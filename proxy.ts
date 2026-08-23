@@ -34,10 +34,21 @@ export function proxy(request: NextRequest) {
   );
   if (pathnameHasLocale) return;
 
-  // Single-hop temporary redirect: /apps -> /en/apps. 307 (not 308) because the
-  // target depends on the visitor's language and must stay renegotiable.
   const locale = getLocale(request);
-  request.nextUrl.pathname = pathname === "/" ? `/${locale}` : `/${locale}${pathname}`;
+  const localizedPathname = pathname === "/" ? `/${locale}` : `/${locale}${pathname}`;
+
+  // Default locale: rewrite so the canonical URL (e.g. "/", "/apps") serves
+  // /en content directly with no visible redirect and no extra 307 hop.
+  if (locale === defaultLocale) {
+    const url = request.nextUrl.clone();
+    url.pathname = localizedPathname;
+    return NextResponse.rewrite(url);
+  }
+
+  // Non-default locale: redirect so the URL reflects the negotiated language.
+  // 307 (not 308) because the target depends on the visitor's language and
+  // must stay renegotiable.
+  request.nextUrl.pathname = localizedPathname;
   return NextResponse.redirect(request.nextUrl, 307);
 }
 
