@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "siteName": "TheCoupleApp",
+    "titleTemplate": "%s — TheCoupleApp",
+    "home": {
+      "title": "TheCoupleApp — A library of apps for couples",
+      "description": "One brand, many small apps — each solving one real problem for couples: communication, planning, memories, finances and more."
+    },
+    "apps": {
+      "title": "All apps",
+      "description": "Browse the full TheCoupleApp library — released apps you can download today and upcoming apps for couples."
+    },
+    "about": {
+      "title": "About",
+      "description": "Why we build a library of focused apps for couples instead of one bloated app."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Get in touch with the TheCoupleApp team — support, feedback and partnership inquiries."
+    },
+    "privacy": {
+      "title": "Privacy policy",
+      "description": "How TheCoupleApp collects, uses and protects your data across our apps and website."
+    },
+    "terms": {
+      "title": "Terms of use",
+      "description": "The terms that govern your use of TheCoupleApp websites and apps."
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "apps": "Apps",
+    "about": "About",
+    "contact": "Contact",
+    "main": "Main navigation",
+    "menu": "Menu",
+    "language": "Language",
+    "skipToContent": "Skip to content"
+  },
+  "home": {
+    "heroTitle": "Every part of your relationship, one app at a time",
+    "heroSubtitle": "TheCoupleApp is a growing library of small, focused apps for couples — each one solves a single problem really well.",
+    "heroCta": "Explore the apps",
+    "releasedTitle": "Available now",
+    "comingSoonTitle": "Coming soon",
+    "comingSoonTag": "Coming soon",
+    "whyTitle": "Why a library, not one bloated app",
+    "whyItems": [
+      {
+        "title": "Focused tools",
+        "body": "Each app does one job — planning a date, settling shared expenses, keeping memories — without burying it in menus."
+      },
+      {
+        "title": "Pick what fits",
+        "body": "Every couple is different. Install only the apps that match your relationship, skip the rest."
+      },
+      {
+        "title": "Better together",
+        "body": "The apps share one design language and one account-free philosophy, so they feel like a family."
+      },
+      {
+        "title": "Always growing",
+        "body": "New apps ship regularly. The library grows with your relationship."
+      }
+    ]
+  },
+  "appsIndex": {
+    "title": "All apps",
+    "intro": "The complete TheCoupleApp library — what you can download today and what is on the way.",
+    "released": "Released",
+    "comingSoon": "Coming soon"
+  },
+  "appDetail": {
+    "featuresTitle": "Features",
+    "faqTitle": "Frequently asked questions",
+    "getTheApp": "Get the app",
+    "comingSoonNote": "This app is not released yet — check back soon.",
+    "backToApps": "All apps",
+    "screenshotsTitle": "Screenshots"
+  },
+  "about": {
+    "title": "About TheCoupleApp",
+    "body": [
+      "TheCoupleApp is an umbrella brand for a growing library of apps for couples. Instead of one app that tries to do everything, we ship many small ones — each solving one specific problem really well.",
+      "Communication, planning, memories, finances, wellness, fun: every area of a relationship deserves a tool that is simple enough to actually get used."
+    ]
+  },
+  "contact": {
+    "title": "Contact us",
+    "body": "Questions, feedback or a partnership idea? We read every message.",
+    "emailCta": "Email us at"
+  },
+  "legal": {
+    "lastUpdated": "Last updated",
+    "privacyTitle": "Privacy policy",
+    "privacyBody": [
+      "This is a placeholder for the TheCoupleApp privacy policy. The final text will describe what data our website and apps collect, how it is used, and your rights."
+    ],
+    "termsTitle": "Terms of use",
+    "termsBody": [
+      "This is a placeholder for the TheCoupleApp terms of use. The final text will describe the terms that govern your use of our website and apps."
+    ]
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "The page you are looking for does not exist or has moved.",
+    "homeCta": "Back to home",
+    "appsCta": "Browse the apps"
+  },
+  "footer": {
+    "tagline": "A library of apps for couples.",
+    "navLabel": "Footer navigation",
+    "legalLabel": "Legal",
+    "languageLabel": "Language",
+    "rights": "All rights reserved."
+  },
+  "categories": {
+    "communication": "Communication",
+    "planning": "Planning",
+    "memories": "Memories",
+    "finance": "Finance",
+    "wellness": "Wellness",
+    "fun": "Fun"
+  },
+  "statuses": {
+    "released": "Released",
+    "coming-soon": "Coming soon",
+    "beta": "Beta"
+  },
+  "stores": {
+    "appStore": "Download {name} on the App Store",
+    "playStore": "Get {name} on Google Play",
+    "web": "Open {name} on the web"
+  }
+}

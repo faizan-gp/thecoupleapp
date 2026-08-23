@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "siteName": "TheCoupleApp",
+    "titleTemplate": "%s — TheCoupleApp",
+    "home": {
+      "title": "TheCoupleApp — Une bibliothèque d'applications pour les couples",
+      "description": "Une marque, plein de petites applications — chacune résout un vrai problème de couple : communication, organisation, souvenirs, finances et plus."
+    },
+    "apps": {
+      "title": "Toutes les applications",
+      "description": "Parcourez la bibliothèque complète TheCoupleApp — les applications déjà disponibles et celles à venir pour les couples."
+    },
+    "about": {
+      "title": "À propos",
+      "description": "Pourquoi nous construisons une bibliothèque d'applications spécialisées pour les couples plutôt qu'une seule application surchargée."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Contactez l'équipe TheCoupleApp — assistance, retours et partenariats."
+    },
+    "privacy": {
+      "title": "Politique de confidentialité",
+      "description": "Comment TheCoupleApp collecte, utilise et protège vos données sur nos applications et notre site."
+    },
+    "terms": {
+      "title": "Conditions d'utilisation",
+      "description": "Les conditions qui régissent l'utilisation des sites et applications TheCoupleApp."
+    }
+  },
+  "nav": {
+    "home": "Accueil",
+    "apps": "Applications",
+    "about": "À propos",
+    "contact": "Contact",
+    "main": "Navigation principale",
+    "menu": "Menu",
+    "language": "Langue",
+    "skipToContent": "Aller au contenu"
+  },
+  "home": {
+    "heroTitle": "Chaque facette de votre relation, une application à la fois",
+    "heroSubtitle": "TheCoupleApp est une bibliothèque grandissante de petites applications spécialisées pour les couples — chacune résout un seul problème, très bien.",
+    "heroCta": "Découvrir les applications",
+    "releasedTitle": "Disponibles maintenant",
+    "comingSoonTitle": "Bientôt disponibles",
+    "comingSoonTag": "Bientôt",
+    "whyTitle": "Pourquoi une bibliothèque plutôt qu'une application surchargée",
+    "whyItems": [
+      {
+        "title": "Des outils ciblés",
+        "body": "Chaque application fait une seule chose — organiser un rendez-vous, partager les dépenses, garder des souvenirs — sans la noyer dans des menus."
+      },
+      {
+        "title": "Choisissez ce qui vous convient",
+        "body": "Chaque couple est différent. Installez uniquement les applications qui correspondent à votre relation."
+      },
+      {
+        "title": "Meilleures ensemble",
+        "body": "Les applications partagent un même langage de design et une même philosophie : elles forment une famille."
+      },
+      {
+        "title": "En croissance constante",
+        "body": "De nouvelles applications sortent régulièrement. La bibliothèque grandit avec votre relation."
+      }
+    ]
+  },
+  "appsIndex": {
+    "title": "Toutes les applications",
+    "intro": "La bibliothèque complète TheCoupleApp — ce que vous pouvez télécharger aujourd'hui et ce qui arrive.",
+    "released": "Disponibles",
+    "comingSoon": "Bientôt"
+  },
+  "appDetail": {
+    "featuresTitle": "Fonctionnalités",
+    "faqTitle": "Questions fréquentes",
+    "getTheApp": "Obtenir l'application",
+    "comingSoonNote": "Cette application n'est pas encore disponible — revenez bientôt.",
+    "backToApps": "Toutes les applications",
+    "screenshotsTitle": "Captures d'écran"
+  },
+  "about": {
+    "title": "À propos de TheCoupleApp",
+    "body": [
+      "TheCoupleApp est la marque ombrelle d'une bibliothèque grandissante d'applications pour les couples. Plutôt qu'une application qui essaie de tout faire, nous en publions beaucoup de petites — chacune résout très bien un problème précis.",
+      "Communication, organisation, souvenirs, finances, bien-être, amusement : chaque facette d'une relation mérite un outil assez simple pour être vraiment utilisé."
+    ]
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "body": "Des questions, des retours ou une idée de partenariat ? Nous lisons chaque message.",
+    "emailCta": "Écrivez-nous à"
+  },
+  "legal": {
+    "lastUpdated": "Dernière mise à jour",
+    "privacyTitle": "Politique de confidentialité",
+    "privacyBody": [
+      "Ceci est un texte provisoire de la politique de confidentialité de TheCoupleApp. Le texte final décrira les données collectées par notre site et nos applications, leur utilisation et vos droits."
+    ],
+    "termsTitle": "Conditions d'utilisation",
+    "termsBody": [
+      "Ceci est un texte provisoire des conditions d'utilisation de TheCoupleApp. Le texte final décrira les conditions qui régissent l'utilisation de notre site et de nos applications."
+    ]
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "body": "La page que vous cherchez n'existe pas ou a été déplacée.",
+    "homeCta": "Retour à l'accueil",
+    "appsCta": "Voir les applications"
+  },
+  "footer": {
+    "tagline": "Une bibliothèque d'applications pour les couples.",
+    "navLabel": "Navigation du pied de page",
+    "legalLabel": "Mentions légales",
+    "languageLabel": "Langue",
+    "rights": "Tous droits réservés."
+  },
+  "categories": {
+    "communication": "Communication",
+    "planning": "Organisation",
+    "memories": "Souvenirs",
+    "finance": "Finances",
+    "wellness": "Bien-être",
+    "fun": "Amusement"
+  },
+  "statuses": {
+    "released": "Disponible",
+    "coming-soon": "Bientôt",
+    "beta": "Bêta"
+  },
+  "stores": {
+    "appStore": "Télécharger {name} sur l'App Store",
+    "playStore": "Obtenir {name} sur Google Play",
+    "web": "Ouvrir {name} sur le web"
+  }
+}

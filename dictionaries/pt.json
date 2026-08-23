@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "siteName": "TheCoupleApp",
+    "titleTemplate": "%s — TheCoupleApp",
+    "home": {
+      "title": "TheCoupleApp — Uma biblioteca de apps para casais",
+      "description": "Uma marca, muitos apps pequenos — cada um resolve um problema real dos casais: comunicação, planejamento, memórias, finanças e mais."
+    },
+    "apps": {
+      "title": "Todos os apps",
+      "description": "Explore a biblioteca completa do TheCoupleApp — apps já disponíveis para baixar e os próximos lançamentos para casais."
+    },
+    "about": {
+      "title": "Sobre",
+      "description": "Por que construímos uma biblioteca de apps focados para casais em vez de um único app sobrecarregado."
+    },
+    "contact": {
+      "title": "Contato",
+      "description": "Fale com a equipe do TheCoupleApp — suporte, feedback e parcerias."
+    },
+    "privacy": {
+      "title": "Política de privacidade",
+      "description": "Como o TheCoupleApp coleta, usa e protege seus dados em nossos apps e em nosso site."
+    },
+    "terms": {
+      "title": "Termos de uso",
+      "description": "Os termos que regem o uso dos sites e apps do TheCoupleApp."
+    }
+  },
+  "nav": {
+    "home": "Início",
+    "apps": "Apps",
+    "about": "Sobre",
+    "contact": "Contato",
+    "main": "Navegação principal",
+    "menu": "Menu",
+    "language": "Idioma",
+    "skipToContent": "Pular para o conteúdo"
+  },
+  "home": {
+    "heroTitle": "Cada parte do seu relacionamento, um app de cada vez",
+    "heroSubtitle": "O TheCoupleApp é uma biblioteca crescente de apps pequenos e focados para casais — cada um resolve um único problema muito bem.",
+    "heroCta": "Explorar os apps",
+    "releasedTitle": "Disponíveis agora",
+    "comingSoonTitle": "Em breve",
+    "comingSoonTag": "Em breve",
+    "whyTitle": "Por que uma biblioteca, e não um app sobrecarregado",
+    "whyItems": [
+      {
+        "title": "Ferramentas focadas",
+        "body": "Cada app faz um único trabalho — planejar um encontro, dividir despesas, guardar memórias — sem enterrá-lo em menus."
+      },
+      {
+        "title": "Escolha o que combina",
+        "body": "Cada casal é diferente. Instale apenas os apps que combinam com o seu relacionamento."
+      },
+      {
+        "title": "Melhores juntos",
+        "body": "Os apps compartilham a mesma linguagem de design e a mesma filosofia — parecem uma família."
+      },
+      {
+        "title": "Sempre crescendo",
+        "body": "Novos apps são lançados regularmente. A biblioteca cresce com o seu relacionamento."
+      }
+    ]
+  },
+  "appsIndex": {
+    "title": "Todos os apps",
+    "intro": "A biblioteca completa do TheCoupleApp — o que você pode baixar hoje e o que está a caminho.",
+    "released": "Disponíveis",
+    "comingSoon": "Em breve"
+  },
+  "appDetail": {
+    "featuresTitle": "Recursos",
+    "faqTitle": "Perguntas frequentes",
+    "getTheApp": "Baixe o app",
+    "comingSoonNote": "Este app ainda não foi lançado — volte em breve.",
+    "backToApps": "Todos os apps",
+    "screenshotsTitle": "Capturas de tela"
+  },
+  "about": {
+    "title": "Sobre o TheCoupleApp",
+    "body": [
+      "O TheCoupleApp é a marca guarda-chuva de uma biblioteca crescente de apps para casais. Em vez de um app que tenta fazer tudo, lançamos muitos pequenos — cada um resolve muito bem um problema específico.",
+      "Comunicação, planejamento, memórias, finanças, bem-estar, diversão: cada área de um relacionamento merece uma ferramenta simples o bastante para ser usada de verdade."
+    ]
+  },
+  "contact": {
+    "title": "Fale conosco",
+    "body": "Dúvidas, feedback ou uma ideia de parceria? Lemos todas as mensagens.",
+    "emailCta": "Escreva para"
+  },
+  "legal": {
+    "lastUpdated": "Última atualização",
+    "privacyTitle": "Política de privacidade",
+    "privacyBody": [
+      "Este é um texto provisório da política de privacidade do TheCoupleApp. O texto final descreverá quais dados nosso site e nossos apps coletam, como são usados e quais são os seus direitos."
+    ],
+    "termsTitle": "Termos de uso",
+    "termsBody": [
+      "Este é um texto provisório dos termos de uso do TheCoupleApp. O texto final descreverá os termos que regem o uso do nosso site e dos nossos apps."
+    ]
+  },
+  "notFound": {
+    "title": "Página não encontrada",
+    "body": "A página que você procura não existe ou foi movida.",
+    "homeCta": "Voltar ao início",
+    "appsCta": "Ver os apps"
+  },
+  "footer": {
+    "tagline": "Uma biblioteca de apps para casais.",
+    "navLabel": "Navegação do rodapé",
+    "legalLabel": "Legal",
+    "languageLabel": "Idioma",
+    "rights": "Todos os direitos reservados."
+  },
+  "categories": {
+    "communication": "Comunicação",
+    "planning": "Planejamento",
+    "memories": "Memórias",
+    "finance": "Finanças",
+    "wellness": "Bem-estar",
+    "fun": "Diversão"
+  },
+  "statuses": {
+    "released": "Disponível",
+    "coming-soon": "Em breve",
+    "beta": "Beta"
+  },
+  "stores": {
+    "appStore": "Baixe {name} na App Store",
+    "playStore": "Baixe {name} no Google Play",
+    "web": "Abra {name} na web"
+  }
+}

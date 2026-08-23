@@ -1,0 +1,68 @@
+import Link from "next/link";
+
+import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
+import type { Dictionary } from "@/lib/i18n/dictionaries";
+import type { Locale } from "@/lib/i18n/locales";
+
+export function Footer({ lang, dict }: { lang: Locale; dict: Dictionary }) {
+  const year = new Date().getFullYear();
+
+  return (
+    <footer className="mt-16 border-t">
+      <div className="mx-auto flex max-w-5xl flex-col gap-8 px-4 py-10">
+        <div className="flex flex-col justify-between gap-8 sm:flex-row">
+          <div>
+            <p className="font-bold">{dict.meta.siteName}</p>
+            <p className="text-sm">{dict.footer.tagline}</p>
+          </div>
+
+          <nav aria-label={dict.footer.navLabel}>
+            <ul className="flex flex-col gap-2 sm:flex-row sm:gap-6">
+              <li>
+                <Link href={`/${lang}`} className="hover:underline">
+                  {dict.nav.home}
+                </Link>
+              </li>
+              <li>
+                <Link href={`/${lang}/apps`} className="hover:underline">
+                  {dict.nav.apps}
+                </Link>
+              </li>
+              <li>
+                <Link href={`/${lang}/about`} className="hover:underline">
+                  {dict.nav.about}
+                </Link>
+              </li>
+              <li>
+                <Link href={`/${lang}/contact`} className="hover:underline">
+                  {dict.nav.contact}
+                </Link>
+              </li>
+            </ul>
+          </nav>
+
+          <nav aria-label={dict.footer.legalLabel}>
+            <ul className="flex flex-col gap-2 sm:flex-row sm:gap-6">
+              <li>
+                <Link href={`/${lang}/privacy`} className="hover:underline">
+                  {dict.meta.privacy.title}
+                </Link>
+              </li>
+              <li>
+                <Link href={`/${lang}/terms`} className="hover:underline">
+                  {dict.meta.terms.title}
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <LanguageSwitcher currentLang={lang} label={dict.footer.languageLabel} />
+
+        <p className="text-sm">
+          © {year} {dict.meta.siteName}. {dict.footer.rights}
+        </p>
+      </div>
+    </footer>
+  );
+}
