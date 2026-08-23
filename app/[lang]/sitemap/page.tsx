@@ -3,9 +3,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { JsonLd } from "@/components/seo/JsonLd";
-import { getAllApps } from "@/lib/apps";
+import { getAllApps, localized } from "@/lib/apps";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { hasLocale } from "@/lib/i18n/locales";
+import { getAllPosts } from "@/lib/posts";
 import { breadcrumbLd } from "@/lib/seo/json-ld";
 import { localeAlternates } from "@/lib/seo/metadata";
 
@@ -34,12 +35,15 @@ export default async function SitemapPage({ params }: PageProps<"/[lang]/sitemap
   if (!hasLocale(lang)) notFound();
   const dict = await getDictionary(lang);
 
+  const posts = getAllPosts();
+
   const sections = [
     {
       heading: dict.sitemapPage.mainSection,
       links: [
         { href: `/${lang}`, label: dict.nav.home },
         { href: `/${lang}/apps`, label: dict.nav.apps },
+        { href: `/${lang}/blog`, label: dict.nav.blog },
         { href: `/${lang}/about`, label: dict.nav.about },
         { href: `/${lang}/author`, label: dict.author.title },
         { href: `/${lang}/contact`, label: dict.nav.contact },
@@ -52,6 +56,19 @@ export default async function SitemapPage({ params }: PageProps<"/[lang]/sitemap
         label: app.name,
       })),
     },
+    // Omitted while there are no posts — an empty section under a heading
+    // reads as broken rather than as "nothing here yet".
+    ...(posts.length > 0
+      ? [
+          {
+            heading: dict.sitemapPage.blogSection,
+            links: posts.map((post) => ({
+              href: `/${lang}/blog/${post.slug}`,
+              label: localized(post.title, lang),
+            })),
+          },
+        ]
+      : []),
     {
       heading: dict.sitemapPage.legalSection,
       links: [

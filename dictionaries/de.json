@@ -36,7 +36,8 @@
     "menu": "Menü",
     "language": "Sprache",
     "skipToContent": "Zum Inhalt springen",
-    "logoAlt": "TheCoupleApp Logo"
+    "logoAlt": "TheCoupleApp Logo",
+    "blog": "Blog"
   },
   "home": {
     "heroTitle": "Jeder Teil eurer Beziehung, eine App nach der anderen",
@@ -186,7 +187,8 @@
     "intro": "Die vollständige Liste der Seiten dieser Website, in deiner Sprache.",
     "mainSection": "Hauptseiten",
     "appsSection": "Apps",
-    "legalSection": "Rechtliches"
+    "legalSection": "Rechtliches",
+    "blogSection": "Blog"
   },
   "ui": {
     "backToTop": "Nach oben"
@@ -222,7 +224,7 @@
   "editorial": {
     "title": "Redaktionelle Grundsätze",
     "description": "Wie die App-Beschreibungen, Funktionslisten und FAQs von TheCoupleApp entstehen, übersetzt und korrigiert werden.",
-    "intro": "Diese Grundsätze gelten für die Texte auf dieser Website: App-Beschreibungen, Funktionslisten, häufige Fragen und deren Übersetzungen. Diese Website veröffentlicht keine Nachrichten, keine Tests fremder Produkte und keine gesponserten Beiträge.",
+    "intro": "Diese Grundsätze gelten für die Texte auf dieser Website: App-Beschreibungen, Funktionslisten, häufige Fragen, Blogbeiträge und deren Übersetzungen. Diese Website veröffentlicht keine Nachrichten über andere Unternehmen, keine Tests fremder Produkte und keine gesponserten Beiträge — Blogbeiträge hier handeln von unseren eigenen Apps und den Entscheidungen dahinter.",
     "sections": [
       {
         "heading": "Wer diese Inhalte schreibt",
@@ -262,5 +264,12 @@
     "englishNotice": "Dieses rechtliche Dokument liegt nur auf Englisch vor. Wo auf dieser Website sonst eine Übersetzung gelten würde, ist die hier gezeigte englische Fassung maßgeblich.",
     "viewPrivacy": "Datenschutzerklärung lesen",
     "viewTerms": "Nutzungsbedingungen lesen"
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Notizen zu den Apps der TheCoupleApp-Sammlung und den Entscheidungen dahinter.",
+    "intro": "Wir schreiben über die Apps, die wir bauen, und warum wir sie so bauen — keine Nachrichten anderer Unternehmen, keine gesponserten Beiträge.",
+    "empty": "Noch nichts veröffentlicht. Schau bald wieder vorbei.",
+    "backToBlog": "Alle Beiträge"
   }
 }

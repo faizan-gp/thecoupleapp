@@ -36,7 +36,8 @@
     "menu": "Menu",
     "language": "Idioma",
     "skipToContent": "Pular para o conteúdo",
-    "logoAlt": "Logotipo da TheCoupleApp"
+    "logoAlt": "Logotipo da TheCoupleApp",
+    "blog": "Blog"
   },
   "home": {
     "heroTitle": "Cada parte do seu relacionamento, um app de cada vez",
@@ -186,7 +187,8 @@
     "intro": "A lista completa das páginas deste site, no seu idioma.",
     "mainSection": "Páginas principais",
     "appsSection": "Apps",
-    "legalSection": "Jurídico"
+    "legalSection": "Jurídico",
+    "blogSection": "Blog"
   },
   "ui": {
     "backToTop": "Voltar ao topo"
@@ -222,7 +224,7 @@
   "editorial": {
     "title": "Diretrizes editoriais",
     "description": "Como as descrições de apps, listas de recursos e perguntas frequentes do TheCoupleApp são escritas, traduzidas e corrigidas.",
-    "intro": "Estas diretrizes valem para o conteúdo escrito deste site: descrições de apps, listas de recursos, perguntas frequentes e as traduções de tudo isso. Este site não publica notícias, análises de produtos de outras empresas nem artigos patrocinados.",
+    "intro": "Estas diretrizes valem para o conteúdo escrito deste site: descrições de apps, listas de recursos, perguntas frequentes, posts do blog e as traduções de tudo isso. Este site não publica notícias sobre outras empresas, análises de produtos de outras empresas nem artigos patrocinados — os posts do blog são sobre nossos próprios apps e as decisões por trás deles.",
     "sections": [
       {
         "heading": "Quem escreve este conteúdo",
@@ -262,5 +264,12 @@
     "englishNotice": "Este documento legal está disponível apenas em inglês. Onde uma tradução normalmente se aplicaria neste site, prevalece a versão em inglês mostrada aqui.",
     "viewPrivacy": "Ler a Política de Privacidade",
     "viewTerms": "Ler os Termos de Serviço"
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Notas sobre os apps da biblioteca do TheCoupleApp e as decisões por trás deles.",
+    "intro": "Escrevemos sobre os apps que criamos e por que os criamos assim — sem notícias de outras empresas, sem posts patrocinados.",
+    "empty": "Nada publicado ainda. Volte em breve.",
+    "backToBlog": "Todos os posts"
   }
 }

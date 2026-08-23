@@ -36,7 +36,8 @@
     "menu": "Menu",
     "language": "Language",
     "skipToContent": "Skip to content",
-    "logoAlt": "TheCoupleApp logo"
+    "logoAlt": "TheCoupleApp logo",
+    "blog": "Blog"
   },
   "home": {
     "heroTitle": "Every part of your relationship, one app at a time",
@@ -186,7 +187,8 @@
     "intro": "A complete list of the pages on this site, in your language.",
     "mainSection": "Main pages",
     "appsSection": "Apps",
-    "legalSection": "Legal"
+    "legalSection": "Legal",
+    "blogSection": "Blog"
   },
   "ui": {
     "backToTop": "Back to top"
@@ -222,7 +224,7 @@
   "editorial": {
     "title": "Editorial guidelines",
     "description": "How the app descriptions, feature lists and FAQs on TheCoupleApp are written, translated and corrected.",
-    "intro": "These guidelines cover the written content on this site: app descriptions, feature lists, frequently asked questions, and the translations of all of it. This site does not publish news, reviews of other companies' products, or sponsored articles.",
+    "intro": "These guidelines cover the written content on this site: app descriptions, feature lists, frequently asked questions, blog posts, and the translations of all of it. This site does not publish news coverage of other companies, reviews of other companies' products, or sponsored articles — blog posts here are about our own apps and the decisions behind them.",
     "sections": [
       {
         "heading": "Who writes this content",
@@ -262,5 +264,12 @@
     "englishNotice": "This legal document is available in English only. Where a translation would otherwise apply on this site, the English version shown here governs.",
     "viewPrivacy": "Read the Privacy Policy",
     "viewTerms": "Read the Terms of Service"
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Notes on the apps in the TheCoupleApp library and the decisions behind them.",
+    "intro": "Writing about the apps we build and why we build them this way — no news from other companies, no sponsored posts.",
+    "empty": "Nothing published yet. Check back soon.",
+    "backToBlog": "All posts"
   }
 }

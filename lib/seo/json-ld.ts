@@ -119,6 +119,28 @@ export function softwareApplicationLd(app: CoupleApp, lang: Locale) {
   };
 }
 
+export function blogPostingLd(post: {
+  title: string;
+  summary: string;
+  slug: string;
+  publishedDate: string;
+  lang: Locale;
+  coverImage?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.summary,
+    url: absoluteUrl(`/${post.lang}/blog/${post.slug}`),
+    datePublished: post.publishedDate,
+    inLanguage: post.lang,
+    author: { "@type": "Person", name: author.name, url: absoluteUrl(`/${post.lang}/author`) },
+    publisher: { "@type": "Organization", name: "TheCoupleApp", url: siteUrl },
+    ...(post.coverImage ? { image: absoluteUrl(post.coverImage) } : {}),
+  };
+}
+
 export function faqLd(faqs: { q: string; a: string }[]) {
   return {
     "@context": "https://schema.org",

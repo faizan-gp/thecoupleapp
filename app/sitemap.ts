@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 
 import { getAllApps } from "@/lib/apps";
+import { getAllPosts } from "@/lib/posts";
 import { defaultLocale, localeCodes } from "@/lib/i18n/locales";
 import { absoluteUrl } from "@/lib/site";
 
@@ -13,6 +14,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/",
     "/apps",
     ...getAllApps().map((app) => `/apps/${app.slug}`),
+    "/blog",
+    ...getAllPosts().map((post) => `/blog/${post.slug}`),
     "/about",
     "/author",
     "/contact",

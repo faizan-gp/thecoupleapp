@@ -36,7 +36,8 @@
     "menu": "Menú",
     "language": "Idioma",
     "skipToContent": "Saltar al contenido",
-    "logoAlt": "Logotipo de TheCoupleApp"
+    "logoAlt": "Logotipo de TheCoupleApp",
+    "blog": "Blog"
   },
   "home": {
     "heroTitle": "Cada parte de tu relación, una app a la vez",
@@ -186,7 +187,8 @@
     "intro": "La lista completa de las páginas de este sitio, en tu idioma.",
     "mainSection": "Páginas principales",
     "appsSection": "Apps",
-    "legalSection": "Legal"
+    "legalSection": "Legal",
+    "blogSection": "Blog"
   },
   "ui": {
     "backToTop": "Volver arriba"
@@ -222,7 +224,7 @@
   "editorial": {
     "title": "Normas editoriales",
     "description": "Cómo se escriben, traducen y corrigen las descripciones de apps, las listas de funciones y las preguntas frecuentes de TheCoupleApp.",
-    "intro": "Estas normas se aplican al contenido escrito de este sitio: descripciones de apps, listas de funciones, preguntas frecuentes y las traducciones de todo ello. Este sitio no publica noticias, análisis de productos de otras empresas ni artículos patrocinados.",
+    "intro": "Estas normas se aplican al contenido escrito de este sitio: descripciones de apps, listas de funciones, preguntas frecuentes, artículos del blog y las traducciones de todo ello. Este sitio no publica noticias sobre otras empresas, análisis de productos de otras empresas ni artículos patrocinados: los artículos del blog tratan sobre nuestras propias apps y las decisiones detrás de ellas.",
     "sections": [
       {
         "heading": "Quién escribe este contenido",
@@ -262,5 +264,12 @@
     "englishNotice": "Este documento legal solo está disponible en inglés. Donde en este sitio correspondería una traducción, prevalece la versión en inglés que se muestra aquí.",
     "viewPrivacy": "Leer la Política de Privacidad",
     "viewTerms": "Leer las Condiciones de Servicio"
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Notas sobre las apps de la biblioteca de TheCoupleApp y las decisiones detrás de ellas.",
+    "intro": "Escribimos sobre las apps que creamos y por qué las hacemos así: sin noticias de otras empresas, sin publicaciones patrocinadas.",
+    "empty": "Todavía no hay nada publicado. Vuelve pronto.",
+    "backToBlog": "Todas las entradas"
   }
 }

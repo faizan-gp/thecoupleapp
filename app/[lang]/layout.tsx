@@ -63,6 +63,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
           data={siteNavigationLd([
             { name: dict.nav.home, path: `/${lang}` },
             { name: dict.nav.apps, path: `/${lang}/apps` },
+            { name: dict.nav.blog, path: `/${lang}/blog` },
             { name: dict.nav.about, path: `/${lang}/about` },
             { name: dict.nav.contact, path: `/${lang}/contact` },
           ])}

@@ -36,7 +36,8 @@
     "menu": "Menu",
     "language": "Langue",
     "skipToContent": "Aller au contenu",
-    "logoAlt": "Logo TheCoupleApp"
+    "logoAlt": "Logo TheCoupleApp",
+    "blog": "Blog"
   },
   "home": {
     "heroTitle": "Chaque facette de votre relation, une application à la fois",
@@ -186,7 +187,8 @@
     "intro": "La liste complète des pages de ce site, dans votre langue.",
     "mainSection": "Pages principales",
     "appsSection": "Applications",
-    "legalSection": "Mentions légales"
+    "legalSection": "Mentions légales",
+    "blogSection": "Blog"
   },
   "ui": {
     "backToTop": "Retour en haut"
@@ -222,7 +224,7 @@
   "editorial": {
     "title": "Charte éditoriale",
     "description": "Comment les descriptions d'applications, les listes de fonctionnalités et les FAQ de TheCoupleApp sont rédigées, traduites et corrigées.",
-    "intro": "Cette charte couvre le contenu rédactionnel de ce site : descriptions d'applications, listes de fonctionnalités, questions fréquentes et leurs traductions. Ce site ne publie ni actualités, ni tests de produits d'autres entreprises, ni articles sponsorisés.",
+    "intro": "Cette charte couvre le contenu rédactionnel de ce site : descriptions d'applications, listes de fonctionnalités, questions fréquentes, articles de blog et leurs traductions. Ce site ne publie ni actualités sur d'autres entreprises, ni tests de produits d'autres entreprises, ni articles sponsorisés — les articles de blog portent sur nos propres applications et les choix qui les sous-tendent.",
     "sections": [
       {
         "heading": "Qui rédige ce contenu",
@@ -262,5 +264,12 @@
     "englishNotice": "Ce document juridique n'est disponible qu'en anglais. Là où une traduction s'appliquerait habituellement sur ce site, c'est la version anglaise présentée ici qui fait foi.",
     "viewPrivacy": "Lire la politique de confidentialité",
     "viewTerms": "Lire les conditions d'utilisation"
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Notes sur les applications de la bibliothèque TheCoupleApp et les choix qui les sous-tendent.",
+    "intro": "Nous écrivons sur les applications que nous créons et pourquoi nous les concevons ainsi — pas d'actualités d'autres entreprises, pas d'articles sponsorisés.",
+    "empty": "Rien de publié pour l'instant. Revenez bientôt.",
+    "backToBlog": "Tous les articles"
   }
 }

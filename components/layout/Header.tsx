@@ -11,6 +11,7 @@ import type { Locale } from "@/lib/i18n/locales";
 export function Header({ lang, dict }: { lang: Locale; dict: Dictionary }) {
   const links = [
     { href: `/${lang}/apps`, label: dict.nav.apps },
+    { href: `/${lang}/blog`, label: dict.nav.blog },
     { href: `/${lang}/about`, label: dict.nav.about },
     { href: `/${lang}/contact`, label: dict.nav.contact },
   ];
