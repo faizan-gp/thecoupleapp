@@ -25,7 +25,7 @@ export const supportEmail = "hello@thecoupleapp.com";
  */
 export const author = {
   name: "Faizan Gillani",
-  github: "https://github.com/faizan-gp",
+  linkedin: "https://www.linkedin.com/in/fyizan/",
   /** Feeds the Person schema's knowsAbout; also rendered as the stack list. */
   stack: [
     "Next.js",

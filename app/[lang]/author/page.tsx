@@ -88,12 +88,12 @@ export default async function AuthorPage({ params }: PageProps<"/[lang]/author">
         </p>
         <p className="mt-2">
           <a
-            href={author.github}
+            href={author.linkedin}
             rel="me noopener noreferrer"
             target="_blank"
             className="font-semibold underline"
           >
-            {dict.author.githubLabel}
+            {dict.author.linkedinLabel}
           </a>
         </p>
       </section>

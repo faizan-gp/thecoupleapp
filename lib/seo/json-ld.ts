@@ -69,7 +69,7 @@ export function personLd(lang: Locale, jobTitle: string, alumniOf: string[]) {
     name: author.name,
     jobTitle,
     url: absoluteUrl(`/${lang}/author`),
-    sameAs: [author.github],
+    sameAs: [author.linkedin],
     alumniOf: alumniOf.map((name) => ({ "@type": "EducationalOrganization", name })),
     knowsAbout: [...author.stack],
   };
