@@ -126,7 +126,7 @@ export default async function AppDetailPage({ params }: PageProps<"/[lang]/apps/
           </div>
 
           <div className="justify-self-center">
-            <PhoneMock app={app} lang={lang} dict={dict} />
+            <PhoneMock app={app} lang={lang} />
           </div>
         </header>
 

@@ -514,6 +514,368 @@
     font-size: 0.86rem;
     line-height: 1.35;
   }
+
+  /* -------------------------------------------------------------------------
+   * The day timeline — the hero's proof, not just its illustration. It plays
+   * on its own (an hour surfaces every few seconds) but every hour is a real
+   * button: click one to jump straight to it, and hovering or focusing
+   * anywhere inside holds the current hour instead of racing past it. That is
+   * the whole product in miniature — "watch the day unfold, or look back at
+   * any hour you like" — so this is the one part of the page built to be
+   * touched rather than just watched.
+   * ---------------------------------------------------------------------- */
+  .timeline {
+    width: 100%;
+    max-width: 25rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-card);
+    background-color: var(--surface);
+    padding: 1.3rem 1.3rem 0.6rem;
+  }
+
+  .timeline-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding-bottom: 1rem;
+    margin-bottom: 0.3rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .timeline-live {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-family: var(--font-body);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .timeline-dot-live {
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 999px;
+    background-color: var(--ember);
+    animation: timeline-pulse 1.8s ease-in-out infinite;
+  }
+
+  .timeline-row {
+    display: grid;
+    grid-template-columns: 1.4rem 1fr;
+    column-gap: 0.8rem;
+    width: 100%;
+    border: 0;
+    background: none;
+    padding: 0.55rem 0;
+    font-family: inherit;
+    text-align: start;
+    color: inherit;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 220ms ease;
+  }
+
+  .timeline-row:hover {
+    opacity: 0.8;
+  }
+
+  .timeline-row:focus-visible {
+    opacity: 1;
+  }
+
+  .timeline-row-active {
+    opacity: 1;
+  }
+
+  /* Each row draws one segment of the rail; stacked, the segments read as a
+     single continuous line with a dot marking every hour. */
+  .timeline-marker-col {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .timeline-marker-col::before {
+    content: "";
+    position: absolute;
+    inset-block: 0;
+    width: 1px;
+    background-color: var(--line);
+  }
+
+  .timeline-row:first-child .timeline-marker-col::before {
+    inset-block-start: 50%;
+  }
+
+  .timeline-row:last-child .timeline-marker-col::before {
+    inset-block-end: 50%;
+  }
+
+  .timeline-dot {
+    position: relative;
+    z-index: 1;
+    margin-block-start: 0.35rem;
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 999px;
+    background-color: var(--line-strong);
+    transition:
+      background-color 220ms ease,
+      box-shadow 220ms ease,
+      transform 220ms ease;
+  }
+
+  .timeline-row-active .timeline-dot {
+    background-color: var(--ember);
+    box-shadow: 0 0 0 4px color-mix(in oklab, var(--ember) 22%, transparent);
+    transform: scale(1.3);
+  }
+
+  .timeline-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    min-width: 0;
+    padding-block-end: 0.3rem;
+  }
+
+  .timeline-row-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .timeline-time {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    transition: color 220ms ease;
+  }
+
+  .timeline-row-active .timeline-time {
+    color: var(--ink);
+  }
+
+  .timeline-who {
+    flex-shrink: 0;
+    border-radius: 999px;
+    padding: 0.1rem 0.55rem;
+    font-family: var(--font-body);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .timeline-who-you {
+    background-color: var(--ember-wash);
+    color: var(--ember);
+  }
+
+  .timeline-who-partner {
+    background-color: var(--candy-wash);
+    color: var(--candy);
+  }
+
+  .timeline-caption {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 0.98rem;
+    line-height: 1.4;
+    color: var(--muted);
+    transition: color 220ms ease;
+  }
+
+  .timeline-row-active .timeline-caption {
+    color: var(--ink);
+  }
+
+  .timeline-emoji {
+    flex-shrink: 0;
+    font-size: 1.1rem;
+    line-height: 1.3;
+  }
+
+  /* -------------------------------------------------------------------------
+   * The shelf — the library's index, set as a manifest rather than a grid of
+   * cards. With one app shipped and five areas still open, a six-cell grid
+   * spends most of its space drawing emptiness and gives the one real product
+   * the same weight as five blanks. As rows, the shipped area can carry real
+   * substance (icon, name, tagline, a link) while an open area costs a single
+   * dim line — the gaps still show, which is the whole thesis, without
+   * outshouting the thing that actually exists.
+   * ---------------------------------------------------------------------- */
+  /* Every row carries the same inline padding and the same 2px leading edge
+     (transparent until an app fills it), so all six share one content box and
+     their columns line up exactly. The list is then pulled back out by that
+     same amount, which lets the filled row's tint bleed into the gutter while
+     its text still aligns with the heading above. The bleed stays inside the
+     1.25rem page gutter, so it can never cause a horizontal scrollbar. */
+  .shelf {
+    border-block-start: 1px solid var(--line);
+    margin-inline-start: calc(-0.9rem - 2px);
+    margin-inline-end: -0.9rem;
+  }
+
+  /* Mobile: area and status share the top line, the app block drops below.
+     From 48rem all three sit on one line in fixed columns. Every cell is
+     placed explicitly — an open row has no app block, and auto-placement
+     would otherwise drop its status into the column the app block vacated. */
+  .shelf-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    column-gap: 1.25rem;
+    row-gap: 0.55rem;
+    border-block-end: 1px solid var(--line);
+    border-inline-start: 2px solid transparent;
+    padding-block: 0.95rem;
+    padding-inline: 0.9rem;
+    transition: background-color 200ms ease;
+  }
+
+  .shelf-area {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .shelf-status {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+  }
+
+  .shelf-body {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  @media (min-width: 48rem) {
+    .shelf-row {
+      grid-template-columns: minmax(8rem, 13rem) minmax(0, 1fr) auto;
+    }
+
+    .shelf-body {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    .shelf-status {
+      grid-column: 3;
+      grid-row: 1;
+    }
+  }
+
+  /* The one area that has an app: brighter, taller, and marked down its
+     leading edge in ember so it reads as the exception, not another row. */
+  .shelf-row-filled {
+    border-inline-start-color: var(--ember);
+    background-color: color-mix(in oklab, var(--ember) 6%, transparent);
+    padding-block: 1.3rem;
+  }
+
+  .shelf-row-filled:hover {
+    background-color: color-mix(in oklab, var(--ember) 11%, transparent);
+  }
+
+  .shelf-area {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .shelf-row-filled .shelf-area {
+    color: var(--ember);
+  }
+
+  /* Top-aligned, not centred: when the tagline wraps to two lines on narrow
+     screens, centring drags the icon down beside the tagline instead of the
+     name it belongs to. */
+  .shelf-app {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    min-width: 0;
+  }
+
+  .shelf-app-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    min-width: 0;
+  }
+
+  .shelf-app-name {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 560;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+
+  .shelf-row-filled:hover .shelf-app-name {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+    text-decoration-color: var(--ember);
+  }
+
+  .shelf-tagline {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: var(--muted);
+    text-wrap: pretty;
+  }
+
+  .shelf-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .shelf-row-filled .shelf-status {
+    color: var(--ember);
+  }
+
+  /* Nudges on hover. This has to be a transform: the status row is pinned to
+     its end edge, so a margin on the last child would grow the box leftward
+     and slide the *label* instead of moving the arrow. */
+  .shelf-arrow {
+    transition: transform 200ms ease;
+  }
+
+  .shelf-row-filled:hover .shelf-arrow {
+    transform: translateX(3px);
+  }
+}
+
+/* RTL: the glyph is mirrored, which also flips its local axis — so the same
+   positive translate carries it visually leftward, the direction of travel. */
+[dir="rtl"] .shelf-arrow {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .shelf-row-filled:hover .shelf-arrow {
+  transform: scaleX(-1) translateX(3px);
 }
 
 /* ---------------------------------------------------------------------------
@@ -561,12 +923,28 @@
   }
 }
 
+@keyframes timeline-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.75);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .rise {
     animation: none;
   }
 
   .ticker-track {
+    animation: none;
+  }
+
+  .timeline-dot-live {
     animation: none;
   }
 

@@ -43,7 +43,7 @@
   "home": {
     "heroTitle": "Cada parte do seu relacionamento, um app de cada vez",
     "heroAccent": "um app de cada vez",
-    "heroSubtitle": "TheCoupleApp é uma biblioteca crescente de apps para casais — apps pequenos e focados, cada um resolve um único problema muito bem.",
+    "heroSubtitle": "O TheCoupleApp é uma biblioteca crescente de apps para casais. Por enquanto, esse app é o HourStory — um diário compartilhado para casais que ficam longe durante o dia, para ver o dia um do outro se desenrolar em vez de perguntar como foi.",
     "heroCta": "Explorar os apps",
     "releasedTitle": "Disponíveis agora",
     "comingSoonTitle": "Em breve",
@@ -51,7 +51,7 @@
     "appsGlimpseTitle": "Conheça os apps para casais",
     "glimpseCta": "Conhecer o {name}",
     "libraryTitle": "A biblioteca, até agora",
-    "libraryNote": "Um app para cada parte da relação. Hoje {filled} de {total} áreas têm app; as outras continuam livres.",
+    "libraryNote": "Um app para cada parte da relação. {filled} de {total} preenchidas até agora; as outras continuam livres.",
     "librarySlotOpen": "Livre",
     "whyTitle": "Por que uma biblioteca, e não um app sobrecarregado",
     "whyItems": [
@@ -102,14 +102,17 @@
       "Grátis para baixar",
       "A biblioteca não para de crescer"
     ],
-    "chat": {
-      "promptLabel": "14h",
-      "prompt": "O que tem ao seu redor agora?",
+    "timeline": {
       "youLabel": "Você",
-      "partnerName": "Sam · 18h",
-      "you": "Um café antes do dia ficar corrido.",
-      "partner": "Começou a chover agora. Queria que você estivesse aqui.",
-      "lockNote": "A próxima hora dele ainda não chegou"
+      "partnerLabel": "Sam",
+      "liveLabel": "Agora",
+      "entries": [
+        { "time": "8h", "emoji": "☕", "caption": "Um café antes de sair." },
+        { "time": "11h30", "emoji": "💻", "caption": "Correndo atrás de um prazo." },
+        { "time": "14h", "emoji": "🌧️", "caption": "A chuva pegou sem guarda-chuva." },
+        { "time": "17h", "emoji": "🚌", "caption": "Quase em casa." },
+        { "time": "20h30", "emoji": "📖", "caption": "Com um livro no colo, pensando em você." }
+      ]
     }
   },
   "appsIndex": {

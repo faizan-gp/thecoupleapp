@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { AppGlimpse } from "@/components/apps/AppGlimpse";
-import { ChatMock } from "@/components/home/ChatMock";
+import { DayTimeline } from "@/components/home/DayTimeline";
 import { LibraryBoard } from "@/components/home/LibraryBoard";
 import { Ticker } from "@/components/home/Ticker";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -84,7 +84,7 @@ export default async function LandingPage({ params }: PageProps<"/[lang]">) {
             </Link>
           </div>
         </div>
-        <ChatMock dict={dict} />
+        <DayTimeline dict={dict} />
       </section>
 
       {/* 3. The library board — which parts of a relationship have an app yet */}

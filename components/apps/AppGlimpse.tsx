@@ -11,22 +11,12 @@ import type { Locale } from "@/lib/i18n/locales";
 
 /**
  * The phone — a spare device frame that sketches what an app feels like from
- * its own catalog data. Communication apps get the answer-then-reveal thread
- * (the partner's bubble stays sealed until you both answer); every other
- * category gets its features as rows of app UI. Purely illustrative, so the
- * whole frame is aria-hidden — the real content sits in the text next to it.
+ * its own catalog data: its features as rows of app UI. Purely illustrative,
+ * so the whole frame is aria-hidden — the real content sits in the text next
+ * to it.
  */
-export function PhoneMock({
-  app,
-  lang,
-  dict,
-}: {
-  app: CoupleApp;
-  lang: Locale;
-  dict: Dictionary;
-}) {
+export function PhoneMock({ app, lang }: { app: CoupleApp; lang: Locale }) {
   const features = localized(app.features, lang);
-  const chat = dict.home.chat;
 
   return (
     <div className="phone" aria-hidden="true">
@@ -43,40 +33,19 @@ export function PhoneMock({
           </span>
         </div>
 
-        {app.category === "communication" ? (
-          <div className="flex flex-1 flex-col justify-end gap-3.5">
-            <div className="flex flex-col items-start gap-1">
-              <span className="bubble-meta">{chat.promptLabel}</span>
-              <p className="bubble bubble-them max-w-full px-3.5 py-2 text-[0.85rem]">
-                {chat.prompt}
-              </p>
-            </div>
-            <div className="flex flex-col items-end gap-1 self-end text-end">
-              <span className="bubble-meta">{chat.youLabel}</span>
-              <p className="bubble bubble-us max-w-full px-3.5 py-2 text-[0.85rem]">{chat.you}</p>
-            </div>
-            <div className="flex flex-col items-start gap-1">
-              <span className="bubble-meta">{chat.partnerName}</span>
-              <p className="bubble bubble-them max-w-full border-dashed px-3.5 py-2 text-[0.85rem] italic text-muted">
-                {chat.lockNote}
-              </p>
-            </div>
-          </div>
-        ) : (
-          <div className="flex flex-1 flex-col gap-2.5 pt-1">
-            {features.map((feature, index) => (
-              <p key={feature.title} className="phone-row">
-                <span
-                  className={`size-2.5 shrink-0 rounded-full ${
-                    index % 2 === 0 ? "bg-candy" : "bg-ember"
-                  }`}
-                />
-                {feature.title}
-              </p>
-            ))}
-            <p className="phone-row justify-center border-dashed text-muted">+</p>
-          </div>
-        )}
+        <div className="flex flex-1 flex-col gap-2.5 pt-1">
+          {features.map((feature, index) => (
+            <p key={feature.title} className="phone-row">
+              <span
+                className={`size-2.5 shrink-0 rounded-full ${
+                  index % 2 === 0 ? "bg-candy" : "bg-ember"
+                }`}
+              />
+              {feature.title}
+            </p>
+          ))}
+          <p className="phone-row justify-center border-dashed text-muted">+</p>
+        </div>
       </div>
     </div>
   );
@@ -163,7 +132,7 @@ export function AppGlimpse({
       </div>
 
       <div className={`justify-self-center ${flip ? "lg:order-first" : ""}`}>
-        <PhoneMock app={app} lang={lang} dict={dict} />
+        <PhoneMock app={app} lang={lang} />
       </div>
     </article>
   );

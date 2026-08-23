@@ -43,7 +43,7 @@
   "home": {
     "heroTitle": "Jeder Teil eurer Beziehung, eine App nach der anderen",
     "heroAccent": "eine App nach der anderen",
-    "heroSubtitle": "TheCoupleApp ist eine wachsende Bibliothek von Paar-Apps — kleine, fokussierte Apps für Paare, jede löst genau ein Problem richtig gut.",
+    "heroSubtitle": "TheCoupleApp ist eine wachsende Bibliothek von Paar-Apps. Im Moment ist das HourStory — ein gemeinsames Tagebuch für Paare, die tagsüber getrennt sind, damit ihr seht, wie sich der Tag des anderen entfaltet, statt danach zu fragen.",
     "heroCta": "Apps entdecken",
     "releasedTitle": "Jetzt verfügbar",
     "comingSoonTitle": "Demnächst",
@@ -51,7 +51,7 @@
     "appsGlimpseTitle": "Lernt die Paar-Apps kennen",
     "glimpseCta": "{name} entdecken",
     "libraryTitle": "Die Bibliothek, bisher",
-    "libraryNote": "Eine App für jeden Teil der Beziehung. Heute haben {filled} von {total} Bereichen eine App — der Rest ist noch offen.",
+    "libraryNote": "Eine App für jeden Teil der Beziehung. {filled} von {total} bisher belegt — der Rest ist noch offen.",
     "librarySlotOpen": "Offen",
     "whyTitle": "Warum eine Bibliothek statt einer überladenen App",
     "whyItems": [
@@ -102,14 +102,17 @@
       "Kostenlos zum Download",
       "Die Bibliothek wächst weiter"
     ],
-    "chat": {
-      "promptLabel": "14 Uhr",
-      "prompt": "Was ist gerade um dich herum?",
+    "timeline": {
       "youLabel": "Du",
-      "partnerName": "Sam · 18 Uhr",
-      "you": "Ein Kaffee, bevor der Tag laut wird.",
-      "partner": "Es hat gerade angefangen zu regnen. Ich wünschte, du wärst hier.",
-      "lockNote": "Seine nächste Stunde ist noch nicht da"
+      "partnerLabel": "Sam",
+      "liveLabel": "Gerade eben",
+      "entries": [
+        { "time": "8 Uhr", "emoji": "☕", "caption": "Ein Kaffee vor dem Pendeln." },
+        { "time": "11:30 Uhr", "emoji": "💻", "caption": "Mitten in einer Deadline." },
+        { "time": "14 Uhr", "emoji": "🌧️", "caption": "Der Regen hat mich ohne Schirm erwischt." },
+        { "time": "17 Uhr", "emoji": "🚌", "caption": "Fast zu Hause." },
+        { "time": "20:30 Uhr", "emoji": "📖", "caption": "Mit einem Buch, an dich denkend." }
+      ]
     }
   },
   "appsIndex": {

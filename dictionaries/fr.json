@@ -43,7 +43,7 @@
   "home": {
     "heroTitle": "Chaque facette de votre relation, une application à la fois",
     "heroAccent": "une application à la fois",
-    "heroSubtitle": "TheCoupleApp est une bibliothèque grandissante d'applications pour couples — des applis petites et ciblées, chacune résout un seul problème, très bien.",
+    "heroSubtitle": "TheCoupleApp est une bibliothèque grandissante d'applications pour couples. Pour l'instant, c'est HourStory — un journal partagé pour les couples séparés pendant la journée, pour voir la journée de l'autre se dérouler plutôt que de demander comment elle s'est passée.",
     "heroCta": "Découvrir les applications",
     "releasedTitle": "Disponibles maintenant",
     "comingSoonTitle": "Bientôt disponibles",
@@ -51,7 +51,7 @@
     "appsGlimpseTitle": "Découvrez les applications pour couples",
     "glimpseCta": "Découvrir {name}",
     "libraryTitle": "La bibliothèque, à ce jour",
-    "libraryNote": "Une app pour chaque aspect de la relation. Aujourd'hui, {filled} domaines sur {total} ont une app ; les autres restent ouverts.",
+    "libraryNote": "Une app pour chaque aspect de la relation. {filled} sur {total} couverts à ce jour ; les autres restent ouverts.",
     "librarySlotOpen": "Libre",
     "whyTitle": "Pourquoi une bibliothèque plutôt qu'une application surchargée",
     "whyItems": [
@@ -102,14 +102,17 @@
       "Téléchargement gratuit",
       "La bibliothèque ne cesse de grandir"
     ],
-    "chat": {
-      "promptLabel": "14 h",
-      "prompt": "Qu'y a-t-il autour de vous en ce moment ?",
+    "timeline": {
       "youLabel": "Vous",
-      "partnerName": "Sam · 18 h",
-      "you": "Un café avant que la journée ne s'emballe.",
-      "partner": "Il vient de se mettre à pleuvoir. J'aimerais que tu sois là.",
-      "lockNote": "Sa prochaine heure n'est pas encore arrivée"
+      "partnerLabel": "Sam",
+      "liveLabel": "En ce moment",
+      "entries": [
+        { "time": "8 h", "emoji": "☕", "caption": "Un café avant de partir." },
+        { "time": "11 h 30", "emoji": "💻", "caption": "Le nez dans une échéance." },
+        { "time": "14 h", "emoji": "🌧️", "caption": "La pluie est arrivée sans prévenir." },
+        { "time": "17 h", "emoji": "🚌", "caption": "Presque à la maison." },
+        { "time": "20 h 30", "emoji": "📖", "caption": "Un livre en main, en pensant à toi." }
+      ]
     }
   },
   "appsIndex": {

@@ -63,7 +63,7 @@ export function DuoMark({ state, className }: { state: DuoState; className?: str
 
   return (
     <svg {...common} fill="none" strokeWidth="1.4">
-      <circle cx="10" cy="6" r="4.4" stroke="var(--line-strong)" strokeDasharray="2.4 2.6" />
+      <circle cx="10" cy="6" r="4.4" stroke="var(--muted)" strokeDasharray="2.4 2.6" />
     </svg>
   );
 }

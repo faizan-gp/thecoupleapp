@@ -2,20 +2,44 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { DuoMark } from "@/components/brand/Mark";
-import { getAppForCategory, getCategories } from "@/lib/apps";
+import { getAppForCategory, getCategories, localized } from "@/lib/apps";
 import type { Dictionary } from "@/lib/i18n/dictionaries";
 import { interpolate } from "@/lib/i18n/interpolate";
 import type { Locale } from "@/lib/i18n/locales";
 
+function ArrowGlyph() {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      width="14"
+      height="14"
+      aria-hidden="true"
+      focusable="false"
+      className="shelf-arrow"
+    >
+      <path
+        d="M2.5 8h11m0 0L9.5 4m4 4l-4 4"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 /**
- * The library board — the landing page's one bold element.
+ * The library board — an index of the areas the library sets out to cover.
  *
- * Six cells, one for each part of a relationship the library sets out to cover.
- * A cell either holds the app that occupies it or is drawn as an open shelf.
- * Showing the empty slots is the point: the product's whole thesis is one small
- * app per problem, released when it is ready, so the gaps are the roadmap
- * rather than something to hide. Everything here is derived from the catalog,
- * so it stays true as apps ship — no copy to update.
+ * One row per part of a relationship. A row either holds the app that occupies
+ * it or states that the area is still open. Showing the open ones is the point:
+ * the product's whole thesis is one small app per problem, released when it is
+ * ready, so the gaps are the roadmap rather than something to hide. But an open
+ * area is a promise, not a product, so it costs one dim line while the area
+ * that shipped gets the icon, the name, the tagline and the link. Everything
+ * here is derived from the catalog, so it stays true as apps ship — no copy to
+ * update.
  */
 export function LibraryBoard({ lang, dict }: { lang: Locale; dict: Dictionary }) {
   const categories = getCategories();
@@ -39,42 +63,42 @@ export function LibraryBoard({ lang, dict }: { lang: Locale; dict: Dictionary })
         </p>
       </div>
 
-      <ul className="mt-6 grid list-none grid-cols-2 gap-3 sm:grid-cols-3">
+      <ul className="shelf mt-8 list-none">
         {cells.map(({ category, app }, index) => (
-          <li
-            key={category}
-            className="rise"
-            style={{ animationDelay: `${120 + index * 45}ms` }}
-          >
+          <li key={category} className="rise" style={{ animationDelay: `${120 + index * 45}ms` }}>
             {app ? (
               <Link
                 href={`/${lang}/apps/${app.slug}`}
-                className="card h-full p-4 sm:p-5"
+                className="shelf-row shelf-row-filled"
                 aria-label={`${app.name} — ${dict.categories[category]}`}
               >
-                <span className="eyebrow">{dict.categories[category]}</span>
-                <span className="mt-4 flex items-center gap-2.5">
+                <span className="shelf-area">{dict.categories[category]}</span>
+
+                <span className="shelf-body shelf-app">
                   <Image
                     src={app.icon}
                     alt=""
-                    width={28}
-                    height={28}
+                    width={38}
+                    height={38}
                     unoptimized
-                    className="rounded-lg"
+                    className="shrink-0 rounded-[10px]"
                   />
-                  <span className="t-card">{app.name}</span>
+                  <span className="shelf-app-text">
+                    <span className="shelf-app-name">{app.name}</span>
+                    <span className="shelf-tagline">{localized(app.tagline, lang)}</span>
+                  </span>
                 </span>
-                <span className="mt-auto flex items-center gap-2 pt-4 text-[0.8rem] text-muted">
+
+                <span className="shelf-status">
                   <DuoMark state={app.status === "released" ? "available" : "soon"} />
-                  {app.status === "released"
-                    ? dict.statuses.released
-                    : dict.home.comingSoonTag}
+                  {app.status === "released" ? dict.statuses.released : dict.home.comingSoonTag}
+                  <ArrowGlyph />
                 </span>
               </Link>
             ) : (
-              <div className="slot flex h-full flex-col p-4 sm:p-5">
-                <span className="eyebrow">{dict.categories[category]}</span>
-                <span className="mt-auto flex items-center gap-2 pt-10 text-[0.8rem] text-muted">
+              <div className="shelf-row">
+                <span className="shelf-area">{dict.categories[category]}</span>
+                <span className="shelf-status">
                   <DuoMark state="open" />
                   {dict.home.librarySlotOpen}
                 </span>
