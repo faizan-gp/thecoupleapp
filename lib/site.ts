@@ -42,6 +42,21 @@ export const author = {
 } as const;
 
 /**
+ * DMCA.com protection badge. The id is the public registration identifier from
+ * the badge snippet DMCA.com issues; both URLs are theirs and must stay
+ * pointed at their origin so the badge verifies.
+ */
+export const dmca = {
+  id: "17b0ad76-3579-4b14-8838-528a39f6dd7b",
+  get statusUrl() {
+    return `https://www.dmca.com/Protection/Status.aspx?ID=${this.id}`;
+  },
+  get badgeUrl() {
+    return `https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=${this.id}`;
+  },
+} as const;
+
+/**
  * Live social profiles, rendered in the footer and published as Organization
  * `sameAs`. Deliberately empty: there are no profiles yet, and linking to
  * ones that don't exist creates dead links and an invalid sameAs graph.

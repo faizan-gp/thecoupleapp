@@ -9,7 +9,9 @@ const csp = [
   "default-src 'self'",
   `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}`,
   "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data:",
+  // images.dmca.com serves the DMCA protection badge. It must load from their
+  // origin (not a local copy or an optimized proxy) for the badge to verify.
+  "img-src 'self' data: https://images.dmca.com",
   "font-src 'self'",
   "object-src 'none'",
   "base-uri 'self'",

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
 import type { Dictionary } from "@/lib/i18n/dictionaries";
 import type { Locale } from "@/lib/i18n/locales";
-import { socialLinks, supportEmail } from "@/lib/site";
+import { dmca, socialLinks, supportEmail } from "@/lib/site";
 
 export function Footer({ lang, dict }: { lang: Locale; dict: Dictionary }) {
   const year = new Date().getFullYear();
@@ -100,9 +100,31 @@ export function Footer({ lang, dict }: { lang: Locale; dict: Dictionary }) {
 
         <LanguageSwitcher currentLang={lang} label={dict.footer.languageLabel} />
 
-        <p className="text-sm">
-          © {year} {dict.meta.siteName}. {dict.footer.rights}
-        </p>
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-sm">
+            © {year} {dict.meta.siteName}. {dict.footer.rights}
+          </p>
+
+          {/* DMCA badge. Plain <img> on purpose: next/image would rewrite the
+              src to /_next/image, and the badge only verifies when it is
+              fetched from images.dmca.com directly (allowed in the CSP). */}
+          <a
+            href={dmca.statusUrl}
+            title="DMCA.com Protection Status"
+            className="dmca-badge"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={dmca.badgeUrl}
+              alt="DMCA.com Protection Status"
+              width={120}
+              height={26}
+              loading="lazy"
+            />
+          </a>
+        </div>
       </div>
     </footer>
   );
