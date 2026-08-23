@@ -112,6 +112,12 @@
       "TheCoupleApp is an umbrella brand for a growing library of apps for couples. Instead of one app that tries to do everything, we ship many small ones — each solving one specific problem really well.",
       "Communication, planning, memories, finances, wellness, fun: every area of a relationship deserves a tool that is simple enough to actually get used."
     ],
+    "storyTitle": "Our story",
+    "storyBody": [
+      "TheCoupleApp started with a small, specific want: one simple tool for one part of a relationship. What we found instead were apps that wanted to be everything at once — a planner, a journal, a budget, a conversation starter, a mood tracker — with the thing we had actually come for buried a few menus deep.",
+      "There is no shortage of apps for couples. What we could not find was a set of small ones. Every product seemed to grow in the same direction: more features, more tabs, more reasons to open it and stay a while. The more they added, the less any single part of them got used.",
+      "So we started shipping the opposite. One app per problem, small enough to understand in a minute and finish in two. Duet came first, for the conversation habit we had gone looking for in the first place. The rest of the library is being built the same way — one focused app at a time, released when it is genuinely ready."
+    ],
     "whoWeAreTitle": "Who we are",
     "whoWeAreBody": [
       "TheCoupleApp is an independent project — not a venture-backed company or a large team. It exists because most relationship apps try to do everything at once and end up doing none of it well.",

@@ -45,6 +45,7 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
       ))}
 
       {[
+        { heading: dict.about.storyTitle, body: dict.about.storyBody },
         { heading: dict.about.whoWeAreTitle, body: dict.about.whoWeAreBody },
         { heading: dict.about.whatWeDoTitle, body: dict.about.whatWeDoBody },
       ].map((section) => (
