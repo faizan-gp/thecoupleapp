@@ -5,7 +5,7 @@ import { interpolate } from "@/lib/i18n/interpolate";
 /**
  * Store links as real anchors. The visible label is the store's own name —
  * a brand name, so it is never translated — while the accessible name carries
- * the full localized sentence ("Download Duet on the App Store"), which is what
+ * the full localized sentence ("Download HourStory on the App Store"), which is what
  * a screen reader announces and what search engines read as the link text.
  */
 

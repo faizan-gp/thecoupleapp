@@ -62,206 +62,56 @@ export type CoupleApp = {
 
 export const apps: CoupleApp[] = [
   {
-    slug: "duet",
-    name: "Duet",
-    category: "communication",
+    slug: "hourstory",
+    name: "HourStory",
+    category: "memories",
     status: "released",
-    releaseDate: "2026-06-01",
-    icon: "/apps/duet/icon.svg",
+    icon: "/apps/hourstory/icon.svg",
     screenshots: [],
     stores: {
-      appStore: "https://apps.apple.com/app/id0000000000",
-      playStore: "https://play.google.com/store/apps/details?id=com.thecoupleapp.duet",
+      appStore: "https://apps.apple.com/us/app/hourstory-couples-journal/id6787663620",
     },
     tagline: {
-      en: "Daily questions that spark real conversations",
-      es: "Preguntas diarias que despiertan conversaciones de verdad",
-      fr: "Des questions quotidiennes qui lancent de vraies conversations",
-      de: "Tägliche Fragen, die echte Gespräche anstoßen",
-      pt: "Perguntas diárias que despertam conversas de verdade",
-      hi: "रोज़ के सवाल जो सच्ची बातचीत शुरू करते हैं",
-      ar: "أسئلة يومية تشعل محادثات حقيقية",
+      en: "Your day has a story — shared with them, one hour at a time",
     },
     description: {
-      en: "Duet gives you and your partner one thoughtful question every day — answer separately, then reveal together. No feeds, no scores, just a two-minute ritual that keeps you talking about things that matter.",
-      es: "Duet os da a ti y a tu pareja una pregunta cuidada cada día: responded por separado y descubrid las respuestas juntos. Sin feeds ni puntuaciones, solo un ritual de dos minutos que os mantiene hablando de lo que importa.",
-      fr: "Duet vous propose, à vous et votre partenaire, une question réfléchie chaque jour — répondez chacun de votre côté, puis découvrez vos réponses ensemble. Pas de fil d'actualité, pas de scores : un rituel de deux minutes qui vous fait parler de ce qui compte.",
-      de: "Duet stellt euch jeden Tag eine durchdachte Frage — jeder antwortet für sich, dann deckt ihr die Antworten gemeinsam auf. Keine Feeds, keine Punktzahlen, nur ein Zwei-Minuten-Ritual, das euch über die wichtigen Dinge im Gespräch hält.",
-      pt: "O Duet dá a você e ao seu par uma pergunta cuidadosa por dia — respondam separadamente e revelem juntos. Sem feeds, sem pontuações, apenas um ritual de dois minutos que mantém vocês conversando sobre o que importa.",
-      hi: "Duet आपको और आपके साथी को हर दिन एक सोच-समझा सवाल देता है — अलग-अलग जवाब दें, फिर साथ में देखें। न कोई फ़ीड, न स्कोर — बस दो मिनट की आदत जो आपको ज़रूरी बातों पर बात करते रखती है।",
-      ar: "يقدّم Duet لكما سؤالاً مدروساً كل يوم — أجيبا كلٌّ على حدة ثم اكشفا الإجابات معاً. لا خلاصات ولا نقاط، مجرد طقس من دقيقتين يبقيكما تتحدثان عمّا يهم.",
+      en: "By evening, the details fade — not because you don't care, but because memory is unkind to the small things, and it's the small things that make a day feel real. HourStory gently asks what's around you once an hour: a photo, a five-second video, a voice note. Answer or skip — there's no streak to protect. By evening, you and your partner have watched each other's whole day unfold instead of trading one flat \"how was your day?\"",
     },
     features: {
       en: [
-        { title: "One question a day", body: "Curated prompts that go deeper than small talk." },
-        { title: "Answer, then reveal", body: "You only see your partner's answer after writing your own." },
-        { title: "Private by design", body: "Your answers stay between the two of you." },
-      ],
-      es: [
-        { title: "Una pregunta al día", body: "Preguntas cuidadas que van más allá de la charla trivial." },
-        { title: "Responde y descubre", body: "Solo ves la respuesta de tu pareja después de escribir la tuya." },
-        { title: "Privado por diseño", body: "Vuestras respuestas quedan entre vosotros dos." },
-      ],
-      fr: [
-        { title: "Une question par jour", body: "Des questions choisies qui vont plus loin que le bavardage." },
-        { title: "Répondez, puis découvrez", body: "Vous ne voyez la réponse de votre partenaire qu'après avoir écrit la vôtre." },
-        { title: "Privé par conception", body: "Vos réponses restent entre vous deux." },
-      ],
-      de: [
-        { title: "Eine Frage pro Tag", body: "Kuratierte Impulse, die tiefer gehen als Smalltalk." },
-        { title: "Antworten, dann aufdecken", body: "Die Antwort deines Partners siehst du erst nach deiner eigenen." },
-        { title: "Privat by Design", body: "Eure Antworten bleiben unter euch." },
-      ],
-      pt: [
-        { title: "Uma pergunta por dia", body: "Perguntas selecionadas que vão além da conversa fiada." },
-        { title: "Responda e revele", body: "Você só vê a resposta do seu par depois de escrever a sua." },
-        { title: "Privado por padrão", body: "As respostas ficam só entre vocês dois." },
-      ],
-      hi: [
-        { title: "दिन में एक सवाल", body: "चुने हुए सवाल जो हल्की-फुल्की बातों से आगे जाते हैं।" },
-        { title: "जवाब दें, फिर देखें", body: "साथी का जवाब आप अपना जवाब लिखने के बाद ही देखते हैं।" },
-        { title: "पूरी तरह निजी", body: "आपके जवाब सिर्फ आप दोनों के बीच रहते हैं।" },
-      ],
-      ar: [
-        { title: "سؤال واحد يومياً", body: "أسئلة منتقاة تتجاوز الأحاديث السطحية." },
-        { title: "أجب ثم اكشف", body: "لا ترى إجابة شريكك إلا بعد كتابة إجابتك." },
-        { title: "خصوصية في الصميم", body: "تبقى إجاباتكما بينكما فقط." },
+        {
+          title: "One nudge an hour",
+          body: "A gentle prompt asks what's around you right now — a photo, a five-second video, or a voice note. No feed to fill, no streak to protect.",
+        },
+        {
+          title: "Watch each other's day",
+          body: "Every hour you both capture unlocks on a shared timeline, so you watch your partner's day replay like a film instead of asking about it after the fact.",
+        },
+        {
+          title: "Private, just the two of you",
+          body: "No public feed, no algorithm, no strangers — everything you capture stays between you and the one person you're paired with.",
+        },
       ],
     },
     faq: {
       en: [
-        { q: "Is Duet free?", a: "Duet is free to download with an optional premium question library." },
-        { q: "Do both partners need the app?", a: "Yes — each of you answers on your own device, then answers unlock for both." },
-      ],
-      es: [
-        { q: "¿Duet es gratis?", a: "Duet es gratis, con una biblioteca premium de preguntas opcional." },
-        { q: "¿Ambos necesitan la app?", a: "Sí: cada uno responde en su dispositivo y las respuestas se desbloquean para ambos." },
-      ],
-      fr: [
-        { q: "Duet est-il gratuit ?", a: "Duet est gratuit, avec une bibliothèque de questions premium en option." },
-        { q: "Les deux partenaires ont-ils besoin de l'application ?", a: "Oui — chacun répond sur son appareil, puis les réponses se déverrouillent pour les deux." },
-      ],
-      de: [
-        { q: "Ist Duet kostenlos?", a: "Duet ist kostenlos, mit optionaler Premium-Fragenbibliothek." },
-        { q: "Brauchen beide Partner die App?", a: "Ja — jeder antwortet auf dem eigenen Gerät, dann werden die Antworten für beide freigeschaltet." },
-      ],
-      pt: [
-        { q: "O Duet é grátis?", a: "O Duet é grátis para baixar, com uma biblioteca premium de perguntas opcional." },
-        { q: "Os dois precisam do app?", a: "Sim — cada um responde no próprio aparelho e as respostas são liberadas para ambos." },
-      ],
-      hi: [
-        { q: "क्या Duet मुफ़्त है?", a: "Duet मुफ़्त है, साथ में वैकल्पिक प्रीमियम सवाल-लाइब्रेरी भी है।" },
-        { q: "क्या दोनों साथियों को ऐप चाहिए?", a: "हाँ — दोनों अपने-अपने डिवाइस पर जवाब देते हैं, फिर जवाब दोनों के लिए खुलते हैं।" },
-      ],
-      ar: [
-        { q: "هل Duet مجاني؟", a: "تنزيل Duet مجاني، مع مكتبة أسئلة مميزة اختيارية." },
-        { q: "هل يحتاج الطرفان إلى التطبيق؟", a: "نعم — يجيب كل منكما على جهازه، ثم تُفتح الإجابات للطرفين." },
+        { q: "Is HourStory free?", a: "HourStory is free to download, with an optional premium upgrade." },
+        {
+          q: "Does my partner need the app too?",
+          a: "Yes — HourStory is built for two. You each capture your own hours, and you both watch the other's day unfold.",
+        },
       ],
     },
     seo: {
       en: {
-        title: "Duet — The couple app for daily conversation questions",
-        description: "Duet is a couple app that gives you one thoughtful question a day. Answer separately, reveal together, and keep talking about what matters. Free on iOS and Android.",
+        title: "HourStory — A shared journal for couples apart during the day",
+        description: "HourStory asks what's around you once an hour — a photo, a video, a voice note — so your partner can watch your day unfold instead of asking how it went. Free on the App Store.",
         keywords: [
-          "couple app",
-          "couples app",
-          "couple questions app",
-          "daily questions for couples",
-          "conversation app for couples",
+          "couples journal app",
+          "long distance couples app",
+          "hourly photo journal for couples",
+          "shared journal for partners",
         ],
-      },
-      es: {
-        title: "Duet — La app para parejas de preguntas diarias",
-        description: "Duet es una app para parejas con una pregunta cuidada al día. Responded por separado, descubrid juntos y seguid hablando de lo que importa. Gratis en iOS y Android.",
-      },
-      fr: {
-        title: "Duet — L'application pour couples aux questions quotidiennes",
-        description: "Duet est une application pour couples : une question réfléchie par jour. Répondez séparément, découvrez ensemble, et continuez à parler de ce qui compte. Gratuit sur iOS et Android.",
-      },
-      de: {
-        title: "Duet — Die Paar-App für tägliche Gesprächsfragen",
-        description: "Duet ist eine Paar-App mit einer durchdachten Frage pro Tag. Getrennt antworten, gemeinsam aufdecken und über das Wichtige im Gespräch bleiben. Kostenlos für iOS und Android.",
-      },
-      pt: {
-        title: "Duet — O app para casais de perguntas diárias",
-        description: "O Duet é um app para casais com uma pergunta cuidadosa por dia. Respondam separados, revelem juntos e continuem falando do que importa. Grátis no iOS e Android.",
-      },
-      hi: {
-        title: "Duet — रोज़ाना बातचीत के सवालों वाला कपल ऐप",
-        description: "Duet एक कपल ऐप है जो हर दिन एक सोच-समझा सवाल देता है। अलग-अलग जवाब दें, साथ में देखें और ज़रूरी बातों पर बात करते रहें। iOS और Android पर मुफ़्त।",
-      },
-      ar: {
-        title: "Duet — تطبيق الأزواج لأسئلة المحادثة اليومية",
-        description: "Duet تطبيق للأزواج يقدّم سؤالاً مدروساً كل يوم. أجيبا كلٌّ على حدة واكشفا الإجابات معاً وواصلا الحديث عمّا يهم. مجاني على iOS وAndroid.",
-      },
-    },
-  },
-  {
-    slug: "nest",
-    name: "Nest",
-    category: "planning",
-    status: "coming-soon",
-    icon: "/apps/nest/icon.svg",
-    screenshots: [],
-    stores: {},
-    tagline: {
-      en: "Plan your life together, from date nights to big moves",
-      es: "Planificad vuestra vida juntos, de las citas a las grandes decisiones",
-      fr: "Planifiez votre vie à deux, des soirées aux grands projets",
-      de: "Plant euer Leben zu zweit — vom Date-Abend bis zum großen Schritt",
-      pt: "Planejem a vida juntos, do encontro à noite às grandes decisões",
-      hi: "डेट नाइट से बड़े फ़ैसलों तक, साथ मिलकर ज़िंदगी की योजना बनाएं",
-      ar: "خططا لحياتكما معاً، من سهرات المواعيد إلى الخطوات الكبيرة",
-    },
-    description: {
-      en: "Nest is a shared planner built for two: date nights, trips, chores and the big milestones — all in one calendar you both actually check. Coming soon to iOS and Android.",
-      es: "Nest es un planificador compartido hecho para dos: citas, viajes, tareas y los grandes hitos, todo en un calendario que ambos consultáis de verdad. Próximamente en iOS y Android.",
-      fr: "Nest est un planificateur partagé conçu pour deux : sorties, voyages, tâches et grandes étapes — dans un seul calendrier que vous consultez vraiment. Bientôt sur iOS et Android.",
-      de: "Nest ist ein gemeinsamer Planer für zwei: Date-Abende, Reisen, Aufgaben und die großen Meilensteine — in einem Kalender, den ihr beide wirklich nutzt. Bald für iOS und Android.",
-      pt: "O Nest é um planejador compartilhado feito para dois: encontros, viagens, tarefas e os grandes marcos — em um calendário que vocês dois realmente consultam. Em breve no iOS e Android.",
-      hi: "Nest दो लोगों के लिए बना साझा प्लानर है: डेट नाइट, यात्राएँ, काम और बड़े पड़ाव — एक ही कैलेंडर में जिसे आप दोनों वाकई देखते हैं। जल्द ही iOS और Android पर।",
-      ar: "Nest مخطط مشترك مصمم لشخصين: سهرات المواعيد والرحلات والمهام والمحطات الكبيرة — في تقويم واحد تتابعانه فعلاً. قريباً على iOS وAndroid.",
-    },
-    features: {
-      en: [
-        { title: "One shared calendar", body: "Plans live in one place, synced for both of you." },
-        { title: "Milestone timelines", body: "From moving in to the wedding — break big goals into steps." },
-      ],
-    },
-    seo: {
-      en: {
-        title: "Nest — The couple app for planning life together (coming soon)",
-        description: "Nest is a couple app for planning life together: a shared calendar for date nights, trips, chores and milestones in one place. Coming soon to iOS and Android.",
-        keywords: [
-          "couple app",
-          "couples planner app",
-          "shared calendar for couples",
-          "planning app for couples",
-        ],
-      },
-      es: {
-        title: "Nest — La app para parejas para planificar la vida juntos (próximamente)",
-        description: "Nest es una app para parejas para planificar la vida en común: un calendario compartido con citas, viajes, tareas e hitos en un solo lugar. Próximamente en iOS y Android.",
-      },
-      fr: {
-        title: "Nest — L'application pour couples qui planifie la vie à deux (bientôt)",
-        description: "Nest est une application pour couples pour planifier la vie à deux : un calendrier partagé pour les sorties, voyages, tâches et grandes étapes. Bientôt sur iOS et Android.",
-      },
-      de: {
-        title: "Nest — Die Paar-App für gemeinsame Planung (demnächst)",
-        description: "Nest ist eine Paar-App für die gemeinsame Planung: ein geteilter Kalender für Date-Abende, Reisen, Aufgaben und Meilensteine an einem Ort. Bald für iOS und Android.",
-      },
-      pt: {
-        title: "Nest — O app para casais planejarem a vida juntos (em breve)",
-        description: "O Nest é um app para casais planejarem a vida juntos: um calendário compartilhado com encontros, viagens, tarefas e marcos em um só lugar. Em breve no iOS e Android.",
-      },
-      hi: {
-        title: "Nest — साथ मिलकर योजना बनाने वाला कपल ऐप (जल्द आ रहा है)",
-        description: "Nest एक कपल ऐप है जिसमें साझा कैलेंडर है: डेट नाइट, यात्राएँ, काम और पड़ाव एक ही जगह। जल्द ही iOS और Android पर।",
-      },
-      ar: {
-        title: "Nest — تطبيق الأزواج لتخطيط الحياة معاً (قريباً)",
-        description: "Nest تطبيق للأزواج لتخطيط الحياة معاً: تقويم مشترك للمواعيد والرحلات والمهام والمحطات الكبيرة في مكان واحد. قريباً على iOS وAndroid.",
       },
     },
   },

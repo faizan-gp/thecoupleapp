@@ -12,10 +12,9 @@ import type { Locale } from "@/lib/i18n/locales";
 /**
  * The phone — a spare device frame that sketches what an app feels like from
  * its own catalog data. Communication apps get the answer-then-reveal thread
- * (Duet's actual mechanic: the partner's bubble stays sealed until you both
- * answer); every other category gets its features as rows of app UI. Purely
- * illustrative, so the whole frame is aria-hidden — the real content sits in
- * the text next to it.
+ * (the partner's bubble stays sealed until you both answer); every other
+ * category gets its features as rows of app UI. Purely illustrative, so the
+ * whole frame is aria-hidden — the real content sits in the text next to it.
  */
 export function PhoneMock({
   app,

@@ -76,11 +76,11 @@
     "faqItems": [
       {
         "q": "TheCoupleApp, c'est une application ou plusieurs ?",
-        "a": "Plusieurs. TheCoupleApp est une bibliothèque de petites applications distinctes : chacune règle un seul problème du couple. Vous n'installez que celles qui correspondent à votre relation."
+        "a": "Une seule pour l'instant. TheCoupleApp est une bibliothèque grandissante de petites applications ciblées pour les couples — HourStory est la première à sortir, et d'autres suivront quand elles seront vraiment prêtes. Vous n'installerez que celles qui correspondent à votre relation."
       },
       {
         "q": "Combien coûtent les applications ?",
-        "a": "Toutes les applications sont gratuites au téléchargement. Certaines proposent une option payante — Duet, par exemple, a une bibliothèque de questions premium facultative."
+        "a": "Toutes les applications sont gratuites au téléchargement. Certaines proposent une option payante — HourStory, par exemple, propose un abonnement premium facultatif."
       },
       {
         "q": "Sur quels appareils fonctionnent les applications ?",
@@ -88,7 +88,7 @@
       },
       {
         "q": "Les deux partenaires doivent-ils installer l'application ?",
-        "a": "Pour les applications partagées comme Duet, oui : chacun répond sur son propre appareil, puis les réponses se déverrouillent pour les deux."
+        "a": "Oui — HourStory, comme chaque application de la bibliothèque, est conçue pour deux. Chacun capture depuis son propre appareil, et vous voyez la journée se dérouler ensemble."
       },
       {
         "q": "Dans quelles langues ce site est-il disponible ?",
@@ -103,13 +103,13 @@
       "La bibliothèque ne cesse de grandir"
     ],
     "chat": {
-      "promptLabel": "La question du jour",
-      "prompt": "Quel petit geste de votre partenaire adorez-vous en secret ?",
+      "promptLabel": "14 h",
+      "prompt": "Qu'y a-t-il autour de vous en ce moment ?",
       "youLabel": "Vous",
-      "partnerName": "Sam",
-      "you": "Ta façon de raconter les pensées du chat.",
-      "partner": "Tes concerts de pancakes à 7 h du matin.",
-      "lockNote": "Scellé jusqu'à ce que vous ayez répondu tous les deux"
+      "partnerName": "Sam · 18 h",
+      "you": "Un café avant que la journée ne s'emballe.",
+      "partner": "Il vient de se mettre à pleuvoir. J'aimerais que tu sois là.",
+      "lockNote": "Sa prochaine heure n'est pas encore arrivée"
     }
   },
   "appsIndex": {
@@ -142,7 +142,7 @@
     "storyBody": [
       "TheCoupleApp est né d'une envie précise et modeste : un outil simple pour un seul aspect de la vie à deux. Ce que nous avons trouvé, ce sont des applications qui voulaient tout faire en même temps — agenda, journal, budget, jeu de questions, suivi de l'humeur — avec ce que nous cherchions vraiment enfoui quelques menus plus bas.",
       "Les applications pour couples ne manquent pas. Ce que nous ne trouvions pas, c'était un ensemble de petites applications. Chaque produit semblait grandir dans la même direction : plus de fonctions, plus d'onglets, plus de raisons de l'ouvrir et d'y rester. Plus ils en ajoutaient, moins chaque partie était utilisée.",
-      "Nous avons donc commencé à publier l'inverse. Une application par problème, assez petite pour se comprendre en une minute et se terminer en deux. Duet est arrivée en premier, pour cette habitude de conversation que nous étions partis chercher. Le reste de la bibliothèque se construit de la même façon : une application ciblée à la fois, publiée quand elle est réellement prête."
+      "Nous avons donc commencé à publier l'inverse. Une application par problème, assez petite pour se comprendre en une minute et se terminer en deux. HourStory est arrivée en premier — pour cette sensation d'être séparés pendant la journée, quand le soir venu les petits détails se sont déjà effacés. Le reste de la bibliothèque se construit de la même façon : une application ciblée à la fois, publiée quand elle est réellement prête."
     ],
     "whoWeAreTitle": "Qui nous sommes",
     "whoWeAreBody": [

@@ -76,11 +76,11 @@
     "faqItems": [
       {
         "q": "Is TheCoupleApp one app or several?",
-        "a": "Several. TheCoupleApp is a library of small, separate apps — each one solves a single problem for couples. You install only the ones that fit your relationship."
+        "a": "One so far. TheCoupleApp is a growing library of small, focused apps for couples — HourStory is the first release, and more will ship as they're genuinely ready. You'll only ever need to install the ones that fit your relationship."
       },
       {
         "q": "How much do the apps cost?",
-        "a": "Every app is free to download. Some add an optional paid upgrade — Duet, for example, has an optional premium question library."
+        "a": "Every app is free to download. Some add an optional paid upgrade — HourStory, for example, has an optional premium plan."
       },
       {
         "q": "Which devices do the apps run on?",
@@ -88,7 +88,7 @@
       },
       {
         "q": "Do both partners need to install the app?",
-        "a": "For shared apps like Duet, yes — each partner answers on their own device, and the answers unlock for both."
+        "a": "Yes — HourStory, like every app in the library, is built for two. Each partner captures on their own device, and you both watch the day unfold together."
       },
       {
         "q": "What languages is this site available in?",
@@ -103,13 +103,13 @@
       "The library keeps growing"
     ],
     "chat": {
-      "promptLabel": "Today's question",
-      "prompt": "What tiny thing does your partner do that you secretly love?",
+      "promptLabel": "2:00 PM",
+      "prompt": "What's around you right now?",
       "youLabel": "You",
-      "partnerName": "Sam",
-      "you": "The way you narrate the cat's thoughts.",
-      "partner": "Your 7 a.m. pancake concerts.",
-      "lockNote": "Sealed until you both answer"
+      "partnerName": "Sam · 6:00 PM",
+      "you": "Grabbing coffee before the day gets loud.",
+      "partner": "Rain just started. Wish you were here.",
+      "lockNote": "Their next hour hasn't landed yet"
     }
   },
   "appsIndex": {
@@ -142,7 +142,7 @@
     "storyBody": [
       "TheCoupleApp started with a small, specific want: one simple tool for one part of a relationship. What we found instead were apps that wanted to be everything at once — a planner, a journal, a budget, a conversation starter, a mood tracker — with the thing we had actually come for buried a few menus deep.",
       "There is no shortage of apps for couples. What we could not find was a set of small ones. Every product seemed to grow in the same direction: more features, more tabs, more reasons to open it and stay a while. The more they added, the less any single part of them got used.",
-      "So we started shipping the opposite. One app per problem, small enough to understand in a minute and finish in two. Duet came first, for the conversation habit we had gone looking for in the first place. The rest of the library is being built the same way — one focused app at a time, released when it is genuinely ready."
+      "So we started shipping the opposite. One app per problem, small enough to understand in a minute and finish in two. HourStory came first — for the ache of being apart during the day, when by evening the small things have already faded. The rest of the library is being built the same way — one focused app at a time, released when it is genuinely ready."
     ],
     "whoWeAreTitle": "Who we are",
     "whoWeAreBody": [
