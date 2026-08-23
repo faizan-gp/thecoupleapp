@@ -184,5 +184,33 @@
   },
   "ui": {
     "backToTop": "العودة إلى الأعلى"
+  },
+  "author": {
+    "title": "المؤلّف",
+    "description": "Faizan Gillani — مهندس البرمجيات المتكامل الذي يبني TheCoupleApp ويتولّى صيانته.",
+    "heading": "عن المؤلّف",
+    "role": "مهندس برمجيات متكامل ومطوّر أنظمة",
+    "intro": "يبني Faizan Gillani تطبيقات TheCoupleApp ويتولّى صيانتها — التطبيقات وهذا الموقع وكل ما يقف خلفهما.",
+    "educationTitle": "التعليم",
+    "educationBody": [
+      "درجة البكالوريوس من COMSATS University.",
+      "درجة الماجستير في تقنية المعلومات من National University of Sciences and Technology (NUST)."
+    ],
+    "engineeringTitle": "الهندسة",
+    "engineeringBody": [
+      "العمل اليومي هندسة متكاملة وهندسة أنظمة: واجهات الويب، وخدمات الخادم، وتطبيقات الهاتف، وما تحتها من قواعد بيانات وأنظمة رسائل وحاويات."
+    ],
+    "researchTitle": "البحث",
+    "researchBody": [
+      "إلى جانب العمل على المنتج، بحث مستمر في استراتيجيات التداول في الأسواق المالية — نماذج تعلّم الآلة، ومقاييس البنية الدقيقة للسوق، وتقنيات خفض الأبعاد."
+    ],
+    "stackTitle": "أدوات العمل",
+    "contactTitle": "تواصل معنا",
+    "contactBody": "للأسئلة عن التطبيقات أو الهندسة التي خلفها، راسلنا على",
+    "githubLabel": "الملف الشخصي على GitHub",
+    "alumniOf": [
+      "COMSATS University",
+      "National University of Sciences and Technology (NUST)"
+    ]
   }
 }

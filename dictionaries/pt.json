@@ -184,5 +184,33 @@
   },
   "ui": {
     "backToTop": "Voltar ao topo"
+  },
+  "author": {
+    "title": "Autor",
+    "description": "Faizan Gillani — o engenheiro full-stack que cria e mantém o TheCoupleApp.",
+    "heading": "Sobre o autor",
+    "role": "Engenheiro de software full-stack e desenvolvedor de sistemas",
+    "intro": "Faizan Gillani cria e mantém o TheCoupleApp — os apps, este site e tudo o que existe por trás deles.",
+    "educationTitle": "Formação",
+    "educationBody": [
+      "Graduação pela COMSATS University.",
+      "Mestrado em Tecnologia da Informação pela National University of Sciences and Technology (NUST)."
+    ],
+    "engineeringTitle": "Engenharia",
+    "engineeringBody": [
+      "O trabalho do dia a dia é engenharia full-stack e de sistemas: interfaces web, serviços de backend, apps móveis e os bancos de dados, a mensageria e os contêineres que sustentam tudo isso."
+    ],
+    "researchTitle": "Pesquisa",
+    "researchBody": [
+      "Ao lado do trabalho de produto, pesquisa contínua sobre estratégias de negociação em mercados financeiros — modelos de aprendizado de máquina, métricas de microestrutura de mercado e técnicas de redução de dimensionalidade."
+    ],
+    "stackTitle": "Ferramentas de trabalho",
+    "contactTitle": "Fale com a gente",
+    "contactBody": "Para dúvidas sobre os apps ou sobre a engenharia por trás deles, escreva para",
+    "githubLabel": "Perfil no GitHub",
+    "alumniOf": [
+      "COMSATS University",
+      "National University of Sciences and Technology (NUST)"
+    ]
   }
 }

@@ -184,5 +184,33 @@
   },
   "ui": {
     "backToTop": "Back to top"
+  },
+  "author": {
+    "title": "Author",
+    "description": "Faizan Gillani — the full-stack engineer who builds and maintains TheCoupleApp.",
+    "heading": "About the author",
+    "role": "Full-stack software engineer and system developer",
+    "intro": "Faizan Gillani builds and maintains TheCoupleApp — the apps, this website, and everything behind them.",
+    "educationTitle": "Education",
+    "educationBody": [
+      "Bachelor's degree from COMSATS University.",
+      "Master's degree in Information Technology from the National University of Sciences and Technology (NUST)."
+    ],
+    "engineeringTitle": "Engineering",
+    "engineeringBody": [
+      "Day-to-day work is full-stack and systems engineering: web front ends, backend services, mobile apps, and the databases, messaging and containers underneath them."
+    ],
+    "researchTitle": "Research",
+    "researchBody": [
+      "Alongside product work, ongoing research into financial market trading strategies — machine learning models, market microstructure metrics, and dimensionality reduction techniques."
+    ],
+    "stackTitle": "Tools of the trade",
+    "contactTitle": "Get in touch",
+    "contactBody": "For questions about the apps or the engineering behind them, email",
+    "githubLabel": "GitHub profile",
+    "alumniOf": [
+      "COMSATS University",
+      "National University of Sciences and Technology (NUST)"
+    ]
   }
 }

@@ -184,5 +184,33 @@
   },
   "ui": {
     "backToTop": "ऊपर जाएँ"
+  },
+  "author": {
+    "title": "लेखक",
+    "description": "Faizan Gillani — TheCoupleApp बनाने और संभालने वाले फ़ुल-स्टैक इंजीनियर।",
+    "heading": "लेखक के बारे में",
+    "role": "फ़ुल-स्टैक सॉफ़्टवेयर इंजीनियर और सिस्टम डेवलपर",
+    "intro": "Faizan Gillani, TheCoupleApp बनाते और संभालते हैं — ऐप्स, यह वेबसाइट और इनके पीछे का सब कुछ।",
+    "educationTitle": "शिक्षा",
+    "educationBody": [
+      "COMSATS University से स्नातक की डिग्री।",
+      "National University of Sciences and Technology (NUST) से सूचना प्रौद्योगिकी में स्नातकोत्तर डिग्री।"
+    ],
+    "engineeringTitle": "इंजीनियरिंग",
+    "engineeringBody": [
+      "रोज़ का काम फ़ुल-स्टैक और सिस्टम इंजीनियरिंग का है: वेब फ़्रंटएंड, बैकएंड सेवाएँ, मोबाइल ऐप्स, और इनके नीचे चलने वाले डेटाबेस, मैसेजिंग तथा कंटेनर।"
+    ],
+    "researchTitle": "शोध",
+    "researchBody": [
+      "प्रोडक्ट के काम के साथ-साथ वित्तीय बाज़ारों की ट्रेडिंग रणनीतियों पर लगातार शोध — मशीन लर्निंग मॉडल, मार्केट माइक्रोस्ट्रक्चर मेट्रिक्स और डाइमेंशनैलिटी रिडक्शन तकनीकें।"
+    ],
+    "stackTitle": "काम के औज़ार",
+    "contactTitle": "संपर्क करें",
+    "contactBody": "ऐप्स या उनके पीछे की इंजीनियरिंग के बारे में सवालों के लिए लिखें",
+    "githubLabel": "GitHub प्रोफ़ाइल",
+    "alumniOf": [
+      "COMSATS University",
+      "National University of Sciences and Technology (NUST)"
+    ]
   }
 }

@@ -19,6 +19,29 @@ export function absoluteUrl(path: string): string {
 export const supportEmail = "hello@thecoupleapp.com";
 
 /**
+ * The person behind the library. Proper nouns live here rather than in the
+ * dictionaries because they are not translated — only the prose around them
+ * is. Everything here is supplied by the person it describes.
+ */
+export const author = {
+  name: "Faizan Gillani",
+  github: "https://github.com/faizan-gp",
+  /** Feeds the Person schema's knowsAbout; also rendered as the stack list. */
+  stack: [
+    "Next.js",
+    "React",
+    "Tailwind CSS",
+    "Java Spring Boot",
+    "Node.js",
+    "Flutter",
+    "MySQL",
+    "MongoDB",
+    "Kafka",
+    "Docker",
+  ],
+} as const;
+
+/**
  * Live social profiles, rendered in the footer and published as Organization
  * `sameAs`. Deliberately empty: there are no profiles yet, and linking to
  * ones that don't exist creates dead links and an invalid sameAs graph.

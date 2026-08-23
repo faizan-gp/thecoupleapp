@@ -41,6 +41,7 @@ export default async function SitemapPage({ params }: PageProps<"/[lang]/sitemap
         { href: `/${lang}`, label: dict.nav.home },
         { href: `/${lang}/apps`, label: dict.nav.apps },
         { href: `/${lang}/about`, label: dict.nav.about },
+        { href: `/${lang}/author`, label: dict.author.title },
         { href: `/${lang}/contact`, label: dict.nav.contact },
       ],
     },

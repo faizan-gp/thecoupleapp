@@ -1,7 +1,7 @@
 import type { CoupleApp } from "@/content/apps";
 import { localized } from "@/lib/apps";
 import type { Locale } from "@/lib/i18n/locales";
-import { absoluteUrl, siteUrl, socialLinks, supportEmail } from "@/lib/site";
+import { absoluteUrl, author, siteUrl, socialLinks, supportEmail } from "@/lib/site";
 
 /**
  * schema.org builders. Rendered server-side via <JsonLd /> so structured data
@@ -55,6 +55,23 @@ export function webSiteLd(lang: Locale) {
     name: SITE_NAME,
     url: absoluteUrl(`/${lang}`),
     inLanguage: lang,
+  };
+}
+
+/**
+ * The person who builds the library. `sameAs` carries only genuinely public,
+ * verifiable profiles — an unverifiable sameAs is worse than none.
+ */
+export function personLd(lang: Locale, jobTitle: string, alumniOf: string[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: author.name,
+    jobTitle,
+    url: absoluteUrl(`/${lang}/author`),
+    sameAs: [author.github],
+    alumniOf: alumniOf.map((name) => ({ "@type": "EducationalOrganization", name })),
+    knowsAbout: [...author.stack],
   };
 }
 

@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/apps",
     ...getAllApps().map((app) => `/apps/${app.slug}`),
     "/about",
+    "/author",
     "/contact",
     "/privacy",
     "/terms",
