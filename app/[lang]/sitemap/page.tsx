@@ -75,6 +75,8 @@ export default async function SitemapPage({ params }: PageProps<"/[lang]/sitemap
         { href: `/${lang}/privacy`, label: dict.meta.privacy.title },
         { href: `/${lang}/terms`, label: dict.meta.terms.title },
         { href: `/${lang}/editorial-guidelines`, label: dict.editorial.title },
+        { href: `/${lang}/apps/hourstory/privacy`, label: dict.hourStoryLegal.footerPrivacy },
+        { href: `/${lang}/apps/hourstory/terms`, label: dict.hourStoryLegal.footerTerms },
       ],
     },
   ];

@@ -16,6 +16,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...getAllApps().map((app) => `/apps/${app.slug}`),
     "/blog",
     ...getAllPosts().map((post) => `/blog/${post.slug}`),
+    "/apps/hourstory/privacy",
+    "/apps/hourstory/terms",
     "/about",
     "/author",
     "/contact",

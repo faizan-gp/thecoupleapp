@@ -263,7 +263,9 @@
     "termsDescription": "The terms that govern your use of HourStory.",
     "englishNotice": "This legal document is available in English only. Where a translation would otherwise apply on this site, the English version shown here governs.",
     "viewPrivacy": "Read the Privacy Policy",
-    "viewTerms": "Read the Terms of Service"
+    "viewTerms": "Read the Terms of Service",
+    "footerPrivacy": "HourStory Privacy Policy",
+    "footerTerms": "HourStory Terms of Service"
   },
   "blog": {
     "title": "Blog",

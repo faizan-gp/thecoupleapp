@@ -79,6 +79,16 @@ export function Footer({ lang, dict }: { lang: Locale; dict: Dictionary }) {
                   {dict.editorial.title}
                 </Link>
               </li>
+              <li>
+                <Link href={`/${lang}/apps/hourstory/privacy`} className="hover:underline">
+                  {dict.hourStoryLegal.footerPrivacy}
+                </Link>
+              </li>
+              <li>
+                <Link href={`/${lang}/apps/hourstory/terms`} className="hover:underline">
+                  {dict.hourStoryLegal.footerTerms}
+                </Link>
+              </li>
             </ul>
           </nav>
         </div>

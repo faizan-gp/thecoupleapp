@@ -263,7 +263,9 @@
     "termsDescription": "Les conditions qui régissent votre utilisation d'HourStory.",
     "englishNotice": "Ce document juridique n'est disponible qu'en anglais. Là où une traduction s'appliquerait habituellement sur ce site, c'est la version anglaise présentée ici qui fait foi.",
     "viewPrivacy": "Lire la politique de confidentialité",
-    "viewTerms": "Lire les conditions d'utilisation"
+    "viewTerms": "Lire les conditions d'utilisation",
+    "footerPrivacy": "Politique de confidentialité HourStory",
+    "footerTerms": "Conditions d'utilisation HourStory"
   },
   "blog": {
     "title": "Blog",

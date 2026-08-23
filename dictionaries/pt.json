@@ -263,7 +263,9 @@
     "termsDescription": "Os termos que regem o uso do HourStory.",
     "englishNotice": "Este documento legal está disponível apenas em inglês. Onde uma tradução normalmente se aplicaria neste site, prevalece a versão em inglês mostrada aqui.",
     "viewPrivacy": "Ler a Política de Privacidade",
-    "viewTerms": "Ler os Termos de Serviço"
+    "viewTerms": "Ler os Termos de Serviço",
+    "footerPrivacy": "Política de Privacidade do HourStory",
+    "footerTerms": "Termos de Serviço do HourStory"
   },
   "blog": {
     "title": "Blog",
