@@ -30,15 +30,15 @@ export default async function OpengraphImage({
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "#131020",
-          color: "#ece8f7",
+          background: "#171111",
+          color: "#f5eee4",
           padding: 80,
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
-          <svg width="88" height="52" viewBox="0 0 40 24" fill="none" strokeWidth="2.6">
-            <circle cx="13" cy="12" r="9.4" stroke="#a79dff" />
-            <circle cx="27" cy="12" r="9.4" stroke="#e58ab4" />
+          <svg width="88" height="52" viewBox="0 0 40 24" fill="none" strokeWidth="3.4">
+            <circle cx="13" cy="12" r="9" stroke="#f0609f" />
+            <circle cx="27" cy="12" r="9" stroke="#f97a2f" />
           </svg>
           <div style={{ fontSize: 34, fontWeight: 600 }}>{dict.meta.siteName}</div>
         </div>
@@ -47,8 +47,8 @@ export default async function OpengraphImage({
           <div style={{ fontSize: 74, fontWeight: 700, lineHeight: 1.08, letterSpacing: -2 }}>
             {dict.home.heroTitle}
           </div>
-          <div style={{ display: "flex", height: 1, background: "#443c69", margin: "40px 0" }} />
-          <div style={{ fontSize: 30, color: "#a49cbe", lineHeight: 1.4 }}>
+          <div style={{ display: "flex", height: 1, background: "#463733", margin: "40px 0" }} />
+          <div style={{ fontSize: 30, color: "#a99a90", lineHeight: 1.4 }}>
             {dict.meta.home.description}
           </div>
         </div>

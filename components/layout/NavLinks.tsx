@@ -40,7 +40,7 @@ export function NavLinks({
               aria-current={current ? "page" : undefined}
               onClick={(event) => closeEnclosingDisclosure(event.currentTarget)}
               className={`block rounded-full px-3 py-2 font-display text-[0.95rem] font-medium transition-colors ${
-                current ? "bg-iris-wash text-iris" : "text-muted hover:bg-sunken hover:text-ink"
+                current ? "bg-candy-wash text-candy" : "text-muted hover:bg-sunken hover:text-ink"
               }`}
             >
               {link.label}

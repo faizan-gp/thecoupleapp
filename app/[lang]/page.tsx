@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { AppCard, AppRow, FeaturedAppCard } from "@/components/apps/AppCard";
+import { AppGlimpse } from "@/components/apps/AppGlimpse";
+import { ChatMock } from "@/components/home/ChatMock";
 import { LibraryBoard } from "@/components/home/LibraryBoard";
+import { Ticker } from "@/components/home/Ticker";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getReleasedApps, getUpcomingApps } from "@/lib/apps";
 import { getDictionary } from "@/lib/i18n/dictionaries";
@@ -28,6 +30,23 @@ export async function generateMetadata({
   };
 }
 
+/**
+ * Renders the headline with its accent phrase in the italic pink voice. The
+ * accent is a per-locale substring of the title; if a translation drifts and
+ * the substring no longer matches, the title renders whole rather than broken.
+ */
+function AccentedTitle({ title, accent }: { title: string; accent: string }) {
+  const index = accent ? title.indexOf(accent) : -1;
+  if (index === -1) return title;
+  return (
+    <>
+      {title.slice(0, index)}
+      <em className="t-accent">{accent}</em>
+      {title.slice(index + accent.length)}
+    </>
+  );
+}
+
 export default async function LandingPage({ params }: PageProps<"/[lang]">) {
   const { lang } = await params;
   if (!hasLocale(lang)) notFound();
@@ -40,74 +59,60 @@ export default async function LandingPage({ params }: PageProps<"/[lang]">) {
     <>
       <JsonLd data={faqLd(dict.home.faqItems)} />
 
-      {/* 1. Hero — owns the page's single h1 */}
-      <section className="wrap pt-14 pb-12 sm:pt-24 sm:pb-16">
-        <h1 className="t-hero rise max-w-[15ch]">{dict.home.heroTitle}</h1>
-        <p
-          className="t-lead rise prose-tight mt-6"
-          style={{ animationDelay: "70ms" }}
-        >
-          {dict.home.heroSubtitle}
-        </p>
-        <div className="rise mt-8 flex flex-wrap gap-3" style={{ animationDelay: "140ms" }}>
-          <Link href={`/${lang}/apps`} className="btn btn-primary">
-            {dict.home.heroCta}
-          </Link>
-          <Link href={`/${lang}/about`} className="btn btn-quiet">
-            {dict.nav.about}
-          </Link>
+      {/* 1. The ticker — the site's short promises, scrolling under the header */}
+      <Ticker items={dict.home.ticker} />
+
+      {/* 2. Hero — owns the page's single h1. The headline carries the italic
+             accent phrase; the couple's thread sits beside it as illustration. */}
+      <section className="wrap grid grid-cols-1 items-center gap-x-16 gap-y-14 pt-14 pb-14 sm:pt-20 sm:pb-20 lg:grid-cols-[3fr_2fr]">
+        <div>
+          <h1 className="t-hero rise max-w-[22ch]">
+            <AccentedTitle title={dict.home.heroTitle} accent={dict.home.heroAccent} />
+          </h1>
+          <p
+            className="t-lead rise prose-tight mt-6"
+            style={{ animationDelay: "70ms" }}
+          >
+            {dict.home.heroSubtitle}
+          </p>
+          <div className="rise mt-9 flex flex-wrap gap-3" style={{ animationDelay: "140ms" }}>
+            <Link href={`/${lang}/apps`} className="btn btn-primary">
+              {dict.home.heroCta}
+            </Link>
+            <Link href={`/${lang}/about`} className="btn btn-quiet">
+              {dict.nav.about}
+            </Link>
+          </div>
         </div>
+        <ChatMock dict={dict} />
       </section>
 
-      {/* 2. The library board — which parts of a relationship have an app yet */}
+      {/* 3. The library board — which parts of a relationship have an app yet */}
       <LibraryBoard lang={lang} dict={dict} />
 
-      {/* 3. Released apps grid */}
+      {/* 4. The glimpses — one landing block per couple app, alternating sides,
+             released apps first. Everything inside is derived from the catalog,
+             so a new app gets its section for free. */}
       <section
         id="released-apps"
-        aria-labelledby="released-heading"
+        aria-labelledby="apps-glimpse-heading"
         className="wrap border-t border-line py-14 sm:py-20"
       >
-        <h2 id="released-heading" className="t-section">
-          {dict.home.releasedTitle}
+        <h2 id="apps-glimpse-heading" className="t-section">
+          {dict.home.appsGlimpseTitle}
         </h2>
-        <ul
-          className={
-            released.length === 1
-              ? "mt-8 list-none"
-              : "mt-8 grid list-none grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
-          }
-        >
-          {released.map((app) => (
-            <li key={app.slug}>
-              {released.length === 1 ? (
-                <FeaturedAppCard app={app} lang={lang} dict={dict} />
-              ) : (
-                <AppCard app={app} lang={lang} dict={dict} />
-              )}
-            </li>
+        <div className="mt-12 flex flex-col gap-20 sm:mt-16 sm:gap-28">
+          {[...released, ...upcoming].map((app, index) => (
+            <AppGlimpse
+              key={app.slug}
+              app={app}
+              lang={lang}
+              dict={dict}
+              flip={index % 2 === 1}
+            />
           ))}
-        </ul>
+        </div>
       </section>
-
-      {/* 4. Coming soon — visually subordinate, never mixed into the grid above */}
-      {upcoming.length > 0 && (
-        <section
-          aria-labelledby="coming-soon-heading"
-          className="wrap border-t border-line py-14 sm:py-20"
-        >
-          <h2 id="coming-soon-heading" className="t-section">
-            {dict.home.comingSoonTitle}
-          </h2>
-          <ul className="mt-6 list-none border-t border-line">
-            {upcoming.map((app) => (
-              <li key={app.slug}>
-                <AppRow app={app} lang={lang} dict={dict} />
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
 
       {/* 5. The multi-app thesis — set on the recessed band so the argument
              reads as a change of voice rather than another list of products. */}

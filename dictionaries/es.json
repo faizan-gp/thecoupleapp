@@ -3,28 +3,28 @@
     "siteName": "TheCoupleApp",
     "titleTemplate": "%s — TheCoupleApp",
     "home": {
-      "title": "TheCoupleApp — Una biblioteca de apps para parejas",
-      "description": "Una marca, muchas apps pequeñas: cada una resuelve un problema real de las parejas: comunicación, planificación, recuerdos, finanzas y más."
+      "title": "TheCoupleApp — Una app para parejas para cada parte de vuestra relación",
+      "description": "TheCoupleApp es una biblioteca de apps para parejas: apps pequeñas y enfocadas que resuelven un problema real cada una — comunicación, planes, recuerdos, finanzas y más. Gratis en iOS y Android."
     },
     "apps": {
-      "title": "Todas las apps",
-      "description": "Explora la biblioteca completa de TheCoupleApp: apps ya disponibles para descargar y próximos lanzamientos para parejas."
+      "title": "Todas las apps para parejas",
+      "description": "Explora la biblioteca completa de apps para parejas: las que puedes descargar hoy y las que están en camino."
     },
     "about": {
       "title": "Sobre nosotros",
-      "description": "Por qué construimos una biblioteca de apps especializadas para parejas en lugar de una sola app sobrecargada."
+      "description": "Por qué TheCoupleApp crea una biblioteca de apps para parejas pequeñas y enfocadas en lugar de una sola app sobrecargada."
     },
     "contact": {
       "title": "Contacto",
-      "description": "Ponte en contacto con el equipo de TheCoupleApp: soporte, comentarios y colaboraciones."
+      "description": "Ponte en contacto con TheCoupleApp — soporte, comentarios y colaboraciones sobre nuestras apps para parejas."
     },
     "privacy": {
       "title": "Política de privacidad",
-      "description": "Cómo TheCoupleApp recopila, usa y protege tus datos en nuestras apps y nuestro sitio web."
+      "description": "Cómo TheCoupleApp recopila, usa y protege tus datos en nuestras apps para parejas y en la web."
     },
     "terms": {
       "title": "Términos de uso",
-      "description": "Los términos que rigen el uso de los sitios web y las apps de TheCoupleApp."
+      "description": "Los términos que rigen el uso de las apps para parejas y los sitios web de TheCoupleApp."
     }
   },
   "nav": {
@@ -42,11 +42,14 @@
   },
   "home": {
     "heroTitle": "Cada parte de tu relación, una app a la vez",
-    "heroSubtitle": "TheCoupleApp es una biblioteca creciente de apps pequeñas y especializadas para parejas: cada una resuelve un solo problema muy bien.",
+    "heroAccent": "una app a la vez",
+    "heroSubtitle": "TheCoupleApp es una biblioteca creciente de apps para parejas — apps pequeñas y enfocadas, cada una resuelve un solo problema muy bien.",
     "heroCta": "Explorar las apps",
     "releasedTitle": "Disponibles ahora",
     "comingSoonTitle": "Próximamente",
     "comingSoonTag": "Próximamente",
+    "appsGlimpseTitle": "Conoce las apps para parejas",
+    "glimpseCta": "Descubre {name}",
     "libraryTitle": "La biblioteca, hasta ahora",
     "libraryNote": "Una app para cada parte de la relación. Hoy {filled} de {total} áreas tienen app; el resto siguen libres.",
     "librarySlotOpen": "Libre",
@@ -91,11 +94,27 @@
         "q": "¿En qué idiomas está disponible este sitio?",
         "a": "Inglés, español, francés, alemán, portugués, hindi y árabe. Usa el selector de idioma del pie de página para cambiarlo."
       }
-    ]
+    ],
+    "ticker": [
+      "Una app para cada problema",
+      "Hecha para exactamente dos personas",
+      "Privada por diseño",
+      "Gratis para descargar",
+      "La biblioteca sigue creciendo"
+    ],
+    "chat": {
+      "promptLabel": "La pregunta de hoy",
+      "prompt": "¿Qué pequeño gesto de tu pareja te encanta en secreto?",
+      "youLabel": "Tú",
+      "partnerName": "Sam",
+      "you": "Cómo narras los pensamientos del gato.",
+      "partner": "Tus conciertos de tortitas a las 7 de la mañana.",
+      "lockNote": "Sellado hasta que respondáis los dos"
+    }
   },
   "appsIndex": {
-    "title": "Todas las apps",
-    "intro": "La biblioteca completa de TheCoupleApp: lo que puedes descargar hoy y lo que está en camino.",
+    "title": "La biblioteca de apps para parejas",
+    "intro": "Cada app para parejas que hemos lanzado y las que vienen en camino — todas hechas para exactamente dos personas.",
     "released": "Disponibles",
     "comingSoon": "Próximamente",
     "searchLabel": "Buscar apps",

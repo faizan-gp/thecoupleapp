@@ -5,7 +5,7 @@
  * That shape is the whole idea: two people, and two apps' worth of a library
  * that keeps growing. The status glyph re-uses it to say something real:
  *
- *   available  two solid rings, one iris and one plum — both partners have it
+ *   available  two solid rings, one candy and one ember — both partners have it
  *   soon       two hollow rings — the pair exists, the app doesn't yet
  *   open       one faint ring — nothing occupies this part of the library
  *
@@ -25,8 +25,8 @@ export function Logo({ className }: { className?: string }) {
       focusable="false"
       className={className}
     >
-      <circle cx="13" cy="12" r="9.4" stroke="var(--iris)" />
-      <circle cx="27" cy="12" r="9.4" stroke="var(--plum)" />
+      <circle cx="13" cy="12" r="9.4" stroke="var(--candy)" />
+      <circle cx="27" cy="12" r="9.4" stroke="var(--ember)" />
     </svg>
   );
 }
@@ -46,8 +46,8 @@ export function DuoMark({ state, className }: { state: DuoState; className?: str
   if (state === "available") {
     return (
       <svg {...common}>
-        <circle cx="5.6" cy="6" r="4.8" fill="var(--iris)" />
-        <circle cx="14.4" cy="6" r="4.8" fill="var(--plum)" />
+        <circle cx="5.6" cy="6" r="4.8" fill="var(--candy)" />
+        <circle cx="14.4" cy="6" r="4.8" fill="var(--ember)" />
       </svg>
     );
   }
@@ -55,8 +55,8 @@ export function DuoMark({ state, className }: { state: DuoState; className?: str
   if (state === "soon") {
     return (
       <svg {...common} fill="none" strokeWidth="1.6">
-        <circle cx="5.6" cy="6" r="4.4" stroke="var(--iris)" />
-        <circle cx="14.4" cy="6" r="4.4" stroke="var(--plum)" />
+        <circle cx="5.6" cy="6" r="4.4" stroke="var(--candy)" />
+        <circle cx="14.4" cy="6" r="4.4" stroke="var(--ember)" />
       </svg>
     );
   }

@@ -3,28 +3,28 @@
     "siteName": "TheCoupleApp",
     "titleTemplate": "%s — TheCoupleApp",
     "home": {
-      "title": "TheCoupleApp — A library of apps for couples",
-      "description": "One brand, many small apps — each solving one real problem for couples: communication, planning, memories, finances and more."
+      "title": "TheCoupleApp — A couple app for every part of your relationship",
+      "description": "TheCoupleApp is a library of couple apps: small, focused apps for couples that each solve one real problem — communication, planning, memories, finances and more. Free on iOS and Android."
     },
     "apps": {
-      "title": "All apps",
-      "description": "Browse the full TheCoupleApp library — released apps you can download today and upcoming apps for couples."
+      "title": "All couple apps",
+      "description": "Browse the full library of couple apps — apps for couples you can download today, and the ones on the way."
     },
     "about": {
       "title": "About",
-      "description": "Why we build a library of focused apps for couples instead of one bloated app."
+      "description": "Why TheCoupleApp builds a library of small, focused couple apps instead of one bloated app for couples."
     },
     "contact": {
       "title": "Contact",
-      "description": "Get in touch with the TheCoupleApp team — support, feedback and partnership inquiries."
+      "description": "Get in touch with TheCoupleApp — support, feedback and partnership inquiries about our couple apps."
     },
     "privacy": {
       "title": "Privacy policy",
-      "description": "How TheCoupleApp collects, uses and protects your data across our apps and website."
+      "description": "How TheCoupleApp collects, uses and protects your data across our couple apps and website."
     },
     "terms": {
       "title": "Terms of use",
-      "description": "The terms that govern your use of TheCoupleApp websites and apps."
+      "description": "The terms that govern your use of TheCoupleApp's couple apps and websites."
     }
   },
   "nav": {
@@ -42,11 +42,14 @@
   },
   "home": {
     "heroTitle": "Every part of your relationship, one app at a time",
-    "heroSubtitle": "TheCoupleApp is a growing library of small, focused apps for couples — each one solves a single problem really well.",
+    "heroAccent": "one app at a time",
+    "heroSubtitle": "TheCoupleApp is a growing library of couple apps — small, focused apps for couples, each one solving a single problem really well.",
     "heroCta": "Explore the apps",
     "releasedTitle": "Available now",
     "comingSoonTitle": "Coming soon",
     "comingSoonTag": "Coming soon",
+    "appsGlimpseTitle": "Meet the couple apps",
+    "glimpseCta": "Explore {name}",
     "libraryTitle": "The library, so far",
     "libraryNote": "One app for each part of a relationship. {filled} of {total} areas have an app today — the rest are still open.",
     "librarySlotOpen": "Open",
@@ -91,11 +94,27 @@
         "q": "What languages is this site available in?",
         "a": "English, Spanish, French, German, Portuguese, Hindi and Arabic. Use the language switcher in the footer to change it."
       }
-    ]
+    ],
+    "ticker": [
+      "One app per problem",
+      "Made for exactly two people",
+      "Private by design",
+      "Free to download",
+      "The library keeps growing"
+    ],
+    "chat": {
+      "promptLabel": "Today's question",
+      "prompt": "What tiny thing does your partner do that you secretly love?",
+      "youLabel": "You",
+      "partnerName": "Sam",
+      "you": "The way you narrate the cat's thoughts.",
+      "partner": "Your 7 a.m. pancake concerts.",
+      "lockNote": "Sealed until you both answer"
+    }
   },
   "appsIndex": {
-    "title": "All apps",
-    "intro": "The complete TheCoupleApp library — what you can download today and what is on the way.",
+    "title": "The couple app library",
+    "intro": "Every couple app we've released and what's on the way — each one built for exactly two people.",
     "released": "Released",
     "comingSoon": "Coming soon",
     "searchLabel": "Search apps",

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 
 import { AppRow } from "@/components/apps/AppCard";
+import { PhoneMock } from "@/components/apps/AppGlimpse";
 import { StoreBadges } from "@/components/apps/StoreBadges";
 import { DuoMark } from "@/components/brand/Mark";
 import { Breadcrumbs, PageShell } from "@/components/layout/Page";
@@ -83,36 +84,36 @@ export default async function AppDetailPage({ params }: PageProps<"/[lang]/apps/
         />
 
         {/* Hero. The h1 carries the name and the tagline — the tagline is set
-            smaller inside it rather than split off, so the page's one heading
-            still says what the app is. */}
-        <header className="flex flex-wrap items-start gap-x-6 gap-y-5 border-b border-line pb-10">
-          <Image
-            src={app.icon}
-            alt={interpolate(dict.appDetail.iconAlt, { name: app.name })}
-            width={80}
-            height={80}
-            priority
-            unoptimized
-            className="rounded-[18px]"
-          />
+            in the italic accent voice inside it rather than split off, so the
+            page's one heading still says what the app is. The phone glimpse
+            sits beside the pitch, same frame as on the landing page. */}
+        <header className="grid grid-cols-1 items-center gap-x-16 gap-y-12 border-b border-line pb-12 lg:grid-cols-[3fr_2fr]">
+          <div className="min-w-0">
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-4">
+              <Image
+                src={app.icon}
+                alt={interpolate(dict.appDetail.iconAlt, { name: app.name })}
+                width={64}
+                height={64}
+                priority
+                unoptimized
+                className="rounded-2xl"
+              />
+              <p className="flex flex-wrap items-center gap-2">
+                <span className={`chip ${released ? "chip-live" : "chip-soon"}`}>
+                  <DuoMark state={released ? "available" : "soon"} />
+                  {released ? dict.statuses.released : dict.home.comingSoonTag}
+                </span>
+                <span className="chip">{dict.categories[app.category]}</span>
+              </p>
+            </div>
 
-          <div className="min-w-0 flex-1">
-            <p className="flex flex-wrap items-center gap-2">
-              <span className={`chip ${released ? "chip-live" : "chip-soon"}`}>
-                <DuoMark state={released ? "available" : "soon"} />
-                {released ? dict.statuses.released : dict.home.comingSoonTag}
-              </span>
-              <span className="chip">{dict.categories[app.category]}</span>
-            </p>
-
-            <h1 className="t-page mt-4">
+            <h1 className="t-page mt-6">
               {app.name}
-              <span className="mt-3 block font-body text-[1.1rem] font-normal leading-snug tracking-normal text-muted sm:text-[1.3rem]">
-                {tagline}
-              </span>
+              <span className="t-accent mt-3 block text-[0.55em] leading-snug">{tagline}</span>
             </h1>
 
-            <p className="prose mt-7 text-[1.1rem]">{description}</p>
+            <p className="prose mt-7 text-[1.1rem] text-muted">{description}</p>
 
             <div className="mt-8">
               {released ? (
@@ -122,6 +123,10 @@ export default async function AppDetailPage({ params }: PageProps<"/[lang]/apps/
               )}
               {/* Future: newsletter "get notified" capture slot for unreleased apps (§12). */}
             </div>
+          </div>
+
+          <div className="justify-self-center">
+            <PhoneMock app={app} lang={lang} dict={dict} />
           </div>
         </header>
 
@@ -153,11 +158,12 @@ export default async function AppDetailPage({ params }: PageProps<"/[lang]/apps/
           <h2 id="features-heading" className="t-section">
             {dict.appDetail.featuresTitle}
           </h2>
-          <ul className="mt-8 grid list-none grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-8 grid list-none grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((feature) => (
-              <li key={feature.title} className="border-t border-line-strong pt-5">
-                <h3 className="font-display text-[1.12rem] font-semibold">{feature.title}</h3>
-                <p className="mt-2 text-muted">{feature.body}</p>
+              <li key={feature.title} className="card gap-3 p-6">
+                <DuoMark state="available" />
+                <h3 className="font-display text-[1.15rem] font-semibold">{feature.title}</h3>
+                <p className="text-[0.98rem] text-muted">{feature.body}</p>
               </li>
             ))}
           </ul>
@@ -169,14 +175,33 @@ export default async function AppDetailPage({ params }: PageProps<"/[lang]/apps/
             <h2 id="faq-heading" className="t-section">
               {dict.appDetail.faqTitle}
             </h2>
-            <dl className="mt-8 grid grid-cols-1 gap-x-10 gap-y-8 lg:grid-cols-2">
+            {/* Native disclosure accordion — works with JavaScript off, and the
+                answers stay in the HTML for the FAQPage JSON-LD to mirror. */}
+            <div className="mt-8 flex max-w-3xl flex-col gap-3">
               {faqs.map((faq) => (
-                <div key={faq.q} className="border-t border-line pt-5">
-                  <dt className="font-display text-[1.05rem] font-semibold">{faq.q}</dt>
-                  <dd className="mt-2 text-muted">{faq.a}</dd>
-                </div>
+                <details key={faq.q} className="card group">
+                  <summary className="flex cursor-pointer items-center justify-between gap-4 px-6 py-5">
+                    <span className="font-display text-[1.1rem] font-semibold">{faq.q}</span>
+                    <svg
+                      viewBox="0 0 12 8"
+                      width="12"
+                      height="8"
+                      aria-hidden="true"
+                      className="shrink-0 text-muted transition-transform group-open:rotate-180"
+                    >
+                      <path
+                        d="M1 1.5l5 5 5-5"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.6"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                  </summary>
+                  <p className="prose px-6 pb-5 text-muted">{faq.a}</p>
+                </details>
               ))}
-            </dl>
+            </div>
           </section>
         )}
 

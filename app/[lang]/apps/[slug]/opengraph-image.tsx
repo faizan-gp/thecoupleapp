@@ -28,21 +28,21 @@ export default async function OpengraphImage({
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "#131020",
-          color: "#ece8f7",
+          background: "#171111",
+          color: "#f5eee4",
           padding: 80,
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
-          <svg width="60" height="36" viewBox="0 0 40 24" fill="none" strokeWidth="2.6">
-            <circle cx="13" cy="12" r="9.4" stroke="#a79dff" />
-            <circle cx="27" cy="12" r="9.4" stroke="#e58ab4" />
+          <svg width="60" height="36" viewBox="0 0 40 24" fill="none" strokeWidth="3.4">
+            <circle cx="13" cy="12" r="9" stroke="#f0609f" />
+            <circle cx="27" cy="12" r="9" stroke="#f97a2f" />
           </svg>
-          <div style={{ fontSize: 26, color: "#a49cbe" }}>{dict.meta.siteName}</div>
+          <div style={{ fontSize: 26, color: "#a99a90" }}>{dict.meta.siteName}</div>
         </div>
 
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <div style={{ fontSize: 26, color: "#a49cbe", letterSpacing: 4 }}>
+          <div style={{ fontSize: 26, color: "#a99a90", letterSpacing: 4 }}>
             {app
               ? `${dict.categories[app.category].toUpperCase()} · ${(released
                   ? dict.statuses.released
@@ -61,8 +61,8 @@ export default async function OpengraphImage({
           >
             {app?.name ?? dict.meta.siteName}
           </div>
-          <div style={{ display: "flex", height: 1, background: "#443c69", margin: "36px 0" }} />
-          <div style={{ fontSize: 34, color: "#a49cbe", lineHeight: 1.35 }}>
+          <div style={{ display: "flex", height: 1, background: "#463733", margin: "36px 0" }} />
+          <div style={{ fontSize: 34, color: "#a99a90", lineHeight: 1.35 }}>
             {app ? localized(app.tagline, lang) : dict.meta.home.description}
           </div>
         </div>

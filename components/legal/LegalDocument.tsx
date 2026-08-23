@@ -45,7 +45,7 @@ function Block({ block }: { block: LegalBlock }) {
       );
     case "shout":
       return (
-        <p className="prose mt-6 border-s-2 border-plum bg-plum-wash px-5 py-4 text-[0.95rem] font-semibold">
+        <p className="prose mt-6 border-s-2 border-ember bg-ember-wash px-5 py-4 text-[0.95rem] font-semibold">
           {block.text}
         </p>
       );

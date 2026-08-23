@@ -52,7 +52,7 @@ export default async function ContactPage({ params }: PageProps<"/[lang]/contact
           <p className="mt-3">
             <a
               href={`mailto:${supportEmail}`}
-              className="font-display text-[1.35rem] font-semibold tracking-tight text-iris underline decoration-1 underline-offset-4 hover:decoration-2"
+              className="font-display text-[1.35rem] font-semibold tracking-tight text-candy underline decoration-1 underline-offset-4 hover:decoration-2"
             >
               {supportEmail}
             </a>

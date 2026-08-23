@@ -1,0 +1,171 @@
+import Image from "next/image";
+import Link from "next/link";
+
+import { StoreBadges } from "@/components/apps/StoreBadges";
+import { DuoMark } from "@/components/brand/Mark";
+import type { CoupleApp } from "@/content/apps";
+import { localized } from "@/lib/apps";
+import type { Dictionary } from "@/lib/i18n/dictionaries";
+import { interpolate } from "@/lib/i18n/interpolate";
+import type { Locale } from "@/lib/i18n/locales";
+
+/**
+ * The phone — a spare device frame that sketches what an app feels like from
+ * its own catalog data. Communication apps get the answer-then-reveal thread
+ * (Duet's actual mechanic: the partner's bubble stays sealed until you both
+ * answer); every other category gets its features as rows of app UI. Purely
+ * illustrative, so the whole frame is aria-hidden — the real content sits in
+ * the text next to it.
+ */
+export function PhoneMock({
+  app,
+  lang,
+  dict,
+}: {
+  app: CoupleApp;
+  lang: Locale;
+  dict: Dictionary;
+}) {
+  const features = localized(app.features, lang);
+  const chat = dict.home.chat;
+
+  return (
+    <div className="phone" aria-hidden="true">
+      <div className="phone-screen">
+        <div className="phone-bar">
+          <span className="phone-notch" />
+        </div>
+
+        <div className="flex items-center gap-2.5 border-b border-line pb-3">
+          <Image src={app.icon} alt="" width={30} height={30} unoptimized className="rounded-lg" />
+          <span className="font-display text-[1.05rem] font-semibold">{app.name}</span>
+          <span className="ms-auto inline-flex">
+            <DuoMark state={app.status === "released" ? "available" : "soon"} />
+          </span>
+        </div>
+
+        {app.category === "communication" ? (
+          <div className="flex flex-1 flex-col justify-end gap-3.5">
+            <div className="flex flex-col items-start gap-1">
+              <span className="bubble-meta">{chat.promptLabel}</span>
+              <p className="bubble bubble-them max-w-full px-3.5 py-2 text-[0.85rem]">
+                {chat.prompt}
+              </p>
+            </div>
+            <div className="flex flex-col items-end gap-1 self-end text-end">
+              <span className="bubble-meta">{chat.youLabel}</span>
+              <p className="bubble bubble-us max-w-full px-3.5 py-2 text-[0.85rem]">{chat.you}</p>
+            </div>
+            <div className="flex flex-col items-start gap-1">
+              <span className="bubble-meta">{chat.partnerName}</span>
+              <p className="bubble bubble-them max-w-full border-dashed px-3.5 py-2 text-[0.85rem] italic text-muted">
+                {chat.lockNote}
+              </p>
+            </div>
+          </div>
+        ) : (
+          <div className="flex flex-1 flex-col gap-2.5 pt-1">
+            {features.map((feature, index) => (
+              <p key={feature.title} className="phone-row">
+                <span
+                  className={`size-2.5 shrink-0 rounded-full ${
+                    index % 2 === 0 ? "bg-candy" : "bg-ember"
+                  }`}
+                />
+                {feature.title}
+              </p>
+            ))}
+            <p className="phone-row justify-center border-dashed text-muted">+</p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+/** A single ember check for the glimpse's feature bullets. */
+function CheckGlyph() {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      width="15"
+      height="15"
+      aria-hidden="true"
+      focusable="false"
+      className="mt-1 shrink-0 text-ember"
+    >
+      <path
+        d="M2.8 8.6l3.4 3.4 7-8"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+/**
+ * One landing block per app: the pitch on one side, the phone on the other,
+ * alternating sides down the page. Everything is derived from the catalog —
+ * a new app gets its glimpse for free.
+ */
+export function AppGlimpse({
+  app,
+  lang,
+  dict,
+  flip,
+}: {
+  app: CoupleApp;
+  lang: Locale;
+  dict: Dictionary;
+  flip: boolean;
+}) {
+  const released = app.status === "released";
+  const tagline = localized(app.tagline, lang);
+  const description = localized(app.description, lang);
+  const features = localized(app.features, lang);
+
+  return (
+    <article className="grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2">
+      <div>
+        <p className="flex flex-wrap items-center gap-2">
+          <span className={`chip ${released ? "chip-live" : "chip-soon"}`}>
+            <DuoMark state={released ? "available" : "soon"} />
+            {released ? dict.statuses.released : dict.home.comingSoonTag}
+          </span>
+          <span className="chip">{dict.categories[app.category]}</span>
+        </p>
+
+        <h3 className="mt-5 font-display text-[2rem] font-semibold leading-tight tracking-tight sm:text-[2.4rem]">
+          <Link href={`/${lang}/apps/${app.slug}`} className="link-title">
+            {app.name}
+          </Link>
+        </h3>
+        <p className="t-lead mt-3">{tagline}</p>
+        <p className="prose mt-4 text-muted">{description}</p>
+
+        <ul className="mt-6 flex list-none flex-col gap-2.5">
+          {features.map((feature) => (
+            <li key={feature.title} className="flex items-start gap-2.5 text-[0.98rem]">
+              <CheckGlyph />
+              {feature.title}
+            </li>
+          ))}
+        </ul>
+
+        <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-4">
+          <Link href={`/${lang}/apps/${app.slug}`} className="btn btn-primary">
+            {interpolate(dict.home.glimpseCta, { name: app.name })}
+          </Link>
+          {released && <StoreBadges app={app} dict={dict} size="compact" />}
+        </div>
+      </div>
+
+      <div className={`justify-self-center ${flip ? "lg:order-first" : ""}`}>
+        <PhoneMock app={app} lang={lang} dict={dict} />
+      </div>
+    </article>
+  );
+}

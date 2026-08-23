@@ -58,7 +58,7 @@ export function AppsBrowser({
           onChange={(event) => setQuery(event.target.value)}
           placeholder={dict.appsIndex.searchPlaceholder}
           // 1rem exactly: anything smaller makes iOS Safari zoom the page on focus.
-          className="mt-2 w-full rounded-full border border-line bg-surface px-5 py-3 text-[1rem] text-ink placeholder:text-muted focus:border-iris"
+          className="mt-2 w-full rounded-full border border-line bg-surface px-5 py-3 text-[1rem] text-ink placeholder:text-muted focus:border-candy"
         />
       </div>
 

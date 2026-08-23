@@ -58,7 +58,7 @@ export function LanguageSwitcher({
                 }}
                 className={`block rounded-full px-3 py-2 font-display text-[0.9rem] transition-colors ${
                   active
-                    ? "bg-iris-wash font-semibold text-iris"
+                    ? "bg-candy-wash font-semibold text-candy"
                     : "text-muted hover:bg-sunken hover:text-ink"
                 }`}
               >

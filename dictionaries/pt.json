@@ -3,28 +3,28 @@
     "siteName": "TheCoupleApp",
     "titleTemplate": "%s — TheCoupleApp",
     "home": {
-      "title": "TheCoupleApp — Uma biblioteca de apps para casais",
-      "description": "Uma marca, muitos apps pequenos — cada um resolve um problema real dos casais: comunicação, planejamento, memórias, finanças e mais."
+      "title": "TheCoupleApp — Um app para casais para cada parte do relacionamento",
+      "description": "TheCoupleApp é uma biblioteca de apps para casais: apps pequenos e focados que resolvem um problema real cada — comunicação, planejamento, memórias, finanças e mais. Grátis no iOS e Android."
     },
     "apps": {
-      "title": "Todos os apps",
-      "description": "Explore a biblioteca completa do TheCoupleApp — apps já disponíveis para baixar e os próximos lançamentos para casais."
+      "title": "Todos os apps para casais",
+      "description": "Navegue pela biblioteca completa de apps para casais — os que você pode baixar hoje e os que estão a caminho."
     },
     "about": {
       "title": "Sobre",
-      "description": "Por que construímos uma biblioteca de apps focados para casais em vez de um único app sobrecarregado."
+      "description": "Por que a TheCoupleApp constrói uma biblioteca de apps para casais pequenos e focados em vez de um único app inchado."
     },
     "contact": {
       "title": "Contato",
-      "description": "Fale com a equipe do TheCoupleApp — suporte, feedback e parcerias."
+      "description": "Fale com a TheCoupleApp — suporte, feedback e parcerias sobre nossos apps para casais."
     },
     "privacy": {
       "title": "Política de privacidade",
-      "description": "Como o TheCoupleApp coleta, usa e protege seus dados em nossos apps e em nosso site."
+      "description": "Como a TheCoupleApp coleta, usa e protege seus dados em nossos apps para casais e no site."
     },
     "terms": {
       "title": "Termos de uso",
-      "description": "Os termos que regem o uso dos sites e apps do TheCoupleApp."
+      "description": "Os termos que regem o uso dos apps para casais e sites da TheCoupleApp."
     }
   },
   "nav": {
@@ -42,11 +42,14 @@
   },
   "home": {
     "heroTitle": "Cada parte do seu relacionamento, um app de cada vez",
-    "heroSubtitle": "O TheCoupleApp é uma biblioteca crescente de apps pequenos e focados para casais — cada um resolve um único problema muito bem.",
+    "heroAccent": "um app de cada vez",
+    "heroSubtitle": "TheCoupleApp é uma biblioteca crescente de apps para casais — apps pequenos e focados, cada um resolve um único problema muito bem.",
     "heroCta": "Explorar os apps",
     "releasedTitle": "Disponíveis agora",
     "comingSoonTitle": "Em breve",
     "comingSoonTag": "Em breve",
+    "appsGlimpseTitle": "Conheça os apps para casais",
+    "glimpseCta": "Conhecer o {name}",
     "libraryTitle": "A biblioteca, até agora",
     "libraryNote": "Um app para cada parte da relação. Hoje {filled} de {total} áreas têm app; as outras continuam livres.",
     "librarySlotOpen": "Livre",
@@ -91,11 +94,27 @@
         "q": "Em que idiomas este site está disponível?",
         "a": "Inglês, espanhol, francês, alemão, português, híndi e árabe. Use o seletor de idioma no rodapé para trocar."
       }
-    ]
+    ],
+    "ticker": [
+      "Um app para cada problema",
+      "Feito para exatamente duas pessoas",
+      "Privado por padrão",
+      "Grátis para baixar",
+      "A biblioteca não para de crescer"
+    ],
+    "chat": {
+      "promptLabel": "A pergunta de hoje",
+      "prompt": "Que pequeno gesto do seu par você ama em segredo?",
+      "youLabel": "Você",
+      "partnerName": "Sam",
+      "you": "O jeito que você narra os pensamentos do gato.",
+      "partner": "Seus shows de panqueca às 7 da manhã.",
+      "lockNote": "Selado até vocês dois responderem"
+    }
   },
   "appsIndex": {
-    "title": "Todos os apps",
-    "intro": "A biblioteca completa do TheCoupleApp — o que você pode baixar hoje e o que está a caminho.",
+    "title": "A biblioteca de apps para casais",
+    "intro": "Cada app para casais que já lançamos e o que vem por aí — todos feitos para exatamente duas pessoas.",
     "released": "Disponíveis",
     "comingSoon": "Em breve",
     "searchLabel": "Buscar apps",

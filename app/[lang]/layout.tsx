@@ -20,12 +20,9 @@ export async function generateStaticParams() {
   return locales.map((locale) => ({ lang: locale.code }));
 }
 
-/** Browser chrome follows the page ground in both themes. */
+/** Browser chrome follows the page ground — the site commits to one dark look. */
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f2f0f6" },
-    { media: "(prefers-color-scheme: dark)", color: "#131020" },
-  ],
+  themeColor: "#171111",
 };
 
 export async function generateMetadata({
