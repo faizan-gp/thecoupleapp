@@ -3,9 +3,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { AppCard, ComingSoonCard } from "@/components/apps/AppCard";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { getReleasedApps, getUpcomingApps } from "@/lib/apps";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { hasLocale } from "@/lib/i18n/locales";
+import { faqLd } from "@/lib/seo/json-ld";
 import { localeAlternates } from "@/lib/seo/metadata";
 
 export async function generateMetadata({
@@ -35,6 +37,8 @@ export default async function LandingPage({ params }: PageProps<"/[lang]">) {
 
   return (
     <>
+      <JsonLd data={faqLd(dict.home.faqItems)} />
+
       {/* 1. Hero — owns the page's single h1 */}
       <section className="py-12">
         <h1 className="max-w-3xl text-4xl font-bold">{dict.home.heroTitle}</h1>
@@ -77,7 +81,22 @@ export default async function LandingPage({ params }: PageProps<"/[lang]">) {
         </section>
       )}
 
-      {/* 4. The multi-app thesis */}
+      {/* 4. FAQ — mirrors the FAQPage JSON-LD above */}
+      <section aria-labelledby="faq-heading" className="py-12">
+        <h2 id="faq-heading" className="text-2xl font-bold">
+          {dict.home.faqTitle}
+        </h2>
+        <dl className="mt-6 space-y-4">
+          {dict.home.faqItems.map((item) => (
+            <div key={item.q}>
+              <dt className="font-semibold">{item.q}</dt>
+              <dd className="mt-1 max-w-2xl">{item.a}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+
+      {/* 5. The multi-app thesis */}
       <section aria-labelledby="why-heading" className="py-12">
         <h2 id="why-heading" className="text-2xl font-bold">
           {dict.home.whyTitle}

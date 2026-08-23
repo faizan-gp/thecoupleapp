@@ -35,7 +35,8 @@
     "main": "Navigation principale",
     "menu": "Menu",
     "language": "Langue",
-    "skipToContent": "Aller au contenu"
+    "skipToContent": "Aller au contenu",
+    "logoAlt": "Logo TheCoupleApp"
   },
   "home": {
     "heroTitle": "Chaque facette de votre relation, une application à la fois",
@@ -62,13 +63,39 @@
         "title": "En croissance constante",
         "body": "De nouvelles applications sortent régulièrement. La bibliothèque grandit avec votre relation."
       }
+    ],
+    "faqTitle": "Questions fréquentes",
+    "faqItems": [
+      {
+        "q": "TheCoupleApp, c'est une application ou plusieurs ?",
+        "a": "Plusieurs. TheCoupleApp est une bibliothèque de petites applications distinctes : chacune règle un seul problème du couple. Vous n'installez que celles qui correspondent à votre relation."
+      },
+      {
+        "q": "Combien coûtent les applications ?",
+        "a": "Toutes les applications sont gratuites au téléchargement. Certaines proposent une option payante — Duet, par exemple, a une bibliothèque de questions premium facultative."
+      },
+      {
+        "q": "Sur quels appareils fonctionnent les applications ?",
+        "a": "Les applications sont conçues pour iOS et Android, et sont publiées sur l'App Store et Google Play au fil des lancements."
+      },
+      {
+        "q": "Les deux partenaires doivent-ils installer l'application ?",
+        "a": "Pour les applications partagées comme Duet, oui : chacun répond sur son propre appareil, puis les réponses se déverrouillent pour les deux."
+      },
+      {
+        "q": "Dans quelles langues ce site est-il disponible ?",
+        "a": "Anglais, espagnol, français, allemand, portugais, hindi et arabe. Utilisez le sélecteur de langue en pied de page pour changer."
+      }
     ]
   },
   "appsIndex": {
     "title": "Toutes les applications",
     "intro": "La bibliothèque complète TheCoupleApp — ce que vous pouvez télécharger aujourd'hui et ce qui arrive.",
     "released": "Disponibles",
-    "comingSoon": "Bientôt"
+    "comingSoon": "Bientôt",
+    "searchLabel": "Rechercher une application",
+    "searchPlaceholder": "Rechercher par nom ou catégorie…",
+    "noResults": "Aucune application ne correspond à votre recherche."
   },
   "appDetail": {
     "featuresTitle": "Fonctionnalités",
@@ -76,14 +103,27 @@
     "getTheApp": "Obtenir l'application",
     "comingSoonNote": "Cette application n'est pas encore disponible — revenez bientôt.",
     "backToApps": "Toutes les applications",
-    "screenshotsTitle": "Captures d'écran"
+    "screenshotsTitle": "Captures d'écran",
+    "iconAlt": "Icône de l'application {name}"
   },
   "about": {
     "title": "À propos de TheCoupleApp",
     "body": [
       "TheCoupleApp est la marque ombrelle d'une bibliothèque grandissante d'applications pour les couples. Plutôt qu'une application qui essaie de tout faire, nous en publions beaucoup de petites — chacune résout très bien un problème précis.",
       "Communication, organisation, souvenirs, finances, bien-être, amusement : chaque facette d'une relation mérite un outil assez simple pour être vraiment utilisé."
-    ]
+    ],
+    "whoWeAreTitle": "Qui nous sommes",
+    "whoWeAreBody": [
+      "TheCoupleApp est un projet indépendant — ni une entreprise financée par des investisseurs, ni une grande équipe. Il existe parce que la plupart des applications pour couples essaient de tout faire à la fois et finissent par ne rien faire correctement.",
+      "Toute la bibliothèque repose sur une idée : une application doit être ouverte, utilisée deux minutes, puis fermée. Pas de fil d'actualité, pas de séries à entretenir, pas de scores à courir après."
+    ],
+    "whatWeDoTitle": "Ce que nous faisons",
+    "whatWeDoBody": [
+      "Nous concevons et publions de petites applications pour les couples, un problème à la fois : communication, organisation, souvenirs, finances, bien-être et loisirs. Chaque application arrive avec ses propres fonctions ciblées plutôt que comme un menu au sein d'un produit tentaculaire.",
+      "Toutes les applications sont gratuites au téléchargement sur iOS et Android, et certaines proposent une option payante. De nouvelles applications rejoignent la bibliothèque dès qu'elles sont prêtes."
+    ],
+    "contactTitle": "Nous écrire",
+    "contactBody": "Questions, retours ou idées de partenariat sont les bienvenus — écrivez-nous à"
   },
   "contact": {
     "title": "Contactez-nous",
@@ -108,11 +148,13 @@
     "appsCta": "Voir les applications"
   },
   "footer": {
-    "tagline": "Une bibliothèque d'applications pour les couples.",
     "navLabel": "Navigation du pied de page",
     "legalLabel": "Mentions légales",
     "languageLabel": "Langue",
-    "rights": "Tous droits réservés."
+    "rights": "Tous droits réservés.",
+    "description": "Une bibliothèque grandissante de petites applications ciblées pour les couples — une application par problème, sur iOS et Android.",
+    "sitemap": "Plan du site",
+    "socialLabel": "Réseaux sociaux"
   },
   "categories": {
     "communication": "Communication",
@@ -131,5 +173,16 @@
     "appStore": "Télécharger {name} sur l'App Store",
     "playStore": "Obtenir {name} sur Google Play",
     "web": "Ouvrir {name} sur le web"
+  },
+  "sitemapPage": {
+    "title": "Plan du site",
+    "description": "Toutes les pages de TheCoupleApp, réunies au même endroit.",
+    "intro": "La liste complète des pages de ce site, dans votre langue.",
+    "mainSection": "Pages principales",
+    "appsSection": "Applications",
+    "legalSection": "Mentions légales"
+  },
+  "ui": {
+    "backToTop": "Retour en haut"
   }
 }

@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import { notFound } from "next/navigation";
 
+import { BackToTop } from "@/components/layout/BackToTop";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { hasLocale, localeDir, locales } from "@/lib/i18n/locales";
-import { organizationLd, webSiteLd } from "@/lib/seo/json-ld";
+import { organizationLd, siteNavigationLd, webSiteLd } from "@/lib/seo/json-ld";
 import { siteUrl } from "@/lib/site";
 
 import "../globals.css";
@@ -58,6 +59,14 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
       <body className="flex min-h-screen flex-col bg-background text-foreground">
         <JsonLd data={organizationLd()} />
         <JsonLd data={webSiteLd(lang)} />
+        <JsonLd
+          data={siteNavigationLd([
+            { name: dict.nav.home, path: `/${lang}` },
+            { name: dict.nav.apps, path: `/${lang}/apps` },
+            { name: dict.nav.about, path: `/${lang}/about` },
+            { name: dict.nav.contact, path: `/${lang}/contact` },
+          ])}
+        />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:absolute focus:start-2 focus:top-2 focus:z-50 focus:rounded focus:border focus:bg-background focus:px-3 focus:py-2"
@@ -69,6 +78,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
           {children}
         </main>
         <Footer lang={lang} dict={dict} />
+        <BackToTop label={dict.ui.backToTop} />
       </body>
     </html>
   );

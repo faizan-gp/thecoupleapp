@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import type { Dictionary } from "@/lib/i18n/dictionaries";
@@ -17,7 +18,8 @@ export function Header({ lang, dict }: { lang: Locale; dict: Dictionary }) {
   return (
     <header className="border-b">
       <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-4">
-        <Link href={`/${lang}`} className="text-lg font-bold">
+        <Link href={`/${lang}`} className="flex items-center gap-2 text-lg font-bold">
+          <Image src="/icon.svg" alt={dict.nav.logoAlt} width={32} height={32} priority />
           {dict.meta.siteName}
         </Link>
 

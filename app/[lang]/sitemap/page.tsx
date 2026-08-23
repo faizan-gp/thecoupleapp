@@ -1,0 +1,91 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+
+import { JsonLd } from "@/components/seo/JsonLd";
+import { getAllApps } from "@/lib/apps";
+import { getDictionary } from "@/lib/i18n/dictionaries";
+import { hasLocale } from "@/lib/i18n/locales";
+import { breadcrumbLd } from "@/lib/seo/json-ld";
+import { localeAlternates } from "@/lib/seo/metadata";
+
+/**
+ * Human-readable sitemap — the browsable counterpart to /sitemap.xml. Every
+ * indexable page in the current locale, one hop from the footer.
+ */
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  if (!hasLocale(lang)) notFound();
+  const dict = await getDictionary(lang);
+
+  return {
+    title: dict.sitemapPage.title,
+    description: dict.sitemapPage.description,
+    alternates: localeAlternates(lang, "/sitemap"),
+  };
+}
+
+export default async function SitemapPage({ params }: PageProps<"/[lang]/sitemap">) {
+  const { lang } = await params;
+  if (!hasLocale(lang)) notFound();
+  const dict = await getDictionary(lang);
+
+  const sections = [
+    {
+      heading: dict.sitemapPage.mainSection,
+      links: [
+        { href: `/${lang}`, label: dict.nav.home },
+        { href: `/${lang}/apps`, label: dict.nav.apps },
+        { href: `/${lang}/about`, label: dict.nav.about },
+        { href: `/${lang}/contact`, label: dict.nav.contact },
+      ],
+    },
+    {
+      heading: dict.sitemapPage.appsSection,
+      links: getAllApps().map((app) => ({
+        href: `/${lang}/apps/${app.slug}`,
+        label: app.name,
+      })),
+    },
+    {
+      heading: dict.sitemapPage.legalSection,
+      links: [
+        { href: `/${lang}/privacy`, label: dict.meta.privacy.title },
+        { href: `/${lang}/terms`, label: dict.meta.terms.title },
+      ],
+    },
+  ];
+
+  return (
+    <>
+      <JsonLd
+        data={breadcrumbLd([
+          { name: dict.nav.home, path: `/${lang}` },
+          { name: dict.sitemapPage.title, path: `/${lang}/sitemap` },
+        ])}
+      />
+
+      <h1 className="text-3xl font-bold">{dict.sitemapPage.title}</h1>
+      <p className="mt-3 max-w-2xl">{dict.sitemapPage.intro}</p>
+
+      {sections.map((section) => (
+        <section key={section.heading} className="mt-10">
+          <h2 className="text-2xl font-bold">{section.heading}</h2>
+          <ul className="mt-4 grid list-none grid-cols-1 gap-2 sm:grid-cols-2">
+            {section.links.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="hover:underline">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </>
+  );
+}

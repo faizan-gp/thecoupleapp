@@ -35,7 +35,8 @@
     "main": "Main navigation",
     "menu": "Menu",
     "language": "Language",
-    "skipToContent": "Skip to content"
+    "skipToContent": "Skip to content",
+    "logoAlt": "TheCoupleApp logo"
   },
   "home": {
     "heroTitle": "Every part of your relationship, one app at a time",
@@ -62,13 +63,39 @@
         "title": "Always growing",
         "body": "New apps ship regularly. The library grows with your relationship."
       }
+    ],
+    "faqTitle": "Frequently asked questions",
+    "faqItems": [
+      {
+        "q": "Is TheCoupleApp one app or several?",
+        "a": "Several. TheCoupleApp is a library of small, separate apps — each one solves a single problem for couples. You install only the ones that fit your relationship."
+      },
+      {
+        "q": "How much do the apps cost?",
+        "a": "Every app is free to download. Some add an optional paid upgrade — Duet, for example, has an optional premium question library."
+      },
+      {
+        "q": "Which devices do the apps run on?",
+        "a": "The apps are built for iOS and Android, and are listed on the App Store and Google Play as they launch."
+      },
+      {
+        "q": "Do both partners need to install the app?",
+        "a": "For shared apps like Duet, yes — each partner answers on their own device, and the answers unlock for both."
+      },
+      {
+        "q": "What languages is this site available in?",
+        "a": "English, Spanish, French, German, Portuguese, Hindi and Arabic. Use the language switcher in the footer to change it."
+      }
     ]
   },
   "appsIndex": {
     "title": "All apps",
     "intro": "The complete TheCoupleApp library — what you can download today and what is on the way.",
     "released": "Released",
-    "comingSoon": "Coming soon"
+    "comingSoon": "Coming soon",
+    "searchLabel": "Search apps",
+    "searchPlaceholder": "Search by name or category…",
+    "noResults": "No apps match your search."
   },
   "appDetail": {
     "featuresTitle": "Features",
@@ -76,14 +103,27 @@
     "getTheApp": "Get the app",
     "comingSoonNote": "This app is not released yet — check back soon.",
     "backToApps": "All apps",
-    "screenshotsTitle": "Screenshots"
+    "screenshotsTitle": "Screenshots",
+    "iconAlt": "{name} app icon"
   },
   "about": {
     "title": "About TheCoupleApp",
     "body": [
       "TheCoupleApp is an umbrella brand for a growing library of apps for couples. Instead of one app that tries to do everything, we ship many small ones — each solving one specific problem really well.",
       "Communication, planning, memories, finances, wellness, fun: every area of a relationship deserves a tool that is simple enough to actually get used."
-    ]
+    ],
+    "whoWeAreTitle": "Who we are",
+    "whoWeAreBody": [
+      "TheCoupleApp is an independent project — not a venture-backed company or a large team. It exists because most relationship apps try to do everything at once and end up doing none of it well.",
+      "The whole library is built around one idea: an app should be opened, used for a couple of minutes, and closed. No feeds, no streaks to protect, no scores to chase."
+    ],
+    "whatWeDoTitle": "What we do",
+    "whatWeDoBody": [
+      "We design and publish small apps for couples, one problem at a time — communication, planning, memories, finances, wellness and fun. Each app ships with its own focused feature set instead of becoming a menu inside one large product.",
+      "Every app is free to download on iOS and Android, and some offer an optional paid upgrade. New apps join the library as they are ready."
+    ],
+    "contactTitle": "Get in touch",
+    "contactBody": "Questions, feedback or partnership ideas are welcome — email us at"
   },
   "contact": {
     "title": "Contact us",
@@ -108,11 +148,13 @@
     "appsCta": "Browse the apps"
   },
   "footer": {
-    "tagline": "A library of apps for couples.",
     "navLabel": "Footer navigation",
     "legalLabel": "Legal",
     "languageLabel": "Language",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "description": "A growing library of small, focused apps for couples — one app per problem, on iOS and Android.",
+    "sitemap": "Sitemap",
+    "socialLabel": "Social media"
   },
   "categories": {
     "communication": "Communication",
@@ -131,5 +173,16 @@
     "appStore": "Download {name} on the App Store",
     "playStore": "Get {name} on Google Play",
     "web": "Open {name} on the web"
+  },
+  "sitemapPage": {
+    "title": "Sitemap",
+    "description": "Every page on TheCoupleApp, listed in one place.",
+    "intro": "A complete list of the pages on this site, in your language.",
+    "mainSection": "Main pages",
+    "appsSection": "Apps",
+    "legalSection": "Legal"
+  },
+  "ui": {
+    "backToTop": "Back to top"
   }
 }

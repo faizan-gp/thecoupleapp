@@ -7,6 +7,7 @@ import { StoreBadges } from "@/components/apps/StoreBadges";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getAllApps, getAppBySlug, localized } from "@/lib/apps";
 import { getDictionary } from "@/lib/i18n/dictionaries";
+import { interpolate } from "@/lib/i18n/interpolate";
 import { hasLocale, locales } from "@/lib/i18n/locales";
 import { breadcrumbLd, faqLd, softwareApplicationLd } from "@/lib/seo/json-ld";
 import { localeAlternates } from "@/lib/seo/metadata";
@@ -75,7 +76,14 @@ export default async function AppDetailPage({ params }: PageProps<"/[lang]/apps/
 
       {/* Hero */}
       <section className="flex items-start gap-5">
-        <Image src={app.icon} alt="" width={80} height={80} priority className="rounded-xl" />
+        <Image
+          src={app.icon}
+          alt={interpolate(dict.appDetail.iconAlt, { name: app.name })}
+          width={80}
+          height={80}
+          priority
+          className="rounded-xl"
+        />
         <div>
           <h1 className="text-3xl font-bold">
             {app.name} — {tagline}

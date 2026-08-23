@@ -51,8 +51,3 @@ export async function getDictionary(locale: Locale): Promise<Dictionary> {
   const partial = await loaders[locale]();
   return withFallback(locale, partial, en) as Dictionary;
 }
-
-/** Tiny `{name}`-style interpolation for dictionary strings. */
-export function interpolate(template: string, values: Record<string, string>): string {
-  return template.replace(/\{(\w+)\}/g, (_, key: string) => values[key] ?? `{${key}}`);
-}

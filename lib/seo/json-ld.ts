@@ -1,7 +1,7 @@
 import type { CoupleApp } from "@/content/apps";
 import { localized } from "@/lib/apps";
 import type { Locale } from "@/lib/i18n/locales";
-import { absoluteUrl, siteUrl } from "@/lib/site";
+import { absoluteUrl, siteUrl, socialLinks, supportEmail } from "@/lib/site";
 
 /**
  * schema.org builders. Rendered server-side via <JsonLd /> so structured data
@@ -18,6 +18,33 @@ export function organizationLd() {
     name: SITE_NAME,
     url: siteUrl,
     logo: absoluteUrl("/icon.svg"),
+    email: supportEmail,
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      email: supportEmail,
+      availableLanguage: "English",
+    },
+    // Omitted entirely while socialLinks is empty — an empty sameAs array is
+    // worse than no sameAs at all.
+    ...(socialLinks.length > 0 ? { sameAs: socialLinks.map((link) => link.url) } : {}),
+  };
+}
+
+/**
+ * The header/footer navigation, expressed as SiteNavigationElement so search
+ * engines can surface the site's main sections as sitelinks.
+ */
+export function siteNavigationLd(items: { name: string; path: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "SiteNavigationElement",
+      position: index + 1,
+      name: item.name,
+      url: absoluteUrl(item.path),
+    })),
   };
 }
 

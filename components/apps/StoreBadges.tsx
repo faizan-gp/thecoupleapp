@@ -1,5 +1,6 @@
 import type { CoupleApp } from "@/content/apps";
-import { interpolate, type Dictionary } from "@/lib/i18n/dictionaries";
+import type { Dictionary } from "@/lib/i18n/dictionaries";
+import { interpolate } from "@/lib/i18n/interpolate";
 
 /**
  * Store links as real anchors with descriptive accessible names

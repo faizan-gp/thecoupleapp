@@ -14,3 +14,14 @@ export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? fallbackSiteUrl).rep
 export function absoluteUrl(path: string): string {
   return `${siteUrl}${path.startsWith("/") ? path : `/${path}`}`;
 }
+
+/** Public support address — shown in the footer and on the contact page. */
+export const supportEmail = "hello@thecoupleapp.com";
+
+/**
+ * Live social profiles, rendered in the footer and published as Organization
+ * `sameAs`. Deliberately empty: there are no profiles yet, and linking to
+ * ones that don't exist creates dead links and an invalid sameAs graph.
+ * Add a real, live profile URL here and it appears in both places.
+ */
+export const socialLinks: { label: string; url: string }[] = [];

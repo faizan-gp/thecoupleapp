@@ -6,6 +6,7 @@ import { getDictionary } from "@/lib/i18n/dictionaries";
 import { hasLocale } from "@/lib/i18n/locales";
 import { breadcrumbLd } from "@/lib/seo/json-ld";
 import { localeAlternates } from "@/lib/seo/metadata";
+import { supportEmail } from "@/lib/site";
 
 export async function generateMetadata({
   params,
@@ -42,6 +43,30 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
           {paragraph}
         </p>
       ))}
+
+      {[
+        { heading: dict.about.whoWeAreTitle, body: dict.about.whoWeAreBody },
+        { heading: dict.about.whatWeDoTitle, body: dict.about.whatWeDoBody },
+      ].map((section) => (
+        <section key={section.heading} className="mt-10">
+          <h2 className="text-2xl font-bold">{section.heading}</h2>
+          {section.body.map((paragraph) => (
+            <p key={paragraph} className="mt-4 max-w-2xl">
+              {paragraph}
+            </p>
+          ))}
+        </section>
+      ))}
+
+      <section className="mt-10">
+        <h2 className="text-2xl font-bold">{dict.about.contactTitle}</h2>
+        <p className="mt-4 max-w-2xl">
+          {dict.about.contactBody}{" "}
+          <a href={`mailto:${supportEmail}`} className="font-semibold underline">
+            {supportEmail}
+          </a>
+        </p>
+      </section>
     </>
   );
 }
