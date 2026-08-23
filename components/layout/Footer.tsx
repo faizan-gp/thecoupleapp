@@ -69,6 +69,11 @@ export function Footer({ lang, dict }: { lang: Locale; dict: Dictionary }) {
                   {dict.meta.terms.title}
                 </Link>
               </li>
+              <li>
+                <Link href={`/${lang}/editorial-guidelines`} className="hover:underline">
+                  {dict.editorial.title}
+                </Link>
+              </li>
             </ul>
           </nav>
         </div>

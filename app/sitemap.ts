@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact",
     "/privacy",
     "/terms",
+    "/editorial-guidelines",
     "/sitemap",
   ];
   const lastModified = new Date();

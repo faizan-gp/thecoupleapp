@@ -212,5 +212,42 @@
       "COMSATS University",
       "National University of Sciences and Technology (NUST)"
     ]
+  },
+  "editorial": {
+    "title": "Redaktionelle Grundsätze",
+    "description": "Wie die App-Beschreibungen, Funktionslisten und FAQs von TheCoupleApp entstehen, übersetzt und korrigiert werden.",
+    "intro": "Diese Grundsätze gelten für die Texte auf dieser Website: App-Beschreibungen, Funktionslisten, häufige Fragen und deren Übersetzungen. Diese Website veröffentlicht keine Nachrichten, keine Tests fremder Produkte und keine gesponserten Beiträge.",
+    "sections": [
+      {
+        "heading": "Wer diese Inhalte schreibt",
+        "body": [
+          "Alles hier wird von der Person geschrieben und gepflegt, die auch die Apps baut. Es gibt kein separates Redaktionsteam, und keine Inhalte stammen von Werbekunden oder Dritten."
+        ]
+      },
+      {
+        "heading": "Richtigkeit",
+        "body": [
+          "App-Beschreibungen schildern, was eine App heute kann — nicht, was geplant ist. Noch nicht veröffentlichte Apps sind als demnächst gekennzeichnet und werden nie als verfügbar dargestellt.",
+          "Angaben, die sich ändern — Preis, Plattformen, Verfügbarkeit in den Stores — liegen in einem einzigen Katalog, aus dem alle Seiten erzeugt werden. Eine Korrektur erfolgt an einer Stelle und wirkt überall."
+        ]
+      },
+      {
+        "heading": "Was hier nicht veröffentlicht wird",
+        "body": [
+          "Kundenstimmen, Bewertungen, Rezensionszahlen, Auszeichnungen oder Empfehlungen erscheinen nur, wenn sie echt und belegbar sind. Wo es keine gibt, wird nichts gezeigt, statt welche zu erfinden.",
+          "Keine bezahlte Platzierung. Gelistet sind ausschließlich unsere eigenen Apps, und niemand kann dafür bezahlen, in der Sammlung aufzutauchen oder günstiger beschrieben zu werden."
+        ]
+      },
+      {
+        "heading": "Übersetzungen",
+        "body": [
+          "Englisch ist die Ausgangssprache. Andere Sprachen werden sinngemäß statt wörtlich übersetzt, Produktnamen bleiben unübersetzt.",
+          "Fehlt für einen Text die Übersetzung, erscheint an dieser Stelle das englische Original statt einer Lücke."
+        ]
+      }
+    ],
+    "correctionsTitle": "Korrekturen",
+    "correctionsBody": "Wenn auf dieser Website etwas falsch oder veraltet ist, melde es bitte — es wird korrigiert. Schreib an",
+    "authorNote": "Die Inhalte dieser Website werden ihrem Autor zugeordnet:"
   }
 }

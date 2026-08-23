@@ -212,5 +212,42 @@
       "COMSATS University",
       "National University of Sciences and Technology (NUST)"
     ]
+  },
+  "editorial": {
+    "title": "Diretrizes editoriais",
+    "description": "Como as descrições de apps, listas de recursos e perguntas frequentes do TheCoupleApp são escritas, traduzidas e corrigidas.",
+    "intro": "Estas diretrizes valem para o conteúdo escrito deste site: descrições de apps, listas de recursos, perguntas frequentes e as traduções de tudo isso. Este site não publica notícias, análises de produtos de outras empresas nem artigos patrocinados.",
+    "sections": [
+      {
+        "heading": "Quem escreve este conteúdo",
+        "body": [
+          "Tudo aqui é escrito e mantido pela pessoa que desenvolve os apps. Não há uma equipe editorial separada, e nenhum conteúdo vem de anunciantes ou de terceiros."
+        ]
+      },
+      {
+        "heading": "Precisão",
+        "body": [
+          "As descrições contam o que um app faz hoje, não o que se planeja fazer. Apps que ainda não foram lançados são marcados como em breve e nunca aparecem como disponíveis.",
+          "Dados que mudam — preço, plataformas, disponibilidade nas lojas — ficam em um único catálogo a partir do qual todas as páginas são geradas, então uma correção é feita em um só lugar e vale em todos os pontos onde aparece."
+        ]
+      },
+      {
+        "heading": "O que não é publicado aqui",
+        "body": [
+          "Nenhum depoimento, nota, contagem de avaliações, prêmio ou recomendação aparece sem ser real e comprovável. Quando não existem, nada é mostrado em vez de inventá-los.",
+          "Sem posicionamento pago. Os únicos apps listados são os nossos, e ninguém pode pagar para entrar na biblioteca ou para ser descrito de forma mais favorável."
+        ]
+      },
+      {
+        "heading": "Traduções",
+        "body": [
+          "O inglês é o idioma de origem. Os demais idiomas são traduzidos para transmitir o mesmo sentido, não palavra por palavra, e os nomes de produtos não são traduzidos.",
+          "Se faltar a tradução de algum texto, o original em inglês é exibido no lugar, nunca um espaço vazio."
+        ]
+      }
+    ],
+    "correctionsTitle": "Correções",
+    "correctionsBody": "Se algo neste site estiver incorreto ou desatualizado, avise que será corrigido. Escreva para",
+    "authorNote": "O conteúdo deste site é atribuído ao seu autor:"
   }
 }

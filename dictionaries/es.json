@@ -212,5 +212,42 @@
       "COMSATS University",
       "National University of Sciences and Technology (NUST)"
     ]
+  },
+  "editorial": {
+    "title": "Normas editoriales",
+    "description": "Cómo se escriben, traducen y corrigen las descripciones de apps, las listas de funciones y las preguntas frecuentes de TheCoupleApp.",
+    "intro": "Estas normas se aplican al contenido escrito de este sitio: descripciones de apps, listas de funciones, preguntas frecuentes y las traducciones de todo ello. Este sitio no publica noticias, análisis de productos de otras empresas ni artículos patrocinados.",
+    "sections": [
+      {
+        "heading": "Quién escribe este contenido",
+        "body": [
+          "Todo lo que hay aquí lo escribe y mantiene la persona que crea las apps. No hay un equipo editorial aparte, y ningún contenido procede de anunciantes ni de terceros."
+        ]
+      },
+      {
+        "heading": "Exactitud",
+        "body": [
+          "Las descripciones explican lo que una app hace hoy, no lo que está previsto que haga. Las apps que aún no se han publicado se marcan como próximamente y nunca se presentan como disponibles.",
+          "Los datos que cambian —precio, plataformas, disponibilidad en las tiendas— se guardan en un único catálogo a partir del cual se generan todas las páginas, de modo que una corrección se hace en un solo sitio y surte efecto en todas partes."
+        ]
+      },
+      {
+        "heading": "Lo que no se publica aquí",
+        "body": [
+          "No se muestran testimonios, valoraciones, recuentos de reseñas, premios ni recomendaciones salvo que sean reales y se puedan acreditar. Cuando no los hay, no se muestra ninguno en lugar de inventarlos.",
+          "Sin posicionamiento pagado. Las únicas apps que aparecen son las nuestras, y nadie puede pagar por figurar en la biblioteca ni por recibir una descripción más favorable."
+        ]
+      },
+      {
+        "heading": "Traducciones",
+        "body": [
+          "El inglés es el idioma de origen. Los demás idiomas se traducen para transmitir el mismo significado, no palabra por palabra, y los nombres de producto no se traducen.",
+          "Si falta la traducción de algún texto, se muestra el original en inglés en su lugar, nunca un espacio vacío."
+        ]
+      }
+    ],
+    "correctionsTitle": "Correcciones",
+    "correctionsBody": "Si algo en este sitio es inexacto o está desactualizado, comunícalo y se corregirá. Escribe a",
+    "authorNote": "El contenido de este sitio se atribuye a su autor:"
   }
 }

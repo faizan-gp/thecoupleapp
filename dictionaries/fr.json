@@ -212,5 +212,42 @@
       "COMSATS University",
       "National University of Sciences and Technology (NUST)"
     ]
+  },
+  "editorial": {
+    "title": "Charte éditoriale",
+    "description": "Comment les descriptions d'applications, les listes de fonctionnalités et les FAQ de TheCoupleApp sont rédigées, traduites et corrigées.",
+    "intro": "Cette charte couvre le contenu rédactionnel de ce site : descriptions d'applications, listes de fonctionnalités, questions fréquentes et leurs traductions. Ce site ne publie ni actualités, ni tests de produits d'autres entreprises, ni articles sponsorisés.",
+    "sections": [
+      {
+        "heading": "Qui rédige ce contenu",
+        "body": [
+          "Tout ce qui figure ici est rédigé et maintenu par la personne qui développe les applications. Il n'y a pas d'équipe éditoriale distincte, et aucun contenu ne provient d'annonceurs ou de tiers."
+        ]
+      },
+      {
+        "heading": "Exactitude",
+        "body": [
+          "Les descriptions présentent ce qu'une application fait aujourd'hui, non ce qu'elle est censée faire plus tard. Les applications non publiées portent la mention à venir et ne sont jamais présentées comme disponibles.",
+          "Les informations susceptibles de changer — prix, plateformes, disponibilité sur les stores — sont conservées dans un catalogue unique à partir duquel chaque page est générée : une correction se fait à un seul endroit et s'applique partout."
+        ]
+      },
+      {
+        "heading": "Ce qui n'est pas publié ici",
+        "body": [
+          "Aucun témoignage, note, nombre d'avis, prix ou recommandation n'est affiché s'il n'est pas réel et vérifiable. Lorsqu'il n'y en a pas, rien n'est affiché plutôt que d'en inventer.",
+          "Aucun placement payant. Les seules applications présentées sont les nôtres, et personne ne peut payer pour figurer dans la bibliothèque ou pour être décrit plus favorablement."
+        ]
+      },
+      {
+        "heading": "Traductions",
+        "body": [
+          "L'anglais est la langue source. Les autres langues sont traduites pour restituer le même sens plutôt que mot à mot, et les noms de produits ne sont pas traduits.",
+          "Si la traduction d'un texte manque, l'original en anglais est affiché à la place, jamais un espace vide."
+        ]
+      }
+    ],
+    "correctionsTitle": "Corrections",
+    "correctionsBody": "Si une information de ce site est inexacte ou obsolète, merci de la signaler : elle sera corrigée. Écrivez à",
+    "authorNote": "Le contenu de ce site est attribué à son auteur :"
   }
 }

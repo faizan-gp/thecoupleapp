@@ -212,5 +212,42 @@
       "COMSATS University",
       "National University of Sciences and Technology (NUST)"
     ]
+  },
+  "editorial": {
+    "title": "Editorial guidelines",
+    "description": "How the app descriptions, feature lists and FAQs on TheCoupleApp are written, translated and corrected.",
+    "intro": "These guidelines cover the written content on this site: app descriptions, feature lists, frequently asked questions, and the translations of all of it. This site does not publish news, reviews of other companies' products, or sponsored articles.",
+    "sections": [
+      {
+        "heading": "Who writes this content",
+        "body": [
+          "Everything here is written and maintained by the person who builds the apps. There is no separate editorial team, and no content is contributed by advertisers or other third parties."
+        ]
+      },
+      {
+        "heading": "Accuracy",
+        "body": [
+          "App descriptions describe what an app does today, not what it is planned to do. Apps that have not shipped are labelled as coming soon and are never presented as available.",
+          "Details that change — price, platforms, store availability — live in a single catalog that every page is generated from, so a correction is made in one place and takes effect everywhere it appears."
+        ]
+      },
+      {
+        "heading": "What is not published here",
+        "body": [
+          "No testimonials, ratings, review counts, awards or endorsements appear unless they are real and can be substantiated. Where there are none, none are shown rather than inventing them.",
+          "No paid placement. The only apps listed are our own, and no one can pay to appear in the library or to be described more favourably."
+        ]
+      },
+      {
+        "heading": "Translations",
+        "body": [
+          "English is the source language. Other languages are translated to carry the same meaning rather than word for word, and product names are left untranslated.",
+          "If a translation is missing for any piece of text, the English original is shown in its place rather than an empty space."
+        ]
+      }
+    ],
+    "correctionsTitle": "Corrections",
+    "correctionsBody": "If anything on this site is inaccurate or out of date, please report it and it will be corrected. Write to",
+    "authorNote": "Content on this site is attributed to its author:"
   }
 }
