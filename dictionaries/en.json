@@ -255,5 +255,12 @@
     "correctionsTitle": "Corrections",
     "correctionsBody": "If anything on this site is inaccurate or out of date, please report it and it will be corrected. Write to",
     "authorNote": "Content on this site is attributed to its author:"
+  },
+  "hourStoryLegal": {
+    "privacyDescription": "How HourStory collects, uses and protects your data.",
+    "termsDescription": "The terms that govern your use of HourStory.",
+    "englishNotice": "This legal document is available in English only. Where a translation would otherwise apply on this site, the English version shown here governs.",
+    "viewPrivacy": "Read the Privacy Policy",
+    "viewTerms": "Read the Terms of Service"
   }
 }

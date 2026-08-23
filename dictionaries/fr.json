@@ -255,5 +255,12 @@
     "correctionsTitle": "Corrections",
     "correctionsBody": "Si une information de ce site est inexacte ou obsolète, merci de la signaler : elle sera corrigée. Écrivez à",
     "authorNote": "Le contenu de ce site est attribué à son auteur :"
+  },
+  "hourStoryLegal": {
+    "privacyDescription": "Comment HourStory collecte, utilise et protège vos données.",
+    "termsDescription": "Les conditions qui régissent votre utilisation d'HourStory.",
+    "englishNotice": "Ce document juridique n'est disponible qu'en anglais. Là où une traduction s'appliquerait habituellement sur ce site, c'est la version anglaise présentée ici qui fait foi.",
+    "viewPrivacy": "Lire la politique de confidentialité",
+    "viewTerms": "Lire les conditions d'utilisation"
   }
 }
