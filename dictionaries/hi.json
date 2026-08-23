@@ -33,6 +33,7 @@
     "about": "हमारे बारे में",
     "contact": "संपर्क",
     "main": "मुख्य नेविगेशन",
+    "breadcrumb": "ब्रेडक्रंब",
     "menu": "मेनू",
     "language": "भाषा",
     "skipToContent": "सामग्री पर जाएँ",
@@ -46,6 +47,9 @@
     "releasedTitle": "अभी उपलब्ध",
     "comingSoonTitle": "जल्द आ रहे हैं",
     "comingSoonTag": "जल्द आ रहा है",
+    "libraryTitle": "अब तक की लाइब्रेरी",
+    "libraryNote": "रिश्ते के हर हिस्से के लिए एक ऐप। आज {total} में से {filled} क्षेत्रों में ऐप है — बाकी अभी खाली हैं।",
+    "librarySlotOpen": "खाली",
     "whyTitle": "एक भारी ऐप नहीं, लाइब्रेरी क्यों",
     "whyItems": [
       {
@@ -96,7 +100,8 @@
     "comingSoon": "जल्द आ रहे हैं",
     "searchLabel": "ऐप्स खोजें",
     "searchPlaceholder": "नाम या श्रेणी से खोजें…",
-    "noResults": "आपकी खोज से कोई ऐप मेल नहीं खाता।"
+    "noResults": "आपकी खोज से कोई ऐप मेल नहीं खाता।",
+    "resultCount": "{count} ऐप मिले"
   },
   "appDetail": {
     "featuresTitle": "विशेषताएँ",
@@ -105,7 +110,8 @@
     "comingSoonNote": "यह ऐप अभी रिलीज़ नहीं हुआ है — जल्द वापस देखें।",
     "backToApps": "सभी ऐप्स",
     "screenshotsTitle": "स्क्रीनशॉट",
-    "iconAlt": "{name} ऐप का आइकन"
+    "iconAlt": "{name} ऐप का आइकन",
+    "moreApps": "लाइब्रेरी से और"
   },
   "about": {
     "title": "TheCoupleApp के बारे में",
@@ -161,7 +167,8 @@
     "rights": "सर्वाधिकार सुरक्षित।",
     "description": "कपल्स के लिए छोटे और केंद्रित ऐप्स की बढ़ती लाइब्रेरी — हर समस्या के लिए एक ऐप, iOS और Android पर।",
     "sitemap": "साइटमैप",
-    "socialLabel": "सोशल मीडिया"
+    "socialLabel": "सोशल मीडिया",
+    "siteLabel": "साइट"
   },
   "categories": {
     "communication": "संवाद",

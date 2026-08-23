@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { AppCard, ComingSoonCard } from "@/components/apps/AppCard";
+import { AppCard, AppRow, FeaturedAppCard } from "@/components/apps/AppCard";
+import { LibraryBoard } from "@/components/home/LibraryBoard";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getReleasedApps, getUpcomingApps } from "@/lib/apps";
 import { getDictionary } from "@/lib/i18n/dictionaries";
@@ -40,75 +41,105 @@ export default async function LandingPage({ params }: PageProps<"/[lang]">) {
       <JsonLd data={faqLd(dict.home.faqItems)} />
 
       {/* 1. Hero — owns the page's single h1 */}
-      <section className="py-12">
-        <h1 className="max-w-3xl text-4xl font-bold">{dict.home.heroTitle}</h1>
-        <p className="mt-4 max-w-2xl text-lg">{dict.home.heroSubtitle}</p>
-        <Link
-          href="#released-apps"
-          className="mt-6 inline-block rounded border px-5 py-2 font-semibold hover:underline"
+      <section className="wrap pt-14 pb-12 sm:pt-24 sm:pb-16">
+        <h1 className="t-hero rise max-w-[15ch]">{dict.home.heroTitle}</h1>
+        <p
+          className="t-lead rise prose-tight mt-6"
+          style={{ animationDelay: "70ms" }}
         >
-          {dict.home.heroCta}
-        </Link>
+          {dict.home.heroSubtitle}
+        </p>
+        <div className="rise mt-8 flex flex-wrap gap-3" style={{ animationDelay: "140ms" }}>
+          <Link href={`/${lang}/apps`} className="btn btn-primary">
+            {dict.home.heroCta}
+          </Link>
+          <Link href={`/${lang}/about`} className="btn btn-quiet">
+            {dict.nav.about}
+          </Link>
+        </div>
       </section>
 
-      {/* 2. Released apps grid */}
-      <section id="released-apps" aria-labelledby="released-heading" className="py-12">
-        <h2 id="released-heading" className="text-2xl font-bold">
+      {/* 2. The library board — which parts of a relationship have an app yet */}
+      <LibraryBoard lang={lang} dict={dict} />
+
+      {/* 3. Released apps grid */}
+      <section
+        id="released-apps"
+        aria-labelledby="released-heading"
+        className="wrap border-t border-line py-14 sm:py-20"
+      >
+        <h2 id="released-heading" className="t-section">
           {dict.home.releasedTitle}
         </h2>
-        <ul className="mt-6 grid list-none grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <ul
+          className={
+            released.length === 1
+              ? "mt-8 list-none"
+              : "mt-8 grid list-none grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+          }
+        >
           {released.map((app) => (
             <li key={app.slug}>
-              <AppCard app={app} lang={lang} dict={dict} />
+              {released.length === 1 ? (
+                <FeaturedAppCard app={app} lang={lang} dict={dict} />
+              ) : (
+                <AppCard app={app} lang={lang} dict={dict} />
+              )}
             </li>
           ))}
         </ul>
       </section>
 
-      {/* 3. Coming soon — visually subordinate, never mixed into the grid above */}
+      {/* 4. Coming soon — visually subordinate, never mixed into the grid above */}
       {upcoming.length > 0 && (
-        <section aria-labelledby="coming-soon-heading" className="py-12">
-          <h2 id="coming-soon-heading" className="text-2xl font-bold">
+        <section
+          aria-labelledby="coming-soon-heading"
+          className="wrap border-t border-line py-14 sm:py-20"
+        >
+          <h2 id="coming-soon-heading" className="t-section">
             {dict.home.comingSoonTitle}
           </h2>
-          <ul className="mt-6 grid list-none grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-6 list-none border-t border-line">
             {upcoming.map((app) => (
               <li key={app.slug}>
-                <ComingSoonCard app={app} lang={lang} dict={dict} />
+                <AppRow app={app} lang={lang} dict={dict} />
               </li>
             ))}
           </ul>
         </section>
       )}
 
-      {/* 4. FAQ — mirrors the FAQPage JSON-LD above */}
-      <section aria-labelledby="faq-heading" className="py-12">
-        <h2 id="faq-heading" className="text-2xl font-bold">
+      {/* 5. The multi-app thesis — set on the recessed band so the argument
+             reads as a change of voice rather than another list of products. */}
+      <section id="why" aria-labelledby="why-heading" className="border-y border-line bg-sunken">
+        <div className="wrap py-14 sm:py-20">
+          <h2 id="why-heading" className="t-section prose-tight">
+            {dict.home.whyTitle}
+          </h2>
+          <ul className="mt-10 grid list-none grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-2">
+            {dict.home.whyItems.map((item) => (
+              <li key={item.title} className="border-t border-line-strong pt-5">
+                <h3 className="font-display text-[1.15rem] font-semibold">{item.title}</h3>
+                <p className="mt-2 text-muted">{item.body}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* 6. FAQ — mirrors the FAQPage JSON-LD above */}
+      <section aria-labelledby="faq-heading" className="wrap py-14 sm:py-20">
+        <h2 id="faq-heading" className="t-section">
           {dict.home.faqTitle}
         </h2>
-        <dl className="mt-6 space-y-4">
+        <dl className="mt-10 grid grid-cols-1 gap-x-10 gap-y-8 lg:grid-cols-2">
           {dict.home.faqItems.map((item) => (
-            <div key={item.q}>
-              <dt className="font-semibold">{item.q}</dt>
-              <dd className="mt-1 max-w-2xl">{item.a}</dd>
+            <div key={item.q} className="border-t border-line pt-5">
+              <dt className="font-display text-[1.05rem] font-semibold">{item.q}</dt>
+              <dd className="mt-2 text-muted">{item.a}</dd>
             </div>
           ))}
         </dl>
-      </section>
-
-      {/* 5. The multi-app thesis */}
-      <section aria-labelledby="why-heading" className="py-12">
-        <h2 id="why-heading" className="text-2xl font-bold">
-          {dict.home.whyTitle}
-        </h2>
-        <ul className="mt-6 grid list-none grid-cols-1 gap-6 sm:grid-cols-2">
-          {dict.home.whyItems.map((item) => (
-            <li key={item.title}>
-              <h3 className="font-semibold">{item.title}</h3>
-              <p className="mt-1">{item.body}</p>
-            </li>
-          ))}
-        </ul>
       </section>
     </>
   );

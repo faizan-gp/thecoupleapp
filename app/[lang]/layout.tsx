@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 
 import { BackToTop } from "@/components/layout/BackToTop";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { fontVariables } from "@/lib/fonts";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { hasLocale, localeDir, locales } from "@/lib/i18n/locales";
 import { organizationLd, siteNavigationLd, webSiteLd } from "@/lib/seo/json-ld";
@@ -13,16 +13,20 @@ import { siteUrl } from "@/lib/site";
 
 import "../globals.css";
 
-// Placeholder face — the design pass (M4, frontend-design skill) picks the
-// final display/text pairing incl. Devanagari + Arabic subsets.
-const sans = Geist({ variable: "--font-sans", subsets: ["latin"], display: "swap" });
-
 /** Pre-render every locale; unknown locales 404 instead of rendering. */
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ lang: locale.code }));
 }
+
+/** Browser chrome follows the page ground in both themes. */
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f2f0f6" },
+    { media: "(prefers-color-scheme: dark)", color: "#131020" },
+  ],
+};
 
 export async function generateMetadata({
   params,
@@ -55,8 +59,8 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
   const dict = await getDictionary(lang);
 
   return (
-    <html lang={lang} dir={localeDir(lang)} className={`${sans.variable} antialiased`}>
-      <body className="flex min-h-screen flex-col bg-background text-foreground">
+    <html lang={lang} dir={localeDir(lang)} className={`${fontVariables} antialiased`}>
+      <body className="flex min-h-screen flex-col bg-paper text-ink">
         <JsonLd data={organizationLd()} />
         <JsonLd data={webSiteLd(lang)} />
         <JsonLd
@@ -70,12 +74,13 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
         />
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:absolute focus:start-2 focus:top-2 focus:z-50 focus:rounded focus:border focus:bg-background focus:px-3 focus:py-2"
+          className="btn btn-primary sr-only focus:not-sr-only focus:absolute focus:start-4 focus:top-4 focus:z-50"
         >
           {dict.nav.skipToContent}
         </a>
         <Header lang={lang} dict={dict} />
-        <main id="main" className="mx-auto w-full max-w-5xl flex-1 px-4 py-10">
+        {/* Pages own their own gutter (.wrap) so a section can run full-bleed. */}
+        <main id="main" tabIndex={-1} className="flex-1 outline-none">
           {children}
         </main>
         <Footer lang={lang} dict={dict} />

@@ -26,16 +26,25 @@ export function BackToTop({ label }: { label: string }) {
       }}
       // Stays mounted and fades in, rather than being added to the DOM on
       // scroll: no layout churn, and the control is present for assistive tech
-      // and crawlers from the first paint. hidden:* keeps it out of the tab
-      // order while invisible.
-      className={`fixed bottom-6 end-6 z-40 rounded-full border bg-background px-4 py-3 text-sm font-semibold shadow-lg transition-opacity hover:underline ${
+      // and crawlers from the first paint. The invisible state also leaves the
+      // tab order, so it can't be focused while it cannot be seen.
+      className={`fixed bottom-6 end-6 z-40 flex h-11 w-11 items-center justify-center rounded-full border border-line-strong bg-surface text-ink shadow-lg transition-opacity hover:border-ink ${
         visible ? "opacity-100" : "pointer-events-none opacity-0"
       }`}
       tabIndex={visible ? undefined : -1}
       aria-hidden={visible ? undefined : true}
       aria-label={label}
     >
-      ↑ <span className="sr-only sm:not-sr-only">{label}</span>
+      <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false">
+        <path
+          d="M8 13V3.4M8 3.4L3.6 7.8M8 3.4l4.4 4.4"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.6"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
     </button>
   );
 }

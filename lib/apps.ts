@@ -1,4 +1,4 @@
-import { apps, type CoupleApp, type Localized } from "@/content/apps";
+import { appCategories, apps, type AppCategory, type CoupleApp, type Localized } from "@/content/apps";
 import { defaultLocale, type Locale } from "@/lib/i18n/locales";
 
 /**
@@ -20,6 +20,21 @@ export function getUpcomingApps(): CoupleApp[] {
 
 export function getAppBySlug(slug: string): CoupleApp | undefined {
   return apps.find((app) => app.slug === slug);
+}
+
+/** The library's areas, in presentation order. */
+export function getCategories(): AppCategory[] {
+  return appCategories;
+}
+
+/**
+ * The app occupying a category, or undefined while that part of the library is
+ * still open. Released apps win over unreleased ones if a category ever holds
+ * more than one.
+ */
+export function getAppForCategory(category: AppCategory): CoupleApp | undefined {
+  const inCategory = apps.filter((app) => app.category === category);
+  return inCategory.find((app) => app.status === "released") ?? inCategory[0];
 }
 
 /**

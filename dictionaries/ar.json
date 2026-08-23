@@ -33,6 +33,7 @@
     "about": "من نحن",
     "contact": "تواصل معنا",
     "main": "التنقل الرئيسي",
+    "breadcrumb": "مسار التنقل",
     "menu": "القائمة",
     "language": "اللغة",
     "skipToContent": "الانتقال إلى المحتوى",
@@ -46,6 +47,9 @@
     "releasedTitle": "متاحة الآن",
     "comingSoonTitle": "قريباً",
     "comingSoonTag": "قريباً",
+    "libraryTitle": "المكتبة حتى الآن",
+    "libraryNote": "تطبيق واحد لكل جانب من جوانب العلاقة. اليوم {filled} من {total} مجالات لها تطبيق، والبقية ما زالت شاغرة.",
+    "librarySlotOpen": "شاغر",
     "whyTitle": "لماذا مكتبة وليس تطبيقاً واحداً مثقلاً",
     "whyItems": [
       {
@@ -96,7 +100,8 @@
     "comingSoon": "قريباً",
     "searchLabel": "البحث في التطبيقات",
     "searchPlaceholder": "ابحث بالاسم أو الفئة…",
-    "noResults": "لا يوجد تطبيق يطابق بحثك."
+    "noResults": "لا يوجد تطبيق يطابق بحثك.",
+    "resultCount": "تم العثور على {count} تطبيق"
   },
   "appDetail": {
     "featuresTitle": "المميزات",
@@ -105,7 +110,8 @@
     "comingSoonNote": "لم يصدر هذا التطبيق بعد — عودا قريباً.",
     "backToApps": "جميع التطبيقات",
     "screenshotsTitle": "لقطات الشاشة",
-    "iconAlt": "أيقونة تطبيق {name}"
+    "iconAlt": "أيقونة تطبيق {name}",
+    "moreApps": "المزيد من المكتبة"
   },
   "about": {
     "title": "عن TheCoupleApp",
@@ -161,7 +167,8 @@
     "rights": "جميع الحقوق محفوظة.",
     "description": "مكتبة متنامية من تطبيقات صغيرة ومركّزة للأزواج — تطبيق واحد لكل مشكلة، على iOS وAndroid.",
     "sitemap": "خريطة الموقع",
-    "socialLabel": "وسائل التواصل"
+    "socialLabel": "وسائل التواصل",
+    "siteLabel": "الموقع"
   },
   "categories": {
     "communication": "التواصل",

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { Breadcrumbs, PageShell, PageTitle } from "@/components/layout/Page";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { localized } from "@/lib/apps";
 import { getDictionary } from "@/lib/i18n/dictionaries";
@@ -41,34 +42,41 @@ export default async function BlogIndexPage({ params }: PageProps<"/[lang]/blog"
         ])}
       />
 
-      <h1 className="text-3xl font-bold">{dict.blog.title}</h1>
-      <p className="mt-3 max-w-2xl">{dict.blog.intro}</p>
+      <PageShell>
+        <Breadcrumbs
+          label={dict.nav.breadcrumb}
+          items={[{ name: dict.nav.home, href: `/${lang}` }, { name: dict.blog.title }]}
+        />
+        <PageTitle title={dict.blog.title} lead={dict.blog.intro} />
 
-      {posts.length === 0 ? (
-        <p className="mt-10 max-w-2xl">{dict.blog.empty}</p>
-      ) : (
-        <ul className="mt-10 grid list-none grid-cols-1 gap-6 sm:grid-cols-2">
-          {posts.map((post) => (
-            <li key={post.slug}>
-              <article className="rounded-lg border p-5">
-                <h2 className="text-lg font-semibold">
-                  <Link href={`/${lang}/blog/${post.slug}`} className="hover:underline">
-                    {localized(post.title, lang)}
-                  </Link>
-                </h2>
-                <p className="mt-1 text-sm">
-                  <time dateTime={post.publishedDate}>
-                    {new Intl.DateTimeFormat(lang, { dateStyle: "long" }).format(
-                      new Date(post.publishedDate)
-                    )}
-                  </time>
-                </p>
-                <p className="mt-3">{localized(post.summary, lang)}</p>
-              </article>
-            </li>
-          ))}
-        </ul>
-      )}
+        {posts.length === 0 ? (
+          <p className="prose mt-12 rounded-[14px] border border-dashed border-line-strong p-8 text-muted">
+            {dict.blog.empty}
+          </p>
+        ) : (
+          <ul className="mt-12 grid list-none grid-cols-1 gap-4 sm:grid-cols-2">
+            {posts.map((post) => (
+              <li key={post.slug}>
+                <article className="card h-full p-6">
+                  <p className="eyebrow">
+                    <time dateTime={post.publishedDate}>
+                      {new Intl.DateTimeFormat(lang, { dateStyle: "long" }).format(
+                        new Date(post.publishedDate)
+                      )}
+                    </time>
+                  </p>
+                  <h2 className="t-card mt-3">
+                    <Link href={`/${lang}/blog/${post.slug}`} className="link-title">
+                      {localized(post.title, lang)}
+                    </Link>
+                  </h2>
+                  <p className="mt-3 text-muted">{localized(post.summary, lang)}</p>
+                </article>
+              </li>
+            ))}
+          </ul>
+        )}
+      </PageShell>
     </>
   );
 }

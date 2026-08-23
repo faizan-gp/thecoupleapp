@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { Breadcrumbs, PageShell } from "@/components/layout/Page";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { localized } from "@/lib/apps";
 import { getDictionary } from "@/lib/i18n/dictionaries";
@@ -70,26 +70,38 @@ export default async function BlogPostPage({ params }: PageProps<"/[lang]/blog/[
         ])}
       />
 
-      <nav aria-label={dict.blog.backToBlog} className="mb-6 text-sm">
-        <Link href={`/${lang}/blog`} className="hover:underline">
-          ← {dict.blog.backToBlog}
-        </Link>
-      </nav>
+      <PageShell>
+        <Breadcrumbs
+          label={dict.nav.breadcrumb}
+          items={[
+            { name: dict.nav.home, href: `/${lang}` },
+            { name: dict.blog.title, href: `/${lang}/blog` },
+            { name: title },
+          ]}
+        />
 
-      <h1 className="text-3xl font-bold">{title}</h1>
-      <p className="mt-2 text-sm">
-        <time dateTime={post.publishedDate}>
-          {new Intl.DateTimeFormat(lang, { dateStyle: "long" }).format(
-            new Date(post.publishedDate)
-          )}
-        </time>
-      </p>
+        <article>
+          <header className="border-b border-line pb-8">
+            <p className="eyebrow">
+              <time dateTime={post.publishedDate}>
+                {new Intl.DateTimeFormat(lang, { dateStyle: "long" }).format(
+                  new Date(post.publishedDate)
+                )}
+              </time>
+            </p>
+            <h1 className="t-page prose mt-4">{title}</h1>
+            <p className="t-lead prose mt-5">{localized(post.summary, lang)}</p>
+          </header>
 
-      {body.map((paragraph) => (
-        <p key={paragraph} className="mt-4 max-w-2xl">
-          {paragraph}
-        </p>
-      ))}
+          <div className="prose mt-10">
+            {body.map((paragraph) => (
+              <p key={paragraph} className="mt-5 first:mt-0">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        </article>
+      </PageShell>
     </>
   );
 }

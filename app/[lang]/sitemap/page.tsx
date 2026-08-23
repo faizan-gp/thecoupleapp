@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { Breadcrumbs, PageShell, PageTitle } from "@/components/layout/Page";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getAllApps, localized } from "@/lib/apps";
 import { getDictionary } from "@/lib/i18n/dictionaries";
@@ -90,23 +91,35 @@ export default async function SitemapPage({ params }: PageProps<"/[lang]/sitemap
         ])}
       />
 
-      <h1 className="text-3xl font-bold">{dict.sitemapPage.title}</h1>
-      <p className="mt-3 max-w-2xl">{dict.sitemapPage.intro}</p>
+      <PageShell>
+        <Breadcrumbs
+          label={dict.nav.breadcrumb}
+          items={[{ name: dict.nav.home, href: `/${lang}` }, { name: dict.sitemapPage.title }]}
+        />
+        <PageTitle title={dict.sitemapPage.title} lead={dict.sitemapPage.intro} />
 
-      {sections.map((section) => (
-        <section key={section.heading} className="mt-10">
-          <h2 className="text-2xl font-bold">{section.heading}</h2>
-          <ul className="mt-4 grid list-none grid-cols-1 gap-2 sm:grid-cols-2">
-            {section.links.map((link) => (
-              <li key={link.href}>
-                <Link href={link.href} className="hover:underline">
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </section>
-      ))}
+        <div className="mt-12 grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+          {sections.map((section) => (
+            <section key={section.heading} aria-labelledby={`sitemap-${section.heading}`}>
+              <h2
+                id={`sitemap-${section.heading}`}
+                className="eyebrow border-b border-line pb-3"
+              >
+                {section.heading}
+              </h2>
+              <ul className="mt-4 flex list-none flex-col gap-2.5">
+                {section.links.map((link) => (
+                  <li key={link.href}>
+                    <Link href={link.href} className="link-quiet">
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))}
+        </div>
+      </PageShell>
     </>
   );
 }

@@ -33,6 +33,7 @@
     "about": "About",
     "contact": "Contact",
     "main": "Main navigation",
+    "breadcrumb": "Breadcrumb",
     "menu": "Menu",
     "language": "Language",
     "skipToContent": "Skip to content",
@@ -46,6 +47,9 @@
     "releasedTitle": "Available now",
     "comingSoonTitle": "Coming soon",
     "comingSoonTag": "Coming soon",
+    "libraryTitle": "The library, so far",
+    "libraryNote": "One app for each part of a relationship. {filled} of {total} areas have an app today — the rest are still open.",
+    "librarySlotOpen": "Open",
     "whyTitle": "Why a library, not one bloated app",
     "whyItems": [
       {
@@ -96,7 +100,8 @@
     "comingSoon": "Coming soon",
     "searchLabel": "Search apps",
     "searchPlaceholder": "Search by name or category…",
-    "noResults": "No apps match your search."
+    "noResults": "No apps match your search.",
+    "resultCount": "{count} apps found"
   },
   "appDetail": {
     "featuresTitle": "Features",
@@ -105,7 +110,8 @@
     "comingSoonNote": "This app is not released yet — check back soon.",
     "backToApps": "All apps",
     "screenshotsTitle": "Screenshots",
-    "iconAlt": "{name} app icon"
+    "iconAlt": "{name} app icon",
+    "moreApps": "More from the library"
   },
   "about": {
     "title": "About TheCoupleApp",
@@ -161,7 +167,8 @@
     "rights": "All rights reserved.",
     "description": "A growing library of small, focused apps for couples — one app per problem, on iOS and Android.",
     "sitemap": "Sitemap",
-    "socialLabel": "Social media"
+    "socialLabel": "Social media",
+    "siteLabel": "Site"
   },
   "categories": {
     "communication": "Communication",

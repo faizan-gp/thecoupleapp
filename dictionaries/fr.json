@@ -33,6 +33,7 @@
     "about": "À propos",
     "contact": "Contact",
     "main": "Navigation principale",
+    "breadcrumb": "Fil d'Ariane",
     "menu": "Menu",
     "language": "Langue",
     "skipToContent": "Aller au contenu",
@@ -46,6 +47,9 @@
     "releasedTitle": "Disponibles maintenant",
     "comingSoonTitle": "Bientôt disponibles",
     "comingSoonTag": "Bientôt",
+    "libraryTitle": "La bibliothèque, à ce jour",
+    "libraryNote": "Une app pour chaque aspect de la relation. Aujourd'hui, {filled} domaines sur {total} ont une app ; les autres restent ouverts.",
+    "librarySlotOpen": "Libre",
     "whyTitle": "Pourquoi une bibliothèque plutôt qu'une application surchargée",
     "whyItems": [
       {
@@ -96,7 +100,8 @@
     "comingSoon": "Bientôt",
     "searchLabel": "Rechercher une application",
     "searchPlaceholder": "Rechercher par nom ou catégorie…",
-    "noResults": "Aucune application ne correspond à votre recherche."
+    "noResults": "Aucune application ne correspond à votre recherche.",
+    "resultCount": "{count} applis trouvées"
   },
   "appDetail": {
     "featuresTitle": "Fonctionnalités",
@@ -105,7 +110,8 @@
     "comingSoonNote": "Cette application n'est pas encore disponible — revenez bientôt.",
     "backToApps": "Toutes les applications",
     "screenshotsTitle": "Captures d'écran",
-    "iconAlt": "Icône de l'application {name}"
+    "iconAlt": "Icône de l'application {name}",
+    "moreApps": "Plus dans la bibliothèque"
   },
   "about": {
     "title": "À propos de TheCoupleApp",
@@ -161,7 +167,8 @@
     "rights": "Tous droits réservés.",
     "description": "Une bibliothèque grandissante de petites applications ciblées pour les couples — une application par problème, sur iOS et Android.",
     "sitemap": "Plan du site",
-    "socialLabel": "Réseaux sociaux"
+    "socialLabel": "Réseaux sociaux",
+    "siteLabel": "Site"
   },
   "categories": {
     "communication": "Communication",

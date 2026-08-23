@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { AppsBrowser } from "@/components/apps/AppsBrowser";
+import { Breadcrumbs, PageShell, PageTitle } from "@/components/layout/Page";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getReleasedApps, getUpcomingApps } from "@/lib/apps";
 import { getDictionary } from "@/lib/i18n/dictionaries";
@@ -42,12 +43,17 @@ export default async function AppsIndexPage({ params }: PageProps<"/[lang]/apps"
         ])}
       />
 
-      <h1 className="text-3xl font-bold">{dict.appsIndex.title}</h1>
-      <p className="mt-3 max-w-2xl">{dict.appsIndex.intro}</p>
+      <PageShell>
+        <Breadcrumbs
+          label={dict.nav.breadcrumb}
+          items={[{ name: dict.nav.home, href: `/${lang}` }, { name: dict.meta.apps.title }]}
+        />
+        <PageTitle title={dict.appsIndex.title} lead={dict.appsIndex.intro} />
 
-      {/* The full, unfiltered catalog is server-rendered inside AppsBrowser;
-          its search box only narrows what is already in the HTML. */}
-      <AppsBrowser released={released} upcoming={upcoming} lang={lang} dict={dict} />
+        {/* The full, unfiltered catalog is server-rendered inside AppsBrowser;
+            its search box only narrows what is already in the HTML. */}
+        <AppsBrowser released={released} upcoming={upcoming} lang={lang} dict={dict} />
+      </PageShell>
     </>
   );
 }

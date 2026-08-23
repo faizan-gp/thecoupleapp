@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+import { Breadcrumbs, PageShell, PageTitle } from "@/components/layout/Page";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { hasLocale } from "@/lib/i18n/locales";
 import { breadcrumbLd } from "@/lib/seo/json-ld";
 import { localeAlternates } from "@/lib/seo/metadata";
-
-const SUPPORT_EMAIL = "hello@thecoupleapp.com";
+import { supportEmail } from "@/lib/site";
 
 export async function generateMetadata({
   params,
@@ -38,14 +38,27 @@ export default async function ContactPage({ params }: PageProps<"/[lang]/contact
           { name: dict.meta.contact.title, path: `/${lang}/contact` },
         ])}
       />
-      <h1 className="text-3xl font-bold">{dict.contact.title}</h1>
-      <p className="mt-4 max-w-2xl">{dict.contact.body}</p>
-      <p className="mt-4">
-        {dict.contact.emailCta}{" "}
-        <a href={`mailto:${SUPPORT_EMAIL}`} className="font-semibold underline">
-          {SUPPORT_EMAIL}
-        </a>
-      </p>
+      <PageShell>
+        <Breadcrumbs
+          label={dict.nav.breadcrumb}
+          items={[{ name: dict.nav.home, href: `/${lang}` }, { name: dict.meta.contact.title }]}
+        />
+        <PageTitle title={dict.contact.title} lead={dict.contact.body} />
+
+        {/* One address, stated once. There is no form to fill in and no ticket
+            number to wait for — the mail goes to the person who builds the apps. */}
+        <div className="mt-10 max-w-xl rounded-[14px] border border-line bg-surface p-6 sm:p-8">
+          <p className="eyebrow">{dict.contact.emailCta}</p>
+          <p className="mt-3">
+            <a
+              href={`mailto:${supportEmail}`}
+              className="font-display text-[1.35rem] font-semibold tracking-tight text-iris underline decoration-1 underline-offset-4 hover:decoration-2"
+            >
+              {supportEmail}
+            </a>
+          </p>
+        </div>
+      </PageShell>
     </>
   );
 }

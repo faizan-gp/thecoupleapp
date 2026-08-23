@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+import { ArticleSection, Breadcrumbs, PageShell, PageTitle } from "@/components/layout/Page";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { hasLocale } from "@/lib/i18n/locales";
@@ -35,9 +36,9 @@ export default async function AuthorPage({ params }: PageProps<"/[lang]/author">
   const dict = await getDictionary(lang);
 
   const sections = [
-    { heading: dict.author.educationTitle, body: dict.author.educationBody },
-    { heading: dict.author.engineeringTitle, body: dict.author.engineeringBody },
-    { heading: dict.author.researchTitle, body: dict.author.researchBody },
+    { id: "education", heading: dict.author.educationTitle, body: dict.author.educationBody },
+    { id: "engineering", heading: dict.author.engineeringTitle, body: dict.author.engineeringBody },
+    { id: "research", heading: dict.author.researchTitle, body: dict.author.researchBody },
   ];
 
   return (
@@ -50,53 +51,61 @@ export default async function AuthorPage({ params }: PageProps<"/[lang]/author">
         ])}
       />
 
-      <h1 className="text-3xl font-bold">{dict.author.heading}</h1>
+      <PageShell>
+        <Breadcrumbs
+          label={dict.nav.breadcrumb}
+          items={[{ name: dict.nav.home, href: `/${lang}` }, { name: dict.author.title }]}
+        />
+        <PageTitle
+          title={dict.author.heading}
+          lead={dict.author.intro}
+          meta={<p className="eyebrow">{dict.author.role}</p>}
+        />
 
-      <p className="mt-6 text-2xl font-semibold">{author.name}</p>
-      <p className="mt-1 text-sm">{dict.author.role}</p>
-      <p className="mt-4 max-w-2xl">{dict.author.intro}</p>
+        <p className="mt-8 font-display text-[1.6rem] font-semibold tracking-tight">
+          {author.name}
+        </p>
 
-      {sections.map((section) => (
-        <section key={section.heading} className="mt-10">
-          <h2 className="text-2xl font-bold">{section.heading}</h2>
-          {section.body.map((paragraph) => (
-            <p key={paragraph} className="mt-4 max-w-2xl">
-              {paragraph}
+        <div className="mt-10">
+          {sections.map((section) => (
+            <ArticleSection
+              key={section.id}
+              id={section.id}
+              title={section.heading}
+              paragraphs={section.body}
+            />
+          ))}
+
+          <ArticleSection id="stack" title={dict.author.stackTitle}>
+            <ul className="flex list-none flex-wrap gap-2">
+              {author.stack.map((item) => (
+                <li key={item} className="chip">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </ArticleSection>
+
+          <ArticleSection id="author-contact" title={dict.author.contactTitle}>
+            <p>
+              {dict.author.contactBody}{" "}
+              <a href={`mailto:${supportEmail}`} className="link">
+                {supportEmail}
+              </a>
             </p>
-          ))}
-        </section>
-      ))}
-
-      <section className="mt-10">
-        <h2 className="text-2xl font-bold">{dict.author.stackTitle}</h2>
-        <ul className="mt-4 flex max-w-2xl list-none flex-wrap gap-2">
-          {author.stack.map((item) => (
-            <li key={item} className="rounded border px-3 py-1 text-sm">
-              {item}
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="mt-10">
-        <h2 className="text-2xl font-bold">{dict.author.contactTitle}</h2>
-        <p className="mt-4 max-w-2xl">
-          {dict.author.contactBody}{" "}
-          <a href={`mailto:${supportEmail}`} className="font-semibold underline">
-            {supportEmail}
-          </a>
-        </p>
-        <p className="mt-2">
-          <a
-            href={author.linkedin}
-            rel="me noopener noreferrer"
-            target="_blank"
-            className="font-semibold underline"
-          >
-            {dict.author.linkedinLabel}
-          </a>
-        </p>
-      </section>
+            <p className="mt-4">
+              <a
+                href={author.linkedin}
+                rel="me noopener noreferrer"
+                target="_blank"
+                className="link"
+              >
+                {dict.author.linkedinLabel}
+              </a>
+            </p>
+          </ArticleSection>
+        </div>
+      </PageShell>
     </>
   );
 }

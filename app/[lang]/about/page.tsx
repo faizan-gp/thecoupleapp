@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+import { ArticleSection, Breadcrumbs, PageShell, PageTitle } from "@/components/layout/Page";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { hasLocale } from "@/lib/i18n/locales";
@@ -29,6 +30,8 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
   if (!hasLocale(lang)) notFound();
   const dict = await getDictionary(lang);
 
+  const [lead, ...rest] = dict.about.body;
+
   return (
     <>
       <JsonLd
@@ -37,37 +40,46 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
           { name: dict.meta.about.title, path: `/${lang}/about` },
         ])}
       />
-      <h1 className="text-3xl font-bold">{dict.about.title}</h1>
-      {dict.about.body.map((paragraph) => (
-        <p key={paragraph} className="mt-4 max-w-2xl">
-          {paragraph}
-        </p>
-      ))}
+      <PageShell>
+        <Breadcrumbs
+          label={dict.nav.breadcrumb}
+          items={[
+            { name: dict.nav.home, href: `/${lang}` },
+            { name: dict.meta.about.title },
+          ]}
+        />
+        <PageTitle title={dict.about.title} lead={lead} />
 
-      {[
-        { heading: dict.about.storyTitle, body: dict.about.storyBody },
-        { heading: dict.about.whoWeAreTitle, body: dict.about.whoWeAreBody },
-        { heading: dict.about.whatWeDoTitle, body: dict.about.whatWeDoBody },
-      ].map((section) => (
-        <section key={section.heading} className="mt-10">
-          <h2 className="text-2xl font-bold">{section.heading}</h2>
-          {section.body.map((paragraph) => (
-            <p key={paragraph} className="mt-4 max-w-2xl">
-              {paragraph}
-            </p>
-          ))}
-        </section>
-      ))}
+        {rest.length > 0 && (
+          <div className="prose py-10">
+            {rest.map((paragraph) => (
+              <p key={paragraph} className="mt-4 first:mt-0">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        )}
 
-      <section className="mt-10">
-        <h2 className="text-2xl font-bold">{dict.about.contactTitle}</h2>
-        <p className="mt-4 max-w-2xl">
-          {dict.about.contactBody}{" "}
-          <a href={`mailto:${supportEmail}`} className="font-semibold underline">
-            {supportEmail}
-          </a>
-        </p>
-      </section>
+        <ArticleSection id="story" title={dict.about.storyTitle} paragraphs={dict.about.storyBody} />
+        <ArticleSection
+          id="who-we-are"
+          title={dict.about.whoWeAreTitle}
+          paragraphs={dict.about.whoWeAreBody}
+        />
+        <ArticleSection
+          id="what-we-do"
+          title={dict.about.whatWeDoTitle}
+          paragraphs={dict.about.whatWeDoBody}
+        />
+        <ArticleSection id="contact" title={dict.about.contactTitle}>
+          <p>
+            {dict.about.contactBody}{" "}
+            <a href={`mailto:${supportEmail}`} className="link">
+              {supportEmail}
+            </a>
+          </p>
+        </ArticleSection>
+      </PageShell>
     </>
   );
 }

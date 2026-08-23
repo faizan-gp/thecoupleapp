@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { Logo } from "@/components/brand/Mark";
 import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
 import type { Dictionary } from "@/lib/i18n/dictionaries";
 import type { Locale } from "@/lib/i18n/locales";
@@ -8,115 +9,102 @@ import { dmca, socialLinks, supportEmail } from "@/lib/site";
 export function Footer({ lang, dict }: { lang: Locale; dict: Dictionary }) {
   const year = new Date().getFullYear();
 
+  const siteLinks = [
+    { href: `/${lang}`, label: dict.nav.home },
+    { href: `/${lang}/apps`, label: dict.nav.apps },
+    { href: `/${lang}/blog`, label: dict.nav.blog },
+    { href: `/${lang}/about`, label: dict.nav.about },
+    { href: `/${lang}/contact`, label: dict.nav.contact },
+    { href: `/${lang}/author`, label: dict.author.title },
+    { href: `/${lang}/sitemap`, label: dict.footer.sitemap },
+  ];
+
+  const legalLinks = [
+    { href: `/${lang}/privacy`, label: dict.meta.privacy.title },
+    { href: `/${lang}/terms`, label: dict.meta.terms.title },
+    { href: `/${lang}/editorial-guidelines`, label: dict.editorial.title },
+    { href: `/${lang}/apps/hourstory/privacy`, label: dict.hourStoryLegal.footerPrivacy },
+    { href: `/${lang}/apps/hourstory/terms`, label: dict.hourStoryLegal.footerTerms },
+  ];
+
   return (
-    <footer className="mt-16 border-t">
-      <div className="mx-auto flex max-w-5xl flex-col gap-8 px-4 py-10">
-        <div className="flex flex-col justify-between gap-8 sm:flex-row">
+    <footer className="mt-auto border-t border-line bg-sunken">
+      <div className="wrap py-14">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div className="max-w-xs">
-            <p className="font-bold">{dict.meta.siteName}</p>
-            <p className="mt-2 text-sm">{dict.footer.description}</p>
-            <p className="mt-3 text-sm">
-              <a href={`mailto:${supportEmail}`} className="underline">
+            <p className="flex items-center gap-2.5">
+              <Logo className="h-6 w-10" />
+              <span className="font-display text-[1.05rem] font-semibold tracking-tight">
+                {dict.meta.siteName}
+              </span>
+            </p>
+            <p className="mt-4 text-[0.95rem] text-muted">{dict.footer.description}</p>
+            <p className="mt-4 text-[0.95rem]">
+              <a href={`mailto:${supportEmail}`} className="link">
                 {supportEmail}
               </a>
             </p>
           </div>
 
           <nav aria-label={dict.footer.navLabel}>
-            <ul className="flex flex-col gap-2 sm:flex-row sm:gap-6">
-              <li>
-                <Link href={`/${lang}`} className="hover:underline">
-                  {dict.nav.home}
-                </Link>
-              </li>
-              <li>
-                <Link href={`/${lang}/apps`} className="hover:underline">
-                  {dict.nav.apps}
-                </Link>
-              </li>
-              <li>
-                <Link href={`/${lang}/blog`} className="hover:underline">
-                  {dict.nav.blog}
-                </Link>
-              </li>
-              <li>
-                <Link href={`/${lang}/about`} className="hover:underline">
-                  {dict.nav.about}
-                </Link>
-              </li>
-              <li>
-                <Link href={`/${lang}/contact`} className="hover:underline">
-                  {dict.nav.contact}
-                </Link>
-              </li>
-              <li>
-                <Link href={`/${lang}/author`} className="hover:underline">
-                  {dict.author.title}
-                </Link>
-              </li>
-              <li>
-                <Link href={`/${lang}/sitemap`} className="hover:underline">
-                  {dict.footer.sitemap}
-                </Link>
-              </li>
-            </ul>
-          </nav>
-
-          <nav aria-label={dict.footer.legalLabel}>
-            <ul className="flex flex-col gap-2 sm:flex-row sm:gap-6">
-              <li>
-                <Link href={`/${lang}/privacy`} className="hover:underline">
-                  {dict.meta.privacy.title}
-                </Link>
-              </li>
-              <li>
-                <Link href={`/${lang}/terms`} className="hover:underline">
-                  {dict.meta.terms.title}
-                </Link>
-              </li>
-              <li>
-                <Link href={`/${lang}/editorial-guidelines`} className="hover:underline">
-                  {dict.editorial.title}
-                </Link>
-              </li>
-              <li>
-                <Link href={`/${lang}/apps/hourstory/privacy`} className="hover:underline">
-                  {dict.hourStoryLegal.footerPrivacy}
-                </Link>
-              </li>
-              <li>
-                <Link href={`/${lang}/apps/hourstory/terms`} className="hover:underline">
-                  {dict.hourStoryLegal.footerTerms}
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-
-        {/* Renders only once a real profile exists in lib/site.ts socialLinks. */}
-        {socialLinks.length > 0 && (
-          <nav aria-label={dict.footer.socialLabel}>
-            <ul className="flex flex-wrap gap-x-4 gap-y-1">
-              {socialLinks.map((link) => (
-                <li key={link.url}>
-                  <a
-                    href={link.url}
-                    rel="me noopener noreferrer"
-                    target="_blank"
-                    className="hover:underline"
-                  >
+            {/* The nav's accessible name stays "Footer navigation"; the visible
+                column head is what a reader scanning the footer needs. */}
+            <h2 className="eyebrow">{dict.footer.siteLabel}</h2>
+            <ul className="mt-4 flex list-none flex-col gap-2.5 text-[0.95rem]">
+              {siteLinks.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="link-quiet">
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </nav>
-        )}
 
-        <LanguageSwitcher currentLang={lang} label={dict.footer.languageLabel} />
+          <nav aria-label={dict.footer.legalLabel}>
+            <h2 className="eyebrow">{dict.footer.legalLabel}</h2>
+            <ul className="mt-4 flex list-none flex-col gap-2.5 text-[0.95rem]">
+              {legalLinks.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="link-quiet">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
 
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-sm">
+          <div>
+            <h2 className="eyebrow">{dict.footer.languageLabel}</h2>
+            <div className="mt-3 -ms-3">
+              <LanguageSwitcher currentLang={lang} label={dict.footer.languageLabel} />
+            </div>
+
+            {/* Renders only once a real profile exists in lib/site.ts socialLinks. */}
+            {socialLinks.length > 0 && (
+              <nav aria-label={dict.footer.socialLabel} className="mt-6">
+                <h2 className="eyebrow">{dict.footer.socialLabel}</h2>
+                <ul className="mt-3 flex list-none flex-wrap gap-x-4 gap-y-1 text-[0.95rem]">
+                  {socialLinks.map((link) => (
+                    <li key={link.url}>
+                      <a
+                        href={link.url}
+                        rel="me noopener noreferrer"
+                        target="_blank"
+                        className="link-quiet"
+                      >
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            )}
+          </div>
+        </div>
+
+        <div className="mt-12 flex flex-col gap-4 border-t border-line pt-6 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-[0.9rem] text-muted">
             © {year} {dict.meta.siteName}. {dict.footer.rights}
           </p>
 

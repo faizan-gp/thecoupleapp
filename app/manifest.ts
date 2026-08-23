@@ -7,8 +7,8 @@ export default function manifest(): MetadataRoute.Manifest {
     description: "A library of apps for couples.",
     start_url: "/",
     display: "browser",
-    background_color: "#ffffff",
-    theme_color: "#171717",
+    background_color: "#f2f0f6",
+    theme_color: "#4a3fbf",
     icons: [{ src: "/icon.svg", sizes: "any", type: "image/svg+xml" }],
   };
 }

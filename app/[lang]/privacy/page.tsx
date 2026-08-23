@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+import { Breadcrumbs, PageShell, PageTitle } from "@/components/layout/Page";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { hasLocale } from "@/lib/i18n/locales";
@@ -38,18 +39,32 @@ export default async function PrivacyPage({ params }: PageProps<"/[lang]/privacy
           { name: dict.meta.privacy.title, path: `/${lang}/privacy` },
         ])}
       />
-      <h1 className="text-3xl font-bold">{dict.legal.privacyTitle}</h1>
-      <p className="mt-2 text-sm">
-        {dict.legal.lastUpdated}:{" "}
-        <time dateTime={LAST_UPDATED}>
-          {new Intl.DateTimeFormat(lang, { dateStyle: "long" }).format(new Date(LAST_UPDATED))}
-        </time>
-      </p>
-      {dict.legal.privacyBody.map((paragraph) => (
-        <p key={paragraph} className="mt-4 max-w-2xl">
-          {paragraph}
-        </p>
-      ))}
+      <PageShell>
+        <Breadcrumbs
+          label={dict.nav.breadcrumb}
+          items={[{ name: dict.nav.home, href: `/${lang}` }, { name: dict.meta.privacy.title }]}
+        />
+        <PageTitle
+          title={dict.legal.privacyTitle}
+          meta={
+            <p className="eyebrow">
+              {dict.legal.lastUpdated}:{" "}
+              <time dateTime={LAST_UPDATED}>
+                {new Intl.DateTimeFormat(lang, { dateStyle: "long" }).format(
+                  new Date(LAST_UPDATED)
+                )}
+              </time>
+            </p>
+          }
+        />
+        <div className="prose mt-10">
+          {dict.legal.privacyBody.map((paragraph) => (
+            <p key={paragraph} className="mt-4 first:mt-0">
+              {paragraph}
+            </p>
+          ))}
+        </div>
+      </PageShell>
     </>
   );
 }

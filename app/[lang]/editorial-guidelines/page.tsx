@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { ArticleSection, Breadcrumbs, PageShell, PageTitle } from "@/components/layout/Page";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { hasLocale } from "@/lib/i18n/locales";
@@ -51,43 +52,54 @@ export default async function EditorialGuidelinesPage({
         ])}
       />
 
-      <h1 className="text-3xl font-bold">{dict.editorial.title}</h1>
-      <p className="mt-2 text-sm">
-        {dict.legal.lastUpdated}:{" "}
-        <time dateTime={LAST_UPDATED}>
-          {new Intl.DateTimeFormat(lang, { dateStyle: "long" }).format(new Date(LAST_UPDATED))}
-        </time>
-      </p>
-      <p className="mt-4 max-w-2xl">{dict.editorial.intro}</p>
-
-      {dict.editorial.sections.map((section) => (
-        <section key={section.heading} className="mt-10">
-          <h2 className="text-2xl font-bold">{section.heading}</h2>
-          {section.body.map((paragraph) => (
-            <p key={paragraph} className="mt-4 max-w-2xl">
-              {paragraph}
+      <PageShell>
+        <Breadcrumbs
+          label={dict.nav.breadcrumb}
+          items={[{ name: dict.nav.home, href: `/${lang}` }, { name: dict.editorial.title }]}
+        />
+        <PageTitle
+          title={dict.editorial.title}
+          lead={dict.editorial.intro}
+          meta={
+            <p className="eyebrow">
+              {dict.legal.lastUpdated}:{" "}
+              <time dateTime={LAST_UPDATED}>
+                {new Intl.DateTimeFormat(lang, { dateStyle: "long" }).format(
+                  new Date(LAST_UPDATED)
+                )}
+              </time>
             </p>
-          ))}
-        </section>
-      ))}
+          }
+        />
 
-      <section className="mt-10">
-        <h2 className="text-2xl font-bold">{dict.editorial.correctionsTitle}</h2>
-        <p className="mt-4 max-w-2xl">
-          {dict.editorial.correctionsBody}{" "}
-          <a href={`mailto:${supportEmail}`} className="font-semibold underline">
-            {supportEmail}
-          </a>
-          .
-        </p>
-        <p className="mt-4 max-w-2xl">
-          {dict.editorial.authorNote}{" "}
-          <Link href={`/${lang}/author`} className="font-semibold underline">
-            {dict.author.title}
-          </Link>
-          .
-        </p>
-      </section>
+        <div className="mt-10">
+          {dict.editorial.sections.map((section, index) => (
+            <ArticleSection
+              key={section.heading}
+              id={`editorial-${index}`}
+              title={section.heading}
+              paragraphs={section.body}
+            />
+          ))}
+
+          <ArticleSection id="corrections" title={dict.editorial.correctionsTitle}>
+            <p>
+              {dict.editorial.correctionsBody}{" "}
+              <a href={`mailto:${supportEmail}`} className="link">
+                {supportEmail}
+              </a>
+              .
+            </p>
+            <p className="mt-4">
+              {dict.editorial.authorNote}{" "}
+              <Link href={`/${lang}/author`} className="link">
+                {dict.author.title}
+              </Link>
+              .
+            </p>
+          </ArticleSection>
+        </div>
+      </PageShell>
     </>
   );
 }

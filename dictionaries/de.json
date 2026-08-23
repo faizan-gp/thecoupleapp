@@ -33,6 +33,7 @@
     "about": "Über uns",
     "contact": "Kontakt",
     "main": "Hauptnavigation",
+    "breadcrumb": "Brotkrumennavigation",
     "menu": "Menü",
     "language": "Sprache",
     "skipToContent": "Zum Inhalt springen",
@@ -46,6 +47,9 @@
     "releasedTitle": "Jetzt verfügbar",
     "comingSoonTitle": "Demnächst",
     "comingSoonTag": "Demnächst",
+    "libraryTitle": "Die Bibliothek, bisher",
+    "libraryNote": "Eine App für jeden Teil der Beziehung. Heute haben {filled} von {total} Bereichen eine App — der Rest ist noch offen.",
+    "librarySlotOpen": "Offen",
     "whyTitle": "Warum eine Bibliothek statt einer überladenen App",
     "whyItems": [
       {
@@ -96,7 +100,8 @@
     "comingSoon": "Demnächst",
     "searchLabel": "Apps durchsuchen",
     "searchPlaceholder": "Nach Name oder Kategorie suchen…",
-    "noResults": "Keine App passt zu deiner Suche."
+    "noResults": "Keine App passt zu deiner Suche.",
+    "resultCount": "{count} Apps gefunden"
   },
   "appDetail": {
     "featuresTitle": "Funktionen",
@@ -105,7 +110,8 @@
     "comingSoonNote": "Diese App ist noch nicht erschienen — schau bald wieder vorbei.",
     "backToApps": "Alle Apps",
     "screenshotsTitle": "Screenshots",
-    "iconAlt": "App-Symbol von {name}"
+    "iconAlt": "App-Symbol von {name}",
+    "moreApps": "Mehr aus der Bibliothek"
   },
   "about": {
     "title": "Über TheCoupleApp",
@@ -161,7 +167,8 @@
     "rights": "Alle Rechte vorbehalten.",
     "description": "Eine wachsende Sammlung kleiner, fokussierter Apps für Paare — eine App pro Problem, für iOS und Android.",
     "sitemap": "Sitemap",
-    "socialLabel": "Soziale Netzwerke"
+    "socialLabel": "Soziale Netzwerke",
+    "siteLabel": "Website"
   },
   "categories": {
     "communication": "Kommunikation",

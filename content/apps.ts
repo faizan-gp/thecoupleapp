@@ -24,6 +24,21 @@ export type AppCategory =
 
 export type AppStatus = "released" | "coming-soon" | "beta";
 
+/**
+ * The parts of a relationship the library sets out to cover, in the order they
+ * are presented. Every category has at most one app for now and most have none
+ * — the landing page's library board reads this list to show which areas are
+ * filled and which are still open.
+ */
+export const appCategories: AppCategory[] = [
+  "communication",
+  "planning",
+  "memories",
+  "finance",
+  "wellness",
+  "fun",
+];
+
 export type CoupleApp = {
   /** URL segment. Stable, English, lowercase-kebab. */
   slug: string;
