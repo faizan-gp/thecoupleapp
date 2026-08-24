@@ -516,6 +516,301 @@
   }
 
   /* -------------------------------------------------------------------------
+   * The live HourStory phone. Same frame as .phone, but the screen is real UI
+   * you can tap, and two labels float off the sides of the device to say so.
+   * The floats are decoration and tuck back inside the column on narrow
+   * screens, where there is no margin left to hang anything in.
+   * ---------------------------------------------------------------------- */
+  .phone-stage {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-block-end: 1.5rem;
+  }
+
+  .phone-hint {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-chip);
+    background-color: var(--surface);
+    box-shadow: var(--lift);
+    padding: 0.5rem 1rem;
+    font-size: 0.84rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .phone-hint-emoji {
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  .phone-live .phone-screen {
+    gap: 0.65rem;
+    min-height: 30rem;
+  }
+
+  .phone-status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .phone-status-time {
+    flex: 1 1 0;
+  }
+
+  .phone-island {
+    flex-shrink: 0;
+    width: 4.5rem;
+    height: 1.15rem;
+    border-radius: 999px;
+    background-color: #000;
+  }
+
+  .phone-status-dots {
+    flex: 1 1 0;
+    text-align: end;
+    letter-spacing: 0.05em;
+  }
+
+  .phone-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-top: 0.35rem;
+  }
+
+  .phone-title {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--ink);
+  }
+
+  .phone-avatars {
+    display: inline-flex;
+    flex-shrink: 0;
+  }
+
+  .phone-avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.1rem;
+    height: 2.1rem;
+    border-radius: 50%;
+    border: 2px solid var(--paper);
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+
+  .phone-avatar-you {
+    background-color: var(--ember);
+    color: var(--ember-on);
+  }
+
+  /* Overlapped, so the pair reads as one unit rather than two users. */
+  .phone-avatar-partner {
+    margin-inline-start: -0.65rem;
+    background-color: var(--candy);
+    color: var(--candy-on);
+  }
+
+  .phone-progress-label {
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+
+  .phone-progress {
+    display: block;
+    height: 0.35rem;
+    border-radius: 999px;
+    background-color: var(--line);
+    overflow: hidden;
+  }
+
+  .phone-progress-fill {
+    display: block;
+    height: 100%;
+    border-radius: 999px;
+    background-color: var(--ember);
+    transition: width 320ms cubic-bezier(0.2, 0.7, 0.3, 1);
+  }
+
+  .phone-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.15rem;
+  }
+
+  .phone-row-live {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: 0.9rem;
+    background-color: var(--surface);
+    padding: 0.6rem 0.7rem;
+    font-family: inherit;
+    font-size: 0.84rem;
+    text-align: start;
+    color: inherit;
+    cursor: pointer;
+    transition:
+      border-color 180ms ease,
+      transform 180ms ease;
+  }
+
+  .phone-row-static {
+    cursor: default;
+  }
+
+  button.phone-row-live:hover {
+    border-color: var(--ember);
+    transform: translateY(-1px);
+  }
+
+  .phone-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 1.35rem;
+    height: 1.35rem;
+    border-radius: 0.45rem;
+    border: 1.5px solid var(--line-strong);
+    font-size: 0.8rem;
+    line-height: 1;
+    color: var(--ember-on);
+  }
+
+  .phone-check-on {
+    border-color: var(--ember);
+    background-color: var(--ember);
+  }
+
+  .phone-row-emoji {
+    flex-shrink: 0;
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  .phone-row-text {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+
+  .phone-row-hour {
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* Two lines, then clamp. These captions are sentences rather than the short
+     labels a task list carries, and cutting them at one line loses the half
+     that makes them worth reading. */
+  .phone-row-caption {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    line-height: 1.3;
+    color: var(--ink);
+  }
+
+  .phone-row-caption-empty {
+    color: var(--muted);
+  }
+
+  .phone-pill {
+    flex-shrink: 0;
+    border-radius: var(--radius-chip);
+    padding: 0.15rem 0.55rem;
+    font-size: 0.66rem;
+    font-weight: 700;
+  }
+
+  .phone-pill-you {
+    background-color: var(--ember);
+    color: var(--ember-on);
+  }
+
+  .phone-pill-partner {
+    background-color: var(--candy);
+    color: var(--candy-on);
+  }
+
+  .phone-foot {
+    margin-top: auto;
+    padding-top: 0.5rem;
+    text-align: center;
+    font-size: 0.74rem;
+    color: var(--muted);
+  }
+
+  .phone-stat {
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-card);
+    background-color: var(--surface);
+    box-shadow: var(--lift);
+    padding: 0.85rem 1.1rem;
+  }
+
+  .phone-stat-value {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.1;
+    color: var(--ink);
+  }
+
+  /* Wide enough to hang things off the device: the hint sits over its top
+     edge and the stat card tucks into the bottom-left corner. */
+  @media (min-width: 30rem) {
+    .phone-stage {
+      display: block;
+      width: min(100%, 19.5rem);
+      margin-inline: auto;
+      padding-block: 1.75rem;
+    }
+
+    .phone-hint {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      white-space: nowrap;
+    }
+
+    /* Hangs off the bottom-left corner, clear of the footer line inside the
+       screen rather than sitting on top of it. */
+    .phone-stat {
+      position: absolute;
+      bottom: -0.75rem;
+      inset-inline-start: -4rem;
+      z-index: 2;
+    }
+  }
+
+  /* -------------------------------------------------------------------------
    * The day timeline — the hero's proof, not just its illustration. It plays
    * on its own (an hour surfaces every few seconds) but every hour is a real
    * button: click one to jump straight to it, and hovering or focusing

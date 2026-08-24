@@ -177,6 +177,16 @@
       ],
       "cta": "Découvrir comment fonctionne HourStory"
     },
+    "phone": {
+      "eyebrow": "Aujourd'hui",
+      "title": "Notre journée",
+      "tapHint": "C'est en direct. Touchez une heure.",
+      "progress": "{done} sur {total} heures capturées",
+      "empty": "Touchez pour capturer",
+      "statLabel": "Partagé aujourd'hui",
+      "statValue": "{n} heures",
+      "footer": "Chaque heure que vous capturez, {partner} la voit."
+    },
     "dayDial": {
       "eyebrow": "Une journée, ensemble",
       "title": "Vingt-quatre heures. Parcourez-les.",

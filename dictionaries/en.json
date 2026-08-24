@@ -177,6 +177,16 @@
       ],
       "cta": "See how HourStory works"
     },
+    "phone": {
+      "eyebrow": "Today",
+      "title": "Our day",
+      "tapHint": "It's live. Tap an hour.",
+      "progress": "{done} of {total} hours captured",
+      "empty": "Tap to capture",
+      "statLabel": "Shared today",
+      "statValue": "{n} hours",
+      "footer": "Every hour you capture, {partner} sees."
+    },
     "dayDial": {
       "eyebrow": "A day, together",
       "title": "Twenty-four hours. Drag through them.",

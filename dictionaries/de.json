@@ -177,6 +177,16 @@
       ],
       "cta": "So funktioniert HourStory"
     },
+    "phone": {
+      "eyebrow": "Heute",
+      "title": "Unser Tag",
+      "tapHint": "Live. Tippe auf eine Stunde.",
+      "progress": "{done} von {total} Stunden festgehalten",
+      "empty": "Zum Festhalten tippen",
+      "statLabel": "Heute geteilt",
+      "statValue": "{n} Stunden",
+      "footer": "Jede Stunde, die du festhältst, sieht {partner}."
+    },
     "dayDial": {
       "eyebrow": "Ein Tag, gemeinsam",
       "title": "Vierundzwanzig Stunden. Zieh dich durch.",

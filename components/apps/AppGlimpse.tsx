@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { HourStoryPhone } from "@/components/apps/HourStoryPhone";
 import { StoreBadges } from "@/components/apps/StoreBadges";
 import { DuoMark } from "@/components/brand/Mark";
 import type { CoupleApp } from "@/content/apps";
@@ -131,8 +132,15 @@ export function AppGlimpse({
         </div>
       </div>
 
+      {/* An app with a working demo shows it; the generic frame stays the
+          fallback for apps that don't have one built yet. A live phone earns
+          its space on the landing page in a way a still of one does not. */}
       <div className={`justify-self-center ${flip ? "lg:order-first" : ""}`}>
-        <PhoneMock app={app} lang={lang} />
+        {app.slug === "hourstory" ? (
+          <HourStoryPhone lang={lang} dict={dict} />
+        ) : (
+          <PhoneMock app={app} lang={lang} />
+        )}
       </div>
     </article>
   );
