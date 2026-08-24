@@ -1,0 +1,22 @@
+<!--
+  The brand mark, stacked.
+
+  Same two overlapping rings as components/brand/Mark.tsx, turned vertical:
+  the horizontal lockup is roughly 40x24, and squeezing that into a square
+  favicon leaves it tiny with dead space above and below. Stacked, the rings
+  get most of the canvas and still read as two at 16px.
+
+  Colours are hex literals rather than the candy and ember custom properties:
+  a favicon is painted by browser chrome, outside the page, where the site
+  stylesheet never reaches. Keep them in step with the tokens in globals.css.
+
+  Note for editors: XML forbids a double hyphen inside a comment, so a CSS
+  custom property cannot be written out in full anywhere in this file. An
+  invalid comment makes the whole SVG unparseable and the icon silently
+  becomes a broken image.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="14" fill="#171111"/>
+  <circle cx="32" cy="20.5" r="17.5" fill="none" stroke="#f0609f" stroke-width="5.2"/>
+  <circle cx="32" cy="43.5" r="17.5" fill="none" stroke="#f97a2f" stroke-width="5.2"/>
+</svg>
