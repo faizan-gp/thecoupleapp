@@ -301,6 +301,53 @@
     "description": "Notes sur les applications de la bibliothèque TheCoupleApp et les choix qui les sous-tendent.",
     "intro": "Nous écrivons sur les applications que nous créons et pourquoi nous les concevons ainsi, sans actualités d'autres entreprises, sans articles sponsorisés.",
     "empty": "Rien de publié pour l'instant. Revenez bientôt.",
-    "backToBlog": "Tous les articles"
+    "backToBlog": "Tous les articles",
+    "useCases": {
+        "tryIt": "Essayez",
+        "timeZone": {
+          "caption": "Même jour, heures différentes.",
+          "hoursApart": "{hours} heures de décalage"
+        },
+        "overlap": {
+          "caption": "Votre partenaire travaille le jour. Vous, la nuit.",
+          "youAwake": "Vous, éveillé·e",
+          "partnerAwake": "Partenaire, éveillé·e",
+          "bothAwake": "Éveillés en même temps",
+          "shiftControl": "Décalez vos horaires",
+          "overlapCount": "{hours} h en commun",
+          "noOverlap": "Aucun chevauchement pour l'instant"
+        },
+        "offline": {
+          "caption": "Le mode avion n'arrête pas l'histoire.",
+          "queued": "En attente",
+          "sent": "Envoyé",
+          "land": "Atterrir",
+          "queueEmpty": "Tout est envoyé"
+        },
+        "signal": {
+          "caption": "La connexion va et vient. L'histoire arrive quand même.",
+          "sent": "Envoyé",
+          "waiting": "En attente de réseau",
+          "simulate": "Simuler une journée"
+        },
+        "streak": {
+          "caption": "Au bout de trois semaines, vous connaissez déjà sa journée.",
+          "day": "Jour {n}",
+          "details": [
+            "Sa commande de café",
+            "Son arrêt de bus",
+            "La lumière de sa cuisine",
+            "Les private jokes",
+            "Son rituel du dimanche"
+          ]
+        },
+        "middle": {
+          "caption": "Vous partagez déjà la soirée. Voici le milieu de la journée.",
+          "together": "Ensemble",
+          "apart": "Séparés",
+          "before": "Avant",
+          "withApp": "Avec HourStory"
+        }
+      }
   }
 }

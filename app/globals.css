@@ -866,6 +866,385 @@
   .shelf-row-filled:hover .shelf-arrow {
     transform: translateX(3px);
   }
+
+  /* -------------------------------------------------------------------------
+   * Blog use-case visuals — one per post, each a small working model of that
+   * post's actual mechanic (a timezone offset, a shift overlap, a queue that
+   * flushes on landing) rather than a screenshot or a stock illustration.
+   * They share one frame and one control language so six different toys
+   * still read as one family, the same way .card and .btn let very different
+   * features agree on what a card or a button is.
+   * ---------------------------------------------------------------------- */
+  .usecase-card {
+    border: 1px solid var(--line);
+    border-radius: var(--radius-card);
+    background-color: var(--surface);
+    padding: 1.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .usecase-card {
+      padding: 1.75rem;
+    }
+  }
+
+  .usecase-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.35rem 0.75rem;
+    padding-bottom: 1.1rem;
+    margin-bottom: 1.3rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .usecase-caption {
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
+
+  /* The slider and its live value. Wraps at narrow widths — OverlapMeter
+     packs a label, a slider and a value into one row, and its longest value
+     string ("No overlap right now") is wider than a phone screen has room
+     for beside both of the others. */
+  .usecase-control {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem 1rem;
+    margin-top: 1.4rem;
+  }
+
+  .usecase-control-label {
+    flex-shrink: 0;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+
+  .usecase-control-value {
+    flex-shrink: 0;
+    min-width: 8.5ch;
+    font-family: var(--font-display);
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .usecase-slider {
+    flex: 1 1 8rem;
+    min-width: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 4px;
+    border-radius: 999px;
+    background: var(--line-strong);
+    outline-offset: 6px;
+  }
+
+  .usecase-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 999px;
+    background: var(--ember);
+    border: 3px solid var(--surface);
+    box-shadow: 0 0 0 1px var(--line-strong);
+    cursor: pointer;
+  }
+
+  .usecase-slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 999px;
+    background: var(--ember);
+    border: 3px solid var(--surface);
+    box-shadow: 0 0 0 1px var(--line-strong);
+    cursor: pointer;
+  }
+
+  .usecase-toggle {
+    margin-top: 1.4rem;
+  }
+
+  .usecase-toggle-row {
+    display: inline-flex;
+    gap: 0.5rem;
+    margin-top: 1.4rem;
+  }
+
+  /* --- Time zone split (long distance) ------------------------------- */
+  .tz-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.85rem;
+  }
+
+  .tz-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    border-radius: calc(var(--radius-card) - 8px);
+    padding: 1.1rem 1rem;
+    border: 1px solid var(--line);
+  }
+
+  .tz-panel-day {
+    background-color: color-mix(in oklab, var(--ember) 10%, var(--surface));
+  }
+
+  .tz-panel-night {
+    background-color: var(--sunken);
+  }
+
+  .tz-label {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .tz-time {
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 1.3rem + 1vw, 2rem);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+  }
+
+  /* --- Overlap meter (opposite shifts) -------------------------------- */
+  .overlap-rail {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    gap: 2px;
+    height: 2.25rem;
+  }
+
+  .overlap-cell {
+    border-radius: 2px;
+    background-color: var(--line);
+    transition: background-color 200ms ease;
+  }
+
+  .overlap-cell-you {
+    background-color: var(--candy);
+  }
+
+  .overlap-cell-partner {
+    background-color: var(--ember);
+  }
+
+  .overlap-cell-both {
+    background-color: var(--ink);
+  }
+
+  .overlap-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.1rem;
+    margin-top: 0.85rem;
+  }
+
+  .overlap-legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+
+  .overlap-dot {
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 999px;
+    flex-shrink: 0;
+  }
+
+  .overlap-dot-you {
+    background-color: var(--candy);
+  }
+
+  .overlap-dot-partner {
+    background-color: var(--ember);
+  }
+
+  .overlap-dot-both {
+    background-color: var(--ink);
+  }
+
+  /* --- Offline queue (frequent travel) -------------------------------- */
+  .queue-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    list-style: none;
+  }
+
+  .queue-chip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    width: 4.6rem;
+    border: 1.5px dashed var(--line-strong);
+    border-radius: calc(var(--radius-card) - 8px);
+    padding: 0.8rem 0.4rem;
+    background-color: var(--sunken);
+    transition:
+      border-color 260ms ease,
+      background-color 260ms ease,
+      transform 260ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .queue-chip-sent {
+    border-style: solid;
+    border-color: var(--ember);
+    background-color: var(--ember-wash);
+    transform: translateY(-3px);
+  }
+
+  .queue-emoji {
+    font-size: 1.4rem;
+    line-height: 1;
+  }
+
+  .queue-status {
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .queue-chip-sent .queue-status {
+    color: var(--ember);
+  }
+
+  /* --- Signal window (deployment) ------------------------------------- */
+  .signal-row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: flex-end;
+    gap: 3px;
+    height: 2.75rem;
+  }
+
+  .signal-bar {
+    border-radius: 2px 2px 0 0;
+    transition: height 240ms ease, background-color 240ms ease;
+  }
+
+  .signal-bar-up {
+    height: 100%;
+    background-color: var(--ember);
+  }
+
+  .signal-bar-down {
+    height: 22%;
+    background-color: var(--line-strong);
+  }
+
+  .signal-attempts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    margin-top: 0.9rem;
+  }
+
+  .signal-attempt {
+    border-radius: var(--radius-chip);
+    padding: 0.3rem 0.75rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    border: 1.5px solid transparent;
+  }
+
+  .signal-attempt-sent {
+    background-color: var(--ember-wash);
+    border-color: var(--ember);
+    color: var(--ember);
+  }
+
+  .signal-attempt-waiting {
+    background-color: var(--sunken);
+    border-color: var(--line-strong);
+    color: var(--muted);
+  }
+
+  /* --- Streak slider (new relationships) ------------------------------ */
+  .streak-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+  }
+
+  .streak-chip {
+    border-radius: var(--radius-chip);
+    padding: 0.4rem 0.9rem;
+    font-size: 0.82rem;
+    color: var(--muted);
+    background-color: var(--sunken);
+    border: 1.5px solid var(--line);
+    opacity: 0.5;
+    transition:
+      opacity 280ms ease,
+      color 280ms ease,
+      background-color 280ms ease,
+      border-color 280ms ease;
+  }
+
+  .streak-chip-unlocked {
+    opacity: 1;
+    color: var(--candy);
+    background-color: var(--candy-wash);
+    border-color: var(--candy);
+  }
+
+  /* --- Missing middle (married couples) -------------------------------- */
+  .middle-rail {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    gap: 2px;
+    height: 2.25rem;
+  }
+
+  .middle-cell {
+    border-radius: 2px;
+    background-color: var(--line);
+    transition: background-color 260ms ease;
+  }
+
+  .middle-cell-together {
+    background-color: var(--ember);
+  }
+
+  .middle-cell-apart {
+    background-color: var(--line-strong);
+  }
+
+  .middle-cell-filled {
+    background-color: var(--candy);
+  }
+
+  .middle-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.1rem;
+    margin-top: 0.85rem;
+  }
+
+  .middle-dot-together {
+    background-color: var(--ember);
+  }
+
+  .middle-dot-apart {
+    background-color: var(--line-strong);
+  }
 }
 
 /* RTL: the glyph is mirrored, which also flips its local axis — so the same

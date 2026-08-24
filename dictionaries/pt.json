@@ -301,6 +301,53 @@
     "description": "Notas sobre os apps da biblioteca do TheCoupleApp e as decisões por trás deles.",
     "intro": "Escrevemos sobre os apps que criamos e por que os criamos assim, sem notícias de outras empresas, sem posts patrocinados.",
     "empty": "Nada publicado ainda. Volte em breve.",
-    "backToBlog": "Todos os posts"
+    "backToBlog": "Todos os posts",
+    "useCases": {
+        "tryIt": "Experimente",
+        "timeZone": {
+          "caption": "Mesmo dia, horas diferentes.",
+          "hoursApart": "{hours} horas de diferença"
+        },
+        "overlap": {
+          "caption": "Seu par trabalha de dia. Você, de noite.",
+          "youAwake": "Você, acordado",
+          "partnerAwake": "Parceiro, acordado",
+          "bothAwake": "Os dois acordados",
+          "shiftControl": "Mude seu horário",
+          "overlapCount": "{hours}h em comum",
+          "noOverlap": "Sem sobreposição agora"
+        },
+        "offline": {
+          "caption": "O modo avião não para a história.",
+          "queued": "Na fila",
+          "sent": "Enviado",
+          "land": "Pousar",
+          "queueEmpty": "Tudo enviado"
+        },
+        "signal": {
+          "caption": "A conexão vem e vai. A história chega do mesmo jeito.",
+          "sent": "Enviado",
+          "waiting": "Esperando sinal",
+          "simulate": "Simular um dia"
+        },
+        "streak": {
+          "caption": "Em três semanas, você já conhece o dia dele.",
+          "day": "Dia {n}",
+          "details": [
+            "Pedido de café",
+            "Ponto de ônibus",
+            "Luz da cozinha",
+            "Piadas internas",
+            "Rotina de domingo"
+          ]
+        },
+        "middle": {
+          "caption": "Vocês já dividem a noite. Aqui está o meio do dia.",
+          "together": "Juntos",
+          "apart": "Separados",
+          "before": "Antes",
+          "withApp": "Com o HourStory"
+        }
+      }
   }
 }

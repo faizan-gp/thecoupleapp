@@ -301,6 +301,53 @@
     "description": "Notizen zu den Apps der TheCoupleApp-Sammlung und den Entscheidungen dahinter.",
     "intro": "Wir schreiben über die Apps, die wir bauen, und warum wir sie so bauen, ohne Nachrichten anderer Unternehmen, ohne gesponserte Beiträge.",
     "empty": "Noch nichts veröffentlicht. Schau bald wieder vorbei.",
-    "backToBlog": "Alle Beiträge"
+    "backToBlog": "Alle Beiträge",
+    "useCases": {
+        "tryIt": "Ausprobieren",
+        "timeZone": {
+          "caption": "Gleicher Tag, andere Uhrzeit.",
+          "hoursApart": "{hours} Stunden Unterschied"
+        },
+        "overlap": {
+          "caption": "Der Partner arbeitet tagsüber. Du nachts.",
+          "youAwake": "Du, wach",
+          "partnerAwake": "Partner, wach",
+          "bothAwake": "Beide wach",
+          "shiftControl": "Verschiebe deine Stunden",
+          "overlapCount": "{hours} Std. Überschneidung",
+          "noOverlap": "Gerade keine Überschneidung"
+        },
+        "offline": {
+          "caption": "Der Flugmodus stoppt die Geschichte nicht.",
+          "queued": "Wartet",
+          "sent": "Gesendet",
+          "land": "Landen",
+          "queueEmpty": "Alles durch"
+        },
+        "signal": {
+          "caption": "Die Verbindung kommt und geht. Die Geschichte kommt trotzdem an.",
+          "sent": "Gesendet",
+          "waiting": "Wartet auf Empfang",
+          "simulate": "Einen Tag simulieren"
+        },
+        "streak": {
+          "caption": "Nach drei Wochen kennst du schon ihren Tag.",
+          "day": "Tag {n}",
+          "details": [
+            "Kaffeebestellung",
+            "Bushaltestelle",
+            "Licht in der Küche",
+            "Insider-Witze",
+            "Sonntagsroutine"
+          ]
+        },
+        "middle": {
+          "caption": "Den Abend teilt ihr schon. Hier ist die Mitte des Tages.",
+          "together": "Zusammen",
+          "apart": "Getrennt",
+          "before": "Vorher",
+          "withApp": "Mit HourStory"
+        }
+      }
   }
 }

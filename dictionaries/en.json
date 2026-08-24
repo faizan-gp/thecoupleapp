@@ -301,6 +301,47 @@
     "description": "Notes on the apps in the TheCoupleApp library and the decisions behind them.",
     "intro": "Writing about the apps we build and why we build them this way, with no news from other companies, no sponsored posts.",
     "empty": "Nothing published yet. Check back soon.",
-    "backToBlog": "All posts"
+    "backToBlog": "All posts",
+    "useCases": {
+      "tryIt": "Try it",
+      "timeZone": {
+        "caption": "Same day, different hours.",
+        "hoursApart": "{hours} hours apart"
+      },
+      "overlap": {
+        "caption": "Partner works days. You work nights.",
+        "youAwake": "You, awake",
+        "partnerAwake": "Partner, awake",
+        "bothAwake": "Both awake",
+        "shiftControl": "Shift your hours",
+        "overlapCount": "{hours}h overlap",
+        "noOverlap": "No overlap right now"
+      },
+      "offline": {
+        "caption": "Airplane mode doesn't stop the story.",
+        "queued": "Queued",
+        "sent": "Sent",
+        "land": "Land",
+        "queueEmpty": "Everything's through"
+      },
+      "signal": {
+        "caption": "Connection comes and goes. The story still gets through.",
+        "sent": "Sent",
+        "waiting": "Waiting for signal",
+        "simulate": "Simulate a day"
+      },
+      "streak": {
+        "caption": "Three weeks in, you already know their day.",
+        "day": "Day {n}",
+        "details": ["Coffee order", "Bus stop", "Kitchen light", "Inside jokes", "Sunday routine"]
+      },
+      "middle": {
+        "caption": "You already share the evening. Here's the middle of the day.",
+        "together": "Together",
+        "apart": "Apart",
+        "before": "Before",
+        "withApp": "With HourStory"
+      }
+    }
   }
 }
