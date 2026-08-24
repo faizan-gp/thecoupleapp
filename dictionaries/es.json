@@ -4,7 +4,7 @@
     "titleTemplate": "%s — TheCoupleApp",
     "home": {
       "title": "TheCoupleApp — Una app para parejas para cada parte de vuestra relación",
-      "description": "TheCoupleApp es una biblioteca de apps para parejas: apps pequeñas y enfocadas que resuelven un problema real cada una — comunicación, planes, recuerdos, finanzas y más. Gratis en iOS y Android."
+      "description": "TheCoupleApp es una biblioteca de apps para parejas: apps pequeñas y enfocadas que resuelven un problema real cada una, como comunicación, planes, recuerdos, finanzas y más. Gratis en iOS y Android."
     },
     "apps": {
       "title": "Todas las apps para parejas",
@@ -16,7 +16,7 @@
     },
     "contact": {
       "title": "Contacto",
-      "description": "Ponte en contacto con TheCoupleApp — soporte, comentarios y colaboraciones sobre nuestras apps para parejas."
+      "description": "Ponte en contacto con TheCoupleApp para soporte, comentarios y colaboraciones sobre nuestras apps para parejas."
     },
     "privacy": {
       "title": "Política de privacidad",
@@ -43,7 +43,7 @@
   "home": {
     "heroTitle": "Cada parte de tu relación, una app a la vez",
     "heroAccent": "una app a la vez",
-    "heroSubtitle": "TheCoupleApp es una biblioteca creciente de apps para parejas — apps pequeñas y enfocadas, cada una resuelve un solo problema muy bien.",
+    "heroSubtitle": "TheCoupleApp es una biblioteca creciente de apps para parejas, es decir, apps pequeñas y enfocadas, cada una resuelve un solo problema muy bien.",
     "heroCta": "Explorar las apps",
     "releasedTitle": "Disponibles ahora",
     "comingSoonTitle": "Próximamente",
@@ -57,7 +57,7 @@
     "whyItems": [
       {
         "title": "Herramientas enfocadas",
-        "body": "Cada app hace un solo trabajo — planear una cita, dividir gastos, guardar recuerdos — sin enterrarlo en menús."
+        "body": "Cada app hace un solo trabajo, como planear una cita, dividir gastos, guardar recuerdos, sin enterrarlo en menús."
       },
       {
         "title": "Elige lo que encaja",
@@ -76,7 +76,7 @@
     "faqItems": [
       {
         "q": "¿TheCoupleApp es una app o varias?",
-        "a": "Una por ahora. TheCoupleApp es una biblioteca creciente de apps pequeñas y enfocadas para parejas — HourStory es el primer lanzamiento, y llegarán más a medida que estén de verdad listas. Solo instalaréis las que encajen con vuestra relación."
+        "a": "Una por ahora. TheCoupleApp es una biblioteca creciente de apps pequeñas y enfocadas para parejas. HourStory es el primer lanzamiento, y llegarán más a medida que estén de verdad listas. Solo instalaréis las que encajen con vuestra relación."
       },
       {
         "q": "¿Cuánto cuestan las apps?",
@@ -88,7 +88,7 @@
       },
       {
         "q": "¿Ambos miembros de la pareja necesitan instalar la app?",
-        "a": "Sí — HourStory, como toda app de la biblioteca, está pensada para dos. Cada uno captura desde su propio dispositivo, y juntos veis el día desplegarse."
+        "a": "Sí, ya que HourStory, como toda app de la biblioteca, está pensada para dos. Cada uno captura desde su propio dispositivo, y juntos veis el día desplegarse."
       },
       {
         "q": "¿En qué idiomas está disponible este sitio?",
@@ -117,7 +117,7 @@
   },
   "appsIndex": {
     "title": "La biblioteca de apps para parejas",
-    "intro": "Cada app para parejas que hemos lanzado y las que vienen en camino — todas hechas para exactamente dos personas.",
+    "intro": "Cada app para parejas que hemos lanzado y las que vienen en camino, todas hechas para exactamente dos personas.",
     "released": "Disponibles",
     "comingSoon": "Próximamente",
     "searchLabel": "Buscar apps",
@@ -129,7 +129,7 @@
     "featuresTitle": "Funciones",
     "faqTitle": "Preguntas frecuentes",
     "getTheApp": "Descarga la app",
-    "comingSoonNote": "Esta app aún no está disponible — vuelve pronto.",
+    "comingSoonNote": "Esta app aún no está disponible, así que vuelve pronto.",
     "backToApps": "Todas las apps",
     "screenshotsTitle": "Capturas de pantalla",
     "iconAlt": "Icono de la app {name}",
@@ -143,9 +143,9 @@
     ],
     "storyTitle": "Nuestra historia",
     "storyBody": [
-      "TheCoupleApp empezó con un deseo pequeño y concreto: una herramienta sencilla para una sola parte de la relación. Lo que encontramos fueron apps que querían serlo todo a la vez —agenda, diario, presupuesto, juego de preguntas, registro del estado de ánimo— con aquello que buscábamos enterrado varios menús más abajo.",
+      "TheCoupleApp empezó con un deseo pequeño y concreto: una herramienta sencilla para una sola parte de la relación. Lo que encontramos fueron apps que querían serlo todo a la vez, como agenda, diario, presupuesto, juego de preguntas, registro del estado de ánimo, con aquello que buscábamos enterrado varios menús más abajo.",
       "No faltan apps para parejas. Lo que no encontrábamos era un conjunto de apps pequeñas. Todos los productos parecían crecer en la misma dirección: más funciones, más pestañas, más motivos para abrirlos y quedarse un rato. Cuanto más añadían, menos se usaba cada parte.",
-      "Así que empezamos a publicar lo contrario. Una app por problema, lo bastante pequeña como para entenderla en un minuto y terminarla en dos. HourStory llegó primero — por esa sensación de estar separados durante el día, cuando al anochecer los pequeños detalles ya se han desvanecido. El resto de la biblioteca se construye igual: una app enfocada cada vez, publicada cuando de verdad está lista."
+      "Así que empezamos a publicar lo contrario. Una app por problema, lo bastante pequeña como para entenderla en un minuto y terminarla en dos. HourStory llegó primero, por esa sensación de estar separados durante el día, cuando al anochecer los pequeños detalles ya se han desvanecido. El resto de la biblioteca se construye igual: una app enfocada cada vez, publicada cuando de verdad está lista."
     ],
     "whoWeAreTitle": "Quiénes somos",
     "whoWeAreBody": [
@@ -265,7 +265,7 @@
         "heading": "Exactitud",
         "body": [
           "Las descripciones explican lo que una app hace hoy, no lo que está previsto que haga. Las apps que aún no se han publicado se marcan como próximamente y nunca se presentan como disponibles.",
-          "Los datos que cambian —precio, plataformas, disponibilidad en las tiendas— se guardan en un único catálogo a partir del cual se generan todas las páginas, de modo que una corrección se hace en un solo sitio y surte efecto en todas partes."
+          "Los datos que cambian, como precio, plataformas, disponibilidad en las tiendas, se guardan en un único catálogo a partir del cual se generan todas las páginas, de modo que una corrección se hace en un solo sitio y surte efecto en todas partes."
         ]
       },
       {

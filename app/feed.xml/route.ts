@@ -13,7 +13,7 @@ import { absoluteUrl } from "@/lib/site";
 
 const FEED_TITLE = "TheCoupleApp — new apps for couples";
 const FEED_DESCRIPTION =
-  "New and upcoming apps in the TheCoupleApp library — one focused app per problem couples actually have.";
+  "New and upcoming apps in the TheCoupleApp library, each one a focused app for a problem couples actually have.";
 
 /** XML text escaping; every interpolated value below goes through this. */
 function escapeXml(value: string): string {

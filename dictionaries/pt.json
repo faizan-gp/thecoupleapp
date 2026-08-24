@@ -4,11 +4,11 @@
     "titleTemplate": "%s — TheCoupleApp",
     "home": {
       "title": "TheCoupleApp — Um app para casais para cada parte do relacionamento",
-      "description": "TheCoupleApp é uma biblioteca de apps para casais: apps pequenos e focados que resolvem um problema real cada — comunicação, planejamento, memórias, finanças e mais. Grátis no iOS e Android."
+      "description": "TheCoupleApp é uma biblioteca de apps para casais: apps pequenos e focados que resolvem um problema real cada, como comunicação, planejamento, memórias, finanças e mais. Grátis no iOS e Android."
     },
     "apps": {
       "title": "Todos os apps para casais",
-      "description": "Navegue pela biblioteca completa de apps para casais — os que você pode baixar hoje e os que estão a caminho."
+      "description": "Navegue pela biblioteca completa de apps para casais, ou seja, os que você pode baixar hoje e os que estão a caminho."
     },
     "about": {
       "title": "Sobre",
@@ -16,7 +16,7 @@
     },
     "contact": {
       "title": "Contato",
-      "description": "Fale com a TheCoupleApp — suporte, feedback e parcerias sobre nossos apps para casais."
+      "description": "Fale com a TheCoupleApp para suporte, feedback e parcerias sobre nossos apps para casais."
     },
     "privacy": {
       "title": "Política de privacidade",
@@ -43,7 +43,7 @@
   "home": {
     "heroTitle": "Cada parte do seu relacionamento, um app de cada vez",
     "heroAccent": "um app de cada vez",
-    "heroSubtitle": "TheCoupleApp é uma biblioteca crescente de apps para casais — apps pequenos e focados, cada um resolve um único problema muito bem.",
+    "heroSubtitle": "TheCoupleApp é uma biblioteca crescente de apps para casais, ou seja, apps pequenos e focados, cada um resolve um único problema muito bem.",
     "heroCta": "Explorar os apps",
     "releasedTitle": "Disponíveis agora",
     "comingSoonTitle": "Em breve",
@@ -57,7 +57,7 @@
     "whyItems": [
       {
         "title": "Ferramentas focadas",
-        "body": "Cada app faz um único trabalho — planejar um encontro, dividir despesas, guardar memórias — sem enterrá-lo em menus."
+        "body": "Cada app faz um único trabalho, como planejar um encontro, dividir despesas, guardar memórias, sem enterrá-lo em menus."
       },
       {
         "title": "Escolha o que combina",
@@ -65,7 +65,7 @@
       },
       {
         "title": "Melhores juntos",
-        "body": "Os apps compartilham a mesma linguagem de design e a mesma filosofia — parecem uma família."
+        "body": "Os apps compartilham a mesma linguagem de design e a mesma filosofia, então parecem uma família."
       },
       {
         "title": "Sempre crescendo",
@@ -76,11 +76,11 @@
     "faqItems": [
       {
         "q": "O TheCoupleApp é um app ou vários?",
-        "a": "Um, por enquanto. O TheCoupleApp é uma biblioteca crescente de apps pequenos e focados para casais — o HourStory é o primeiro lançamento, e mais virão conforme estiverem realmente prontos. Você só vai instalar os que combinam com a sua relação."
+        "a": "Um, por enquanto. O TheCoupleApp é uma biblioteca crescente de apps pequenos e focados para casais. O HourStory é o primeiro lançamento, e mais virão conforme estiverem realmente prontos. Você só vai instalar os que combinam com a sua relação."
       },
       {
         "q": "Quanto custam os apps?",
-        "a": "Todos os apps são gratuitos para baixar. Alguns têm uma melhoria paga opcional — o HourStory, por exemplo, tem um plano premium opcional."
+        "a": "Todos os apps são gratuitos para baixar. Alguns têm uma melhoria paga opcional, e o HourStory, por exemplo, tem um plano premium opcional."
       },
       {
         "q": "Em quais aparelhos os apps funcionam?",
@@ -88,7 +88,7 @@
       },
       {
         "q": "Os dois precisam instalar o app?",
-        "a": "Sim — o HourStory, como todo app da biblioteca, é feito para dois. Cada um captura no próprio aparelho, e vocês veem o dia se desenrolar juntos."
+        "a": "Sim, já que o HourStory, como todo app da biblioteca, é feito para dois. Cada um captura no próprio aparelho, e vocês veem o dia se desenrolar juntos."
       },
       {
         "q": "Em que idiomas este site está disponível?",
@@ -117,7 +117,7 @@
   },
   "appsIndex": {
     "title": "A biblioteca de apps para casais",
-    "intro": "Cada app para casais que já lançamos e o que vem por aí — todos feitos para exatamente duas pessoas.",
+    "intro": "Cada app para casais que já lançamos e o que vem por aí, todos feitos para exatamente duas pessoas.",
     "released": "Disponíveis",
     "comingSoon": "Em breve",
     "searchLabel": "Buscar apps",
@@ -129,7 +129,7 @@
     "featuresTitle": "Recursos",
     "faqTitle": "Perguntas frequentes",
     "getTheApp": "Baixe o app",
-    "comingSoonNote": "Este app ainda não foi lançado — volte em breve.",
+    "comingSoonNote": "Este app ainda não foi lançado, então volte em breve.",
     "backToApps": "Todos os apps",
     "screenshotsTitle": "Capturas de tela",
     "iconAlt": "Ícone do app {name}",
@@ -138,27 +138,27 @@
   "about": {
     "title": "Sobre o TheCoupleApp",
     "body": [
-      "O TheCoupleApp é a marca guarda-chuva de uma biblioteca crescente de apps para casais. Em vez de um app que tenta fazer tudo, lançamos muitos pequenos — cada um resolve muito bem um problema específico.",
+      "O TheCoupleApp é a marca guarda-chuva de uma biblioteca crescente de apps para casais. Em vez de um app que tenta fazer tudo, lançamos muitos pequenos, cada um resolve muito bem um problema específico.",
       "Comunicação, planejamento, memórias, finanças, bem-estar, diversão: cada área de um relacionamento merece uma ferramenta simples o bastante para ser usada de verdade."
     ],
     "storyTitle": "Nossa história",
     "storyBody": [
-      "O TheCoupleApp começou com um desejo pequeno e específico: uma ferramenta simples para uma única parte da relação. O que encontramos foram apps que queriam ser tudo ao mesmo tempo — agenda, diário, orçamento, jogo de perguntas, registro de humor — com aquilo que buscávamos enterrado alguns menus abaixo.",
+      "O TheCoupleApp começou com um desejo pequeno e específico: uma ferramenta simples para uma única parte da relação. O que encontramos foram apps que queriam ser tudo ao mesmo tempo, como agenda, diário, orçamento, jogo de perguntas, registro de humor, com aquilo que buscávamos enterrado alguns menus abaixo.",
       "Não faltam apps para casais. O que não encontrávamos era um conjunto de apps pequenos. Todo produto parecia crescer na mesma direção: mais recursos, mais abas, mais motivos para abrir e ficar um tempo. Quanto mais adicionavam, menos cada parte era usada.",
-      "Então passamos a lançar o oposto. Um app por problema, pequeno o bastante para entender em um minuto e concluir em dois. O HourStory veio primeiro — pela sensação de estar longe durante o dia, quando ao anoitecer os pequenos detalhes já desapareceram. O resto da biblioteca é construído do mesmo jeito: um app focado de cada vez, lançado quando está realmente pronto."
+      "Então passamos a lançar o oposto. Um app por problema, pequeno o bastante para entender em um minuto e concluir em dois. O HourStory veio primeiro, pela sensação de estar longe durante o dia, quando ao anoitecer os pequenos detalhes já desapareceram. O resto da biblioteca é construído do mesmo jeito: um app focado de cada vez, lançado quando está realmente pronto."
     ],
     "whoWeAreTitle": "Quem somos",
     "whoWeAreBody": [
-      "O TheCoupleApp é um projeto independente — não somos uma empresa com investimento de risco nem uma equipe grande. Ele existe porque a maioria dos apps para casais tenta fazer tudo ao mesmo tempo e acaba não fazendo nada direito.",
+      "O TheCoupleApp é um projeto independente, não somos uma empresa com investimento de risco nem uma equipe grande. Ele existe porque a maioria dos apps para casais tenta fazer tudo ao mesmo tempo e acaba não fazendo nada direito.",
       "Toda a biblioteca gira em torno de uma ideia: um app deve ser aberto, usado por alguns minutos e fechado. Sem feeds, sem sequências para manter, sem pontuações para perseguir."
     ],
     "whatWeDoTitle": "O que fazemos",
     "whatWeDoBody": [
-      "Criamos e publicamos apps pequenos para casais, um problema de cada vez — comunicação, planejamento, memórias, finanças, bem-estar e diversão. Cada app chega com o seu próprio conjunto de recursos em vez de virar mais um menu dentro de um produto gigante.",
+      "Criamos e publicamos apps pequenos para casais, um problema de cada vez, como comunicação, planejamento, memórias, finanças, bem-estar e diversão. Cada app chega com o seu próprio conjunto de recursos em vez de virar mais um menu dentro de um produto gigante.",
       "Todos os apps são gratuitos para baixar no iOS e no Android, e alguns oferecem uma melhoria paga opcional. Novos apps entram na biblioteca assim que ficam prontos."
     ],
     "contactTitle": "Fale com a gente",
-    "contactBody": "Dúvidas, sugestões ou ideias de parceria são bem-vindas — escreva para"
+    "contactBody": "Dúvidas, sugestões ou ideias de parceria são bem-vindas, então escreva para"
   },
   "contact": {
     "title": "Fale conosco",
@@ -187,7 +187,7 @@
     "legalLabel": "Legal",
     "languageLabel": "Idioma",
     "rights": "Todos os direitos reservados.",
-    "description": "Uma biblioteca crescente de apps pequenos e focados para casais — um app por problema, no iOS e no Android.",
+    "description": "Uma biblioteca crescente de apps pequenos e focados para casais, um app por problema, no iOS e no Android.",
     "sitemap": "Mapa do site",
     "socialLabel": "Redes sociais",
     "siteLabel": "Site"
@@ -224,10 +224,10 @@
   },
   "author": {
     "title": "Autor",
-    "description": "Faizan Gillani — o engenheiro full-stack que cria e mantém o TheCoupleApp.",
+    "description": "Faizan Gillani, o engenheiro full-stack que cria e mantém o TheCoupleApp.",
     "heading": "Sobre o autor",
     "role": "Engenheiro de software full-stack e desenvolvedor de sistemas",
-    "intro": "Faizan Gillani cria e mantém o TheCoupleApp — os apps, este site e tudo o que existe por trás deles.",
+    "intro": "Faizan Gillani cria e mantém o TheCoupleApp, ou seja, os apps, este site e tudo o que existe por trás deles.",
     "educationTitle": "Formação",
     "educationBody": [
       "Graduação pela COMSATS University.",
@@ -239,7 +239,7 @@
     ],
     "researchTitle": "Pesquisa",
     "researchBody": [
-      "Ao lado do trabalho de produto, pesquisa contínua sobre estratégias de negociação em mercados financeiros — modelos de aprendizado de máquina, métricas de microestrutura de mercado e técnicas de redução de dimensionalidade."
+      "Ao lado do trabalho de produto, pesquisa contínua sobre estratégias de negociação em mercados financeiros, como modelos de aprendizado de máquina, métricas de microestrutura de mercado e técnicas de redução de dimensionalidade."
     ],
     "stackTitle": "Ferramentas de trabalho",
     "contactTitle": "Fale com a gente",
@@ -253,7 +253,7 @@
   "editorial": {
     "title": "Diretrizes editoriais",
     "description": "Como as descrições de apps, listas de recursos e perguntas frequentes do TheCoupleApp são escritas, traduzidas e corrigidas.",
-    "intro": "Estas diretrizes valem para o conteúdo escrito deste site: descrições de apps, listas de recursos, perguntas frequentes, posts do blog e as traduções de tudo isso. Este site não publica notícias sobre outras empresas, análises de produtos de outras empresas nem artigos patrocinados — os posts do blog são sobre nossos próprios apps e as decisões por trás deles.",
+    "intro": "Estas diretrizes valem para o conteúdo escrito deste site: descrições de apps, listas de recursos, perguntas frequentes, posts do blog e as traduções de tudo isso. Este site não publica notícias sobre outras empresas, análises de produtos de outras empresas nem artigos patrocinados, já que os posts do blog são sobre nossos próprios apps e as decisões por trás deles.",
     "sections": [
       {
         "heading": "Quem escreve este conteúdo",
@@ -265,7 +265,7 @@
         "heading": "Precisão",
         "body": [
           "As descrições contam o que um app faz hoje, não o que se planeja fazer. Apps que ainda não foram lançados são marcados como em breve e nunca aparecem como disponíveis.",
-          "Dados que mudam — preço, plataformas, disponibilidade nas lojas — ficam em um único catálogo a partir do qual todas as páginas são geradas, então uma correção é feita em um só lugar e vale em todos os pontos onde aparece."
+          "Dados que mudam, como preço, plataformas, disponibilidade nas lojas, ficam em um único catálogo a partir do qual todas as páginas são geradas, então uma correção é feita em um só lugar e vale em todos os pontos onde aparece."
         ]
       },
       {
@@ -299,7 +299,7 @@
   "blog": {
     "title": "Blog",
     "description": "Notas sobre os apps da biblioteca do TheCoupleApp e as decisões por trás deles.",
-    "intro": "Escrevemos sobre os apps que criamos e por que os criamos assim — sem notícias de outras empresas, sem posts patrocinados.",
+    "intro": "Escrevemos sobre os apps que criamos e por que os criamos assim, sem notícias de outras empresas, sem posts patrocinados.",
     "empty": "Nada publicado ainda. Volte em breve.",
     "backToBlog": "Todos os posts"
   }

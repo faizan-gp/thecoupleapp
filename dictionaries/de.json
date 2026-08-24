@@ -4,11 +4,11 @@
     "titleTemplate": "%s — TheCoupleApp",
     "home": {
       "title": "TheCoupleApp — Eine Paar-App für jeden Teil eurer Beziehung",
-      "description": "TheCoupleApp ist eine Bibliothek von Paar-Apps: kleine, fokussierte Apps für Paare, die jeweils ein echtes Problem lösen — Kommunikation, Planung, Erinnerungen, Finanzen und mehr. Kostenlos für iOS und Android."
+      "description": "TheCoupleApp ist eine Bibliothek von Paar-Apps: kleine, fokussierte Apps für Paare, die jeweils ein echtes Problem lösen, etwa Kommunikation, Planung, Erinnerungen, Finanzen und mehr. Kostenlos für iOS und Android."
     },
     "apps": {
       "title": "Alle Paar-Apps",
-      "description": "Die komplette Bibliothek der Paar-Apps — was ihr heute herunterladen könnt und was als Nächstes kommt."
+      "description": "Die komplette Bibliothek der Paar-Apps, also was ihr heute herunterladen könnt und was als Nächstes kommt."
     },
     "about": {
       "title": "Über uns",
@@ -16,7 +16,7 @@
     },
     "contact": {
       "title": "Kontakt",
-      "description": "Kontaktiert TheCoupleApp — Support, Feedback und Partnerschaften rund um unsere Paar-Apps."
+      "description": "Kontaktiert TheCoupleApp für Support, Feedback und Partnerschaften rund um unsere Paar-Apps."
     },
     "privacy": {
       "title": "Datenschutzerklärung",
@@ -43,7 +43,7 @@
   "home": {
     "heroTitle": "Jeder Teil eurer Beziehung, eine App nach der anderen",
     "heroAccent": "eine App nach der anderen",
-    "heroSubtitle": "TheCoupleApp ist eine wachsende Bibliothek von Paar-Apps — kleine, fokussierte Apps für Paare, jede löst genau ein Problem richtig gut.",
+    "heroSubtitle": "TheCoupleApp ist eine wachsende Bibliothek von Paar-Apps, also kleine, fokussierte Apps für Paare, jede löst genau ein Problem richtig gut.",
     "heroCta": "Apps entdecken",
     "releasedTitle": "Jetzt verfügbar",
     "comingSoonTitle": "Demnächst",
@@ -51,13 +51,13 @@
     "appsGlimpseTitle": "Lernt die Paar-Apps kennen",
     "glimpseCta": "{name} entdecken",
     "libraryTitle": "Die Bibliothek, bisher",
-    "libraryNote": "Eine App für jeden Teil der Beziehung. {filled} von {total} bisher belegt — der Rest ist noch offen.",
+    "libraryNote": "Eine App für jeden Teil der Beziehung. {filled} von {total} bisher belegt, der Rest ist noch offen.",
     "librarySlotOpen": "Offen",
     "whyTitle": "Warum eine Bibliothek statt einer überladenen App",
     "whyItems": [
       {
         "title": "Fokussierte Werkzeuge",
-        "body": "Jede App erledigt eine Aufgabe — ein Date planen, gemeinsame Ausgaben abrechnen, Erinnerungen festhalten — ohne sie in Menüs zu vergraben."
+        "body": "Jede App erledigt eine Aufgabe, etwa ein Date planen, gemeinsame Ausgaben abrechnen, Erinnerungen festhalten, ohne sie in Menüs zu vergraben."
       },
       {
         "title": "Wählt, was passt",
@@ -65,7 +65,7 @@
       },
       {
         "title": "Gemeinsam besser",
-        "body": "Alle Apps teilen eine Designsprache und eine Philosophie — sie fühlen sich wie eine Familie an."
+        "body": "Alle Apps teilen eine Designsprache und eine Philosophie, sodass sie sich wie eine Familie anfühlen."
       },
       {
         "title": "Ständig wachsend",
@@ -76,11 +76,11 @@
     "faqItems": [
       {
         "q": "Ist TheCoupleApp eine App oder mehrere?",
-        "a": "Bisher eine. TheCoupleApp ist eine wachsende Sammlung kleiner, fokussierter Apps für Paare — HourStory ist die erste Veröffentlichung, weitere folgen, sobald sie wirklich fertig sind. Ihr installiert nur die, die zu eurer Beziehung passen."
+        "a": "Bisher eine. TheCoupleApp ist eine wachsende Sammlung kleiner, fokussierter Apps für Paare. HourStory ist die erste Veröffentlichung, weitere folgen, sobald sie wirklich fertig sind. Ihr installiert nur die, die zu eurer Beziehung passen."
       },
       {
         "q": "Was kosten die Apps?",
-        "a": "Alle Apps sind kostenlos herunterzuladen. Einige bieten ein optionales kostenpflichtiges Upgrade — HourStory hat zum Beispiel ein optionales Premium-Abo."
+        "a": "Alle Apps sind kostenlos herunterzuladen. Einige bieten ein optionales kostenpflichtiges Upgrade, und HourStory hat zum Beispiel ein optionales Premium-Abo."
       },
       {
         "q": "Auf welchen Geräten laufen die Apps?",
@@ -88,7 +88,7 @@
       },
       {
         "q": "Müssen beide Partner die App installieren?",
-        "a": "Ja — HourStory ist, wie jede App der Sammlung, für zwei gemacht. Jeder erfasst auf dem eigenen Gerät, und ihr seht gemeinsam, wie sich der Tag entfaltet."
+        "a": "Ja, denn HourStory ist, wie jede App der Sammlung, für zwei gemacht. Jeder erfasst auf dem eigenen Gerät, und ihr seht gemeinsam, wie sich der Tag entfaltet."
       },
       {
         "q": "In welchen Sprachen gibt es diese Website?",
@@ -117,7 +117,7 @@
   },
   "appsIndex": {
     "title": "Die Paar-App-Bibliothek",
-    "intro": "Jede Paar-App, die wir veröffentlicht haben, und was als Nächstes kommt — alle gemacht für genau zwei Menschen.",
+    "intro": "Jede Paar-App, die wir veröffentlicht haben, und was als Nächstes kommt, alle gemacht für genau zwei Menschen.",
     "released": "Verfügbar",
     "comingSoon": "Demnächst",
     "searchLabel": "Apps durchsuchen",
@@ -129,7 +129,7 @@
     "featuresTitle": "Funktionen",
     "faqTitle": "Häufige Fragen",
     "getTheApp": "App holen",
-    "comingSoonNote": "Diese App ist noch nicht erschienen — schau bald wieder vorbei.",
+    "comingSoonNote": "Diese App ist noch nicht erschienen, schau bald wieder vorbei.",
     "backToApps": "Alle Apps",
     "screenshotsTitle": "Screenshots",
     "iconAlt": "App-Symbol von {name}",
@@ -138,27 +138,27 @@
   "about": {
     "title": "Über TheCoupleApp",
     "body": [
-      "TheCoupleApp ist die Dachmarke einer wachsenden Bibliothek von Apps für Paare. Statt einer App, die alles können will, veröffentlichen wir viele kleine — jede löst ein konkretes Problem richtig gut.",
+      "TheCoupleApp ist die Dachmarke einer wachsenden Bibliothek von Apps für Paare. Statt einer App, die alles können will, veröffentlichen wir viele kleine, jede löst ein konkretes Problem richtig gut.",
       "Kommunikation, Planung, Erinnerungen, Finanzen, Wohlbefinden, Spaß: Jeder Bereich einer Beziehung verdient ein Werkzeug, das einfach genug ist, um wirklich benutzt zu werden."
     ],
     "storyTitle": "Unsere Geschichte",
     "storyBody": [
-      "TheCoupleApp begann mit einem kleinen, konkreten Wunsch: ein einfaches Werkzeug für einen einzigen Teil der Beziehung. Gefunden haben wir stattdessen Apps, die alles auf einmal sein wollten — Planer, Tagebuch, Haushaltsbuch, Fragenspiel, Stimmungstagebuch — und das, weswegen wir eigentlich gekommen waren, lag ein paar Menüs tiefer.",
+      "TheCoupleApp begann mit einem kleinen, konkreten Wunsch: ein einfaches Werkzeug für einen einzigen Teil der Beziehung. Gefunden haben wir stattdessen Apps, die alles auf einmal sein wollten, etwa Planer, Tagebuch, Haushaltsbuch, Fragenspiel, Stimmungstagebuch, und das, weswegen wir eigentlich gekommen waren, lag ein paar Menüs tiefer.",
       "An Apps für Paare mangelt es nicht. Was wir nicht fanden, war eine Sammlung kleiner. Jedes Produkt wuchs in dieselbe Richtung: mehr Funktionen, mehr Reiter, mehr Gründe, es zu öffnen und eine Weile zu bleiben. Je mehr dazukam, desto weniger wurde der einzelne Teil genutzt.",
-      "Also begannen wir, das Gegenteil zu veröffentlichen. Eine App pro Problem, klein genug, um sie in einer Minute zu verstehen und in zwei abzuschließen. HourStory kam zuerst — für das Gefühl, tagsüber getrennt zu sein, wenn abends die kleinen Dinge schon verblasst sind. Der Rest der Sammlung entsteht genauso: eine fokussierte App nach der anderen, veröffentlicht, wenn sie wirklich fertig ist."
+      "Also begannen wir, das Gegenteil zu veröffentlichen. Eine App pro Problem, klein genug, um sie in einer Minute zu verstehen und in zwei abzuschließen. HourStory kam zuerst, für das Gefühl, tagsüber getrennt zu sein, wenn abends die kleinen Dinge schon verblasst sind. Der Rest der Sammlung entsteht genauso: eine fokussierte App nach der anderen, veröffentlicht, wenn sie wirklich fertig ist."
     ],
     "whoWeAreTitle": "Wer wir sind",
     "whoWeAreBody": [
-      "TheCoupleApp ist ein unabhängiges Projekt — kein risikokapitalfinanziertes Unternehmen und kein großes Team. Es gibt uns, weil die meisten Beziehungs-Apps alles auf einmal versuchen und am Ende nichts davon gut können.",
+      "TheCoupleApp ist ein unabhängiges Projekt, kein risikokapitalfinanziertes Unternehmen und kein großes Team. Es gibt uns, weil die meisten Beziehungs-Apps alles auf einmal versuchen und am Ende nichts davon gut können.",
       "Die ganze Sammlung folgt einer Idee: Eine App soll geöffnet, ein paar Minuten genutzt und wieder geschlossen werden. Keine Feeds, keine Serien, die man halten muss, keine Punktzahlen, denen man hinterherläuft."
     ],
     "whatWeDoTitle": "Was wir tun",
     "whatWeDoBody": [
-      "Wir gestalten und veröffentlichen kleine Apps für Paare, ein Problem nach dem anderen — Kommunikation, Planung, Erinnerungen, Finanzen, Wohlbefinden und Spaß. Jede App kommt mit ihrem eigenen, klar umrissenen Funktionsumfang, statt ein Menüpunkt in einem riesigen Produkt zu sein.",
+      "Wir gestalten und veröffentlichen kleine Apps für Paare, ein Problem nach dem anderen, etwa Kommunikation, Planung, Erinnerungen, Finanzen, Wohlbefinden und Spaß. Jede App kommt mit ihrem eigenen, klar umrissenen Funktionsumfang, statt ein Menüpunkt in einem riesigen Produkt zu sein.",
       "Alle Apps sind auf iOS und Android kostenlos herunterzuladen, einige bieten ein optionales kostenpflichtiges Upgrade. Neue Apps kommen dazu, sobald sie fertig sind."
     ],
     "contactTitle": "Kontakt",
-    "contactBody": "Fragen, Rückmeldungen oder Ideen für eine Zusammenarbeit sind willkommen — schreib uns an"
+    "contactBody": "Fragen, Rückmeldungen oder Ideen für eine Zusammenarbeit sind willkommen, also schreib uns an"
   },
   "contact": {
     "title": "Kontaktiere uns",
@@ -187,7 +187,7 @@
     "legalLabel": "Rechtliches",
     "languageLabel": "Sprache",
     "rights": "Alle Rechte vorbehalten.",
-    "description": "Eine wachsende Sammlung kleiner, fokussierter Apps für Paare — eine App pro Problem, für iOS und Android.",
+    "description": "Eine wachsende Sammlung kleiner, fokussierter Apps für Paare, eine App pro Problem, für iOS und Android.",
     "sitemap": "Sitemap",
     "socialLabel": "Soziale Netzwerke",
     "siteLabel": "Website"
@@ -224,10 +224,10 @@
   },
   "author": {
     "title": "Autor",
-    "description": "Faizan Gillani — der Full-Stack-Entwickler hinter TheCoupleApp.",
+    "description": "Faizan Gillani, der Full-Stack-Entwickler hinter TheCoupleApp.",
     "heading": "Über den Autor",
     "role": "Full-Stack-Softwareentwickler und Systementwickler",
-    "intro": "Faizan Gillani baut und pflegt TheCoupleApp — die Apps, diese Website und alles, was dahintersteckt.",
+    "intro": "Faizan Gillani baut und pflegt TheCoupleApp, also die Apps, diese Website und alles, was dahintersteckt.",
     "educationTitle": "Ausbildung",
     "educationBody": [
       "Bachelorabschluss an der COMSATS University.",
@@ -239,7 +239,7 @@
     ],
     "researchTitle": "Forschung",
     "researchBody": [
-      "Neben der Produktarbeit laufende Forschung zu Handelsstrategien an Finanzmärkten — Modelle des maschinellen Lernens, Kennzahlen zur Marktmikrostruktur und Verfahren zur Dimensionsreduktion."
+      "Neben der Produktarbeit laufende Forschung zu Handelsstrategien an Finanzmärkten, etwa Modelle des maschinellen Lernens, Kennzahlen zur Marktmikrostruktur und Verfahren zur Dimensionsreduktion."
     ],
     "stackTitle": "Werkzeuge",
     "contactTitle": "Kontakt",
@@ -253,7 +253,7 @@
   "editorial": {
     "title": "Redaktionelle Grundsätze",
     "description": "Wie die App-Beschreibungen, Funktionslisten und FAQs von TheCoupleApp entstehen, übersetzt und korrigiert werden.",
-    "intro": "Diese Grundsätze gelten für die Texte auf dieser Website: App-Beschreibungen, Funktionslisten, häufige Fragen, Blogbeiträge und deren Übersetzungen. Diese Website veröffentlicht keine Nachrichten über andere Unternehmen, keine Tests fremder Produkte und keine gesponserten Beiträge — Blogbeiträge hier handeln von unseren eigenen Apps und den Entscheidungen dahinter.",
+    "intro": "Diese Grundsätze gelten für die Texte auf dieser Website: App-Beschreibungen, Funktionslisten, häufige Fragen, Blogbeiträge und deren Übersetzungen. Diese Website veröffentlicht keine Nachrichten über andere Unternehmen, keine Tests fremder Produkte und keine gesponserten Beiträge, denn Blogbeiträge hier handeln von unseren eigenen Apps und den Entscheidungen dahinter.",
     "sections": [
       {
         "heading": "Wer diese Inhalte schreibt",
@@ -264,8 +264,8 @@
       {
         "heading": "Richtigkeit",
         "body": [
-          "App-Beschreibungen schildern, was eine App heute kann — nicht, was geplant ist. Noch nicht veröffentlichte Apps sind als demnächst gekennzeichnet und werden nie als verfügbar dargestellt.",
-          "Angaben, die sich ändern — Preis, Plattformen, Verfügbarkeit in den Stores — liegen in einem einzigen Katalog, aus dem alle Seiten erzeugt werden. Eine Korrektur erfolgt an einer Stelle und wirkt überall."
+          "App-Beschreibungen schildern, was eine App heute kann, nicht, was geplant ist. Noch nicht veröffentlichte Apps sind als demnächst gekennzeichnet und werden nie als verfügbar dargestellt.",
+          "Angaben, die sich ändern, etwa Preis, Plattformen, Verfügbarkeit in den Stores, liegen in einem einzigen Katalog, aus dem alle Seiten erzeugt werden. Eine Korrektur erfolgt an einer Stelle und wirkt überall."
         ]
       },
       {
@@ -284,7 +284,7 @@
       }
     ],
     "correctionsTitle": "Korrekturen",
-    "correctionsBody": "Wenn auf dieser Website etwas falsch oder veraltet ist, melde es bitte — es wird korrigiert. Schreib an",
+    "correctionsBody": "Wenn auf dieser Website etwas falsch oder veraltet ist, melde es bitte, dann wird es korrigiert. Schreib an",
     "authorNote": "Die Inhalte dieser Website werden ihrem Autor zugeordnet:"
   },
   "hourStoryLegal": {
@@ -299,7 +299,7 @@
   "blog": {
     "title": "Blog",
     "description": "Notizen zu den Apps der TheCoupleApp-Sammlung und den Entscheidungen dahinter.",
-    "intro": "Wir schreiben über die Apps, die wir bauen, und warum wir sie so bauen — keine Nachrichten anderer Unternehmen, keine gesponserten Beiträge.",
+    "intro": "Wir schreiben über die Apps, die wir bauen, und warum wir sie so bauen, ohne Nachrichten anderer Unternehmen, ohne gesponserte Beiträge.",
     "empty": "Noch nichts veröffentlicht. Schau bald wieder vorbei.",
     "backToBlog": "Alle Beiträge"
   }

@@ -4,11 +4,11 @@
     "titleTemplate": "%s — TheCoupleApp",
     "home": {
       "title": "TheCoupleApp — A couple app for every part of your relationship",
-      "description": "TheCoupleApp is a library of couple apps: small, focused apps for couples that each solve one real problem — communication, planning, memories, finances and more. Free on iOS and Android."
+      "description": "TheCoupleApp is a library of couple apps: small, focused apps for couples that each solve one real problem, like communication, planning, memories, finances and more. Free on iOS and Android."
     },
     "apps": {
       "title": "All couple apps",
-      "description": "Browse the full library of couple apps — apps for couples you can download today, and the ones on the way."
+      "description": "Browse the full library of couple apps, meaning apps for couples you can download today, and the ones on the way."
     },
     "about": {
       "title": "About",
@@ -16,7 +16,7 @@
     },
     "contact": {
       "title": "Contact",
-      "description": "Get in touch with TheCoupleApp — support, feedback and partnership inquiries about our couple apps."
+      "description": "Get in touch with TheCoupleApp for support, feedback and partnership inquiries about our couple apps."
     },
     "privacy": {
       "title": "Privacy policy",
@@ -43,7 +43,7 @@
   "home": {
     "heroTitle": "Every part of your relationship, one app at a time",
     "heroAccent": "one app at a time",
-    "heroSubtitle": "TheCoupleApp is a growing library of couple apps — small, focused apps for couples, each one solving a single problem really well.",
+    "heroSubtitle": "TheCoupleApp is a growing library of couple apps, meaning small, focused apps for couples, each one solving a single problem really well.",
     "heroCta": "Explore the apps",
     "releasedTitle": "Available now",
     "comingSoonTitle": "Coming soon",
@@ -51,13 +51,13 @@
     "appsGlimpseTitle": "Meet the couple apps",
     "glimpseCta": "Explore {name}",
     "libraryTitle": "The library, so far",
-    "libraryNote": "One app for each part of a relationship. {filled} of {total} filled so far — the rest are still open.",
+    "libraryNote": "One app for each part of a relationship. {filled} of {total} filled so far, and the rest are still open.",
     "librarySlotOpen": "Open",
     "whyTitle": "Why a library, not one bloated app",
     "whyItems": [
       {
         "title": "Focused tools",
-        "body": "Each app does one job — planning a date, settling shared expenses, keeping memories — without burying it in menus."
+        "body": "Each app does one job, like planning a date, settling shared expenses, keeping memories, without burying it in menus."
       },
       {
         "title": "Pick what fits",
@@ -76,11 +76,11 @@
     "faqItems": [
       {
         "q": "Is TheCoupleApp one app or several?",
-        "a": "One so far. TheCoupleApp is a growing library of small, focused apps for couples — HourStory is the first release, and more will ship as they're genuinely ready. You'll only ever need to install the ones that fit your relationship."
+        "a": "One so far. TheCoupleApp is a growing library of small, focused apps for couples. HourStory is the first release, and more will ship as they're genuinely ready. You'll only ever need to install the ones that fit your relationship."
       },
       {
         "q": "How much do the apps cost?",
-        "a": "Every app is free to download. Some add an optional paid upgrade — HourStory, for example, has an optional premium plan."
+        "a": "Every app is free to download. Some add an optional paid upgrade, and HourStory, for example, has an optional premium plan."
       },
       {
         "q": "Which devices do the apps run on?",
@@ -88,7 +88,7 @@
       },
       {
         "q": "Do both partners need to install the app?",
-        "a": "Yes — HourStory, like every app in the library, is built for two. Each partner captures on their own device, and you both watch the day unfold together."
+        "a": "Yes, since HourStory, like every app in the library, is built for two. Each partner captures on their own device, and you both watch the day unfold together."
       },
       {
         "q": "What languages is this site available in?",
@@ -117,7 +117,7 @@
   },
   "appsIndex": {
     "title": "The couple app library",
-    "intro": "Every couple app we've released and what's on the way — each one built for exactly two people.",
+    "intro": "Every couple app we've released and what's on the way, each one built for exactly two people.",
     "released": "Released",
     "comingSoon": "Coming soon",
     "searchLabel": "Search apps",
@@ -129,7 +129,7 @@
     "featuresTitle": "Features",
     "faqTitle": "Frequently asked questions",
     "getTheApp": "Get the app",
-    "comingSoonNote": "This app is not released yet — check back soon.",
+    "comingSoonNote": "This app is not released yet, so check back soon.",
     "backToApps": "All apps",
     "screenshotsTitle": "Screenshots",
     "iconAlt": "{name} app icon",
@@ -138,27 +138,27 @@
   "about": {
     "title": "About TheCoupleApp",
     "body": [
-      "TheCoupleApp is an umbrella brand for a growing library of apps for couples. Instead of one app that tries to do everything, we ship many small ones — each solving one specific problem really well.",
+      "TheCoupleApp is an umbrella brand for a growing library of apps for couples. Instead of one app that tries to do everything, we ship many small ones, each solving one specific problem really well.",
       "Communication, planning, memories, finances, wellness, fun: every area of a relationship deserves a tool that is simple enough to actually get used."
     ],
     "storyTitle": "Our story",
     "storyBody": [
-      "TheCoupleApp started with a small, specific want: one simple tool for one part of a relationship. What we found instead were apps that wanted to be everything at once — a planner, a journal, a budget, a conversation starter, a mood tracker — with the thing we had actually come for buried a few menus deep.",
+      "TheCoupleApp started with a small, specific want: one simple tool for one part of a relationship. What we found instead were apps that wanted to be everything at once, like a planner, a journal, a budget, a conversation starter, a mood tracker, with the thing we had actually come for buried a few menus deep.",
       "There is no shortage of apps for couples. What we could not find was a set of small ones. Every product seemed to grow in the same direction: more features, more tabs, more reasons to open it and stay a while. The more they added, the less any single part of them got used.",
-      "So we started shipping the opposite. One app per problem, small enough to understand in a minute and finish in two. HourStory came first — for the ache of being apart during the day, when by evening the small things have already faded. The rest of the library is being built the same way — one focused app at a time, released when it is genuinely ready."
+      "So we started shipping the opposite. One app per problem, small enough to understand in a minute and finish in two. HourStory came first, for the ache of being apart during the day, when by evening the small things have already faded. The rest of the library is being built the same way, one focused app at a time, released when it is genuinely ready."
     ],
     "whoWeAreTitle": "Who we are",
     "whoWeAreBody": [
-      "TheCoupleApp is an independent project — not a venture-backed company or a large team. It exists because most relationship apps try to do everything at once and end up doing none of it well.",
+      "TheCoupleApp is an independent project, not a venture-backed company or a large team. It exists because most relationship apps try to do everything at once and end up doing none of it well.",
       "The whole library is built around one idea: an app should be opened, used for a couple of minutes, and closed. No feeds, no streaks to protect, no scores to chase."
     ],
     "whatWeDoTitle": "What we do",
     "whatWeDoBody": [
-      "We design and publish small apps for couples, one problem at a time — communication, planning, memories, finances, wellness and fun. Each app ships with its own focused feature set instead of becoming a menu inside one large product.",
+      "We design and publish small apps for couples, one problem at a time, like communication, planning, memories, finances, wellness and fun. Each app ships with its own focused feature set instead of becoming a menu inside one large product.",
       "Every app is free to download on iOS and Android, and some offer an optional paid upgrade. New apps join the library as they are ready."
     ],
     "contactTitle": "Get in touch",
-    "contactBody": "Questions, feedback or partnership ideas are welcome — email us at"
+    "contactBody": "Questions, feedback or partnership ideas are welcome, so email us at"
   },
   "contact": {
     "title": "Contact us",
@@ -187,7 +187,7 @@
     "legalLabel": "Legal",
     "languageLabel": "Language",
     "rights": "All rights reserved.",
-    "description": "A growing library of small, focused apps for couples — one app per problem, on iOS and Android.",
+    "description": "A growing library of small, focused apps for couples, one app per problem, on iOS and Android.",
     "sitemap": "Sitemap",
     "socialLabel": "Social media",
     "siteLabel": "Site"
@@ -224,10 +224,10 @@
   },
   "author": {
     "title": "Author",
-    "description": "Faizan Gillani — the full-stack engineer who builds and maintains TheCoupleApp.",
+    "description": "Faizan Gillani, the full-stack engineer who builds and maintains TheCoupleApp.",
     "heading": "About the author",
     "role": "Full-stack software engineer and system developer",
-    "intro": "Faizan Gillani builds and maintains TheCoupleApp — the apps, this website, and everything behind them.",
+    "intro": "Faizan Gillani builds and maintains TheCoupleApp, meaning the apps, this website, and everything behind them.",
     "educationTitle": "Education",
     "educationBody": [
       "Bachelor's degree from COMSATS University.",
@@ -239,7 +239,7 @@
     ],
     "researchTitle": "Research",
     "researchBody": [
-      "Alongside product work, ongoing research into financial market trading strategies — machine learning models, market microstructure metrics, and dimensionality reduction techniques."
+      "Alongside product work, ongoing research into financial market trading strategies, including machine learning models, market microstructure metrics, and dimensionality reduction techniques."
     ],
     "stackTitle": "Tools of the trade",
     "contactTitle": "Get in touch",
@@ -253,7 +253,7 @@
   "editorial": {
     "title": "Editorial guidelines",
     "description": "How the app descriptions, feature lists and FAQs on TheCoupleApp are written, translated and corrected.",
-    "intro": "These guidelines cover the written content on this site: app descriptions, feature lists, frequently asked questions, blog posts, and the translations of all of it. This site does not publish news coverage of other companies, reviews of other companies' products, or sponsored articles — blog posts here are about our own apps and the decisions behind them.",
+    "intro": "These guidelines cover the written content on this site: app descriptions, feature lists, frequently asked questions, blog posts, and the translations of all of it. This site does not publish news coverage of other companies, reviews of other companies' products, or sponsored articles, since blog posts here are about our own apps and the decisions behind them.",
     "sections": [
       {
         "heading": "Who writes this content",
@@ -265,7 +265,7 @@
         "heading": "Accuracy",
         "body": [
           "App descriptions describe what an app does today, not what it is planned to do. Apps that have not shipped are labelled as coming soon and are never presented as available.",
-          "Details that change — price, platforms, store availability — live in a single catalog that every page is generated from, so a correction is made in one place and takes effect everywhere it appears."
+          "Details that change, like price, platforms, store availability, live in a single catalog that every page is generated from, so a correction is made in one place and takes effect everywhere it appears."
         ]
       },
       {
@@ -299,7 +299,7 @@
   "blog": {
     "title": "Blog",
     "description": "Notes on the apps in the TheCoupleApp library and the decisions behind them.",
-    "intro": "Writing about the apps we build and why we build them this way — no news from other companies, no sponsored posts.",
+    "intro": "Writing about the apps we build and why we build them this way, with no news from other companies, no sponsored posts.",
     "empty": "Nothing published yet. Check back soon.",
     "backToBlog": "All posts"
   }

@@ -72,16 +72,16 @@ export const apps: CoupleApp[] = [
       appStore: "https://apps.apple.com/us/app/hourstory-couples-journal/id6787663620",
     },
     tagline: {
-      en: "Your day has a story — shared with them, one hour at a time",
+      en: "Your day has a story, told to them, one hour at a time",
     },
     description: {
-      en: "By evening, the details fade — not because you don't care, but because memory is unkind to the small things, and it's the small things that make a day feel real. HourStory gently asks what's around you once an hour: a photo, a five-second video, a voice note. Answer or skip — there's no streak to protect. By evening, you and your partner have watched each other's whole day unfold instead of trading one flat \"how was your day?\"",
+      en: "By evening, the details fade, not because you don't care, but because memory is unkind to the small things, and it's the small things that make a day feel real. HourStory gently asks what's around you once an hour: a photo, a five-second video, a voice note. Answer or skip, since there's no streak to protect. By evening, you and your partner have watched each other's whole day unfold instead of trading one flat \"how was your day?\"",
     },
     features: {
       en: [
         {
           title: "One nudge an hour",
-          body: "A gentle prompt asks what's around you right now — a photo, a five-second video, or a voice note. No feed to fill, no streak to protect.",
+          body: "A gentle prompt asks what's around you right now, like a photo, a five-second video, or a voice note. No feed to fill, no streak to protect.",
         },
         {
           title: "Watch each other's day",
@@ -89,7 +89,7 @@ export const apps: CoupleApp[] = [
         },
         {
           title: "Private, just the two of you",
-          body: "No public feed, no algorithm, no strangers — everything you capture stays between you and the one person you're paired with.",
+          body: "No public feed, no algorithm, no strangers, so everything you capture stays between you and the one person you're paired with.",
         },
       ],
     },
@@ -98,14 +98,14 @@ export const apps: CoupleApp[] = [
         { q: "Is HourStory free?", a: "HourStory is free to download, with an optional premium upgrade." },
         {
           q: "Does my partner need the app too?",
-          a: "Yes — HourStory is built for two. You each capture your own hours, and you both watch the other's day unfold.",
+          a: "Yes, since HourStory is built for two. You each capture your own hours, and you both watch the other's day unfold.",
         },
       ],
     },
     seo: {
       en: {
         title: "HourStory — A shared journal for couples apart during the day",
-        description: "HourStory asks what's around you once an hour — a photo, a video, a voice note — so your partner can watch your day unfold instead of asking how it went. Free on the App Store.",
+        description: "HourStory asks what's around you once an hour, like a photo, a video, a voice note, so your partner can watch your day unfold instead of asking how it went. Free on the App Store.",
         keywords: [
           "couples journal app",
           "long distance couples app",
