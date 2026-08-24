@@ -302,6 +302,7 @@
     "intro": "Writing about the apps we build and why we build them this way, with no news from other companies, no sponsored posts.",
     "empty": "Nothing published yet. Check back soon.",
     "backToBlog": "All posts",
+    "onThisPage": "On this page",
     "useCases": {
       "tryIt": "Try it",
       "timeZone": {

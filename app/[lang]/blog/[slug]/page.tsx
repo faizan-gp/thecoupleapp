@@ -2,14 +2,16 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import type { ComponentType } from "react";
+import type { ComponentType, ReactNode } from "react";
 
 import { StoreBadges } from "@/components/apps/StoreBadges";
+import { ArticlePromo } from "@/components/blog/ArticlePromo";
 import { MissingMiddle } from "@/components/blog/MissingMiddle";
 import { OfflineQueue } from "@/components/blog/OfflineQueue";
 import { OverlapMeter } from "@/components/blog/OverlapMeter";
 import { SignalWindow } from "@/components/blog/SignalWindow";
 import { StreakSlider } from "@/components/blog/StreakSlider";
+import { TableOfContents } from "@/components/blog/TableOfContents";
 import { TimeZoneSplit } from "@/components/blog/TimeZoneSplit";
 import { Breadcrumbs, PageShell } from "@/components/layout/Page";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -81,6 +83,43 @@ export default async function BlogPostPage({ params }: PageProps<"/[lang]/blog/[
   const [featuredApp] = getReleasedApps();
   const UseCaseVisual = USE_CASE_VISUALS[post.slug];
 
+  const tocItems = body
+    .filter((block) => block.type === "h2")
+    .map((block) => ({ id: block.id, text: block.text }));
+
+  // Every post lands an inline promo between its second and third section —
+  // the reader who's already sold partway through shouldn't have to reach
+  // the bottom of the page to act on it.
+  let h2Count = 0;
+  const bodyNodes: ReactNode[] = [];
+  body.forEach((block, index) => {
+    if (block.type === "h2") {
+      h2Count += 1;
+      if (h2Count === 3 && featuredApp) {
+        bodyNodes.push(
+          <ArticlePromo key="promo" app={featuredApp} lang={lang} dict={dict} />
+        );
+      }
+      bodyNodes.push(
+        <h2 key={block.id} id={block.id} className="article-h2">
+          {block.text}
+        </h2>
+      );
+    } else if (block.type === "tip") {
+      bodyNodes.push(
+        <p key={`tip-${index}`} className="article-tip">
+          {block.text}
+        </p>
+      );
+    } else {
+      bodyNodes.push(
+        <p key={`p-${index}`} className="mt-5 first:mt-0">
+          {block.text}
+        </p>
+      );
+    }
+  });
+
   return (
     <>
       <JsonLd
@@ -111,58 +150,56 @@ export default async function BlogPostPage({ params }: PageProps<"/[lang]/blog/[
           ]}
         />
 
-        <article>
-          <header className="border-b border-line pb-8">
-            <p className="eyebrow">
-              <time dateTime={post.publishedDate}>
-                {new Intl.DateTimeFormat(lang, { dateStyle: "long" }).format(
-                  new Date(post.publishedDate)
-                )}
-              </time>
-            </p>
-            <h1 className="t-page prose mt-4">{title}</h1>
-            <p className="t-lead prose mt-5">{localized(post.summary, lang)}</p>
-          </header>
+        <header className="border-b border-line pb-8">
+          <p className="eyebrow">
+            <time dateTime={post.publishedDate}>
+              {new Intl.DateTimeFormat(lang, { dateStyle: "long" }).format(
+                new Date(post.publishedDate)
+              )}
+            </time>
+          </p>
+          <h1 className="t-page prose mt-4">{title}</h1>
+          <p className="t-lead prose mt-5">{localized(post.summary, lang)}</p>
+        </header>
 
-          {UseCaseVisual && (
-            <div className="mt-10">
-              <UseCaseVisual dict={dict} />
-            </div>
-          )}
-
-          <div className="prose mt-10">
-            {body.map((paragraph) => (
-              <p key={paragraph} className="mt-5 first:mt-0">
-                {paragraph}
-              </p>
-            ))}
+        {UseCaseVisual && (
+          <div className="mt-10">
+            <UseCaseVisual dict={dict} />
           </div>
+        )}
 
-          {featuredApp && (
-            <div className="card prose mt-12 gap-5 p-6 sm:flex-row sm:items-center sm:p-7">
-              <Image
-                src={featuredApp.icon}
-                alt=""
-                width={48}
-                height={48}
-                unoptimized
-                className="shrink-0 rounded-[14px]"
-              />
-              <div className="min-w-0 flex-1">
-                <p className="t-card">{featuredApp.name}</p>
-                <p className="mt-1 text-muted">{localized(featuredApp.tagline, lang)}</p>
+        <div className="article-layout mt-10">
+          <article className="prose">
+            {bodyNodes}
+
+            {featuredApp && (
+              <div className="card mt-12 gap-5 p-6 sm:flex-row sm:items-center sm:p-7">
+                <Image
+                  src={featuredApp.icon}
+                  alt=""
+                  width={48}
+                  height={48}
+                  unoptimized
+                  className="shrink-0 rounded-[14px]"
+                />
+                <div className="min-w-0 flex-1">
+                  <p className="t-card">{featuredApp.name}</p>
+                  <p className="mt-1 text-muted">{localized(featuredApp.tagline, lang)}</p>
+                </div>
+                <div className="mt-5 flex flex-wrap items-center gap-3 sm:mt-0 sm:shrink-0">
+                  <Link href={`/${lang}/apps/${featuredApp.slug}`} className="btn btn-primary">
+                    {interpolate(dict.home.glimpseCta, { name: featuredApp.name })}
+                  </Link>
+                  {featuredApp.status === "released" && (
+                    <StoreBadges app={featuredApp} dict={dict} size="compact" />
+                  )}
+                </div>
               </div>
-              <div className="mt-5 flex flex-wrap items-center gap-3 sm:mt-0 sm:shrink-0">
-                <Link href={`/${lang}/apps/${featuredApp.slug}`} className="btn btn-primary">
-                  {interpolate(dict.home.glimpseCta, { name: featuredApp.name })}
-                </Link>
-                {featuredApp.status === "released" && (
-                  <StoreBadges app={featuredApp} dict={dict} size="compact" />
-                )}
-              </div>
-            </div>
-          )}
-        </article>
+            )}
+          </article>
+
+          <TableOfContents items={tocItems} label={dict.blog.onThisPage} />
+        </div>
       </PageShell>
     </>
   );

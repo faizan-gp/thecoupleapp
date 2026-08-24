@@ -1245,6 +1245,142 @@
   .middle-dot-apart {
     background-color: var(--line-strong);
   }
+
+  /* -------------------------------------------------------------------------
+   * Blog article body — section headings, the one highlighted takeaway per
+   * post, the "on this page" contents rail, and the inline app promo that
+   * sits between sections instead of only ever waiting at the bottom.
+   * ---------------------------------------------------------------------- */
+  .article-layout {
+    display: grid;
+    gap: 3rem;
+  }
+
+  @media (min-width: 64rem) {
+    .article-layout {
+      grid-template-columns: minmax(0, 1fr) 14rem;
+      align-items: start;
+    }
+  }
+
+  .article-h2 {
+    margin-top: 2.4rem;
+    margin-bottom: 0.9rem;
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--ember);
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-decoration-color: color-mix(in oklab, var(--ember) 45%, transparent);
+    text-underline-offset: 0.28em;
+  }
+
+  .article-h2:first-child {
+    margin-top: 0;
+  }
+
+  /* The single pulled-out sentence a post is built around — set apart from
+     the paragraphs around it rather than styled like one more of them. */
+  .article-tip {
+    margin-top: 1.6rem;
+    padding: 1.1rem 1.3rem;
+    border-inline-start: 3px solid var(--ember);
+    border-radius: 0 var(--radius-card) var(--radius-card) 0;
+    background-color: var(--ember-wash);
+    font-size: 1.05rem;
+    color: var(--ink);
+  }
+
+  .article-promo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-block: 2.2rem;
+    padding: 1.25rem 1.4rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-card);
+    background-color: color-mix(in oklab, var(--ember) 8%, var(--surface));
+  }
+
+  .article-promo-icon {
+    flex-shrink: 0;
+    border-radius: 10px;
+  }
+
+  .article-promo-body {
+    flex: 1 1 14rem;
+    min-width: 0;
+  }
+
+  .article-promo-title {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .article-promo-text {
+    margin-top: 0.2rem;
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+
+  .article-promo-cta {
+    flex-shrink: 0;
+  }
+
+  /* Sticky contents rail. Desktop-only — a scroll-spy list is a convenience
+     for a long page with room to spare beside it, not something worth a
+     collapsed accordion on a phone where the article is one thumb-scroll
+     away anyway. */
+  .article-toc {
+    display: none;
+  }
+
+  @media (min-width: 64rem) {
+    .article-toc {
+      display: block;
+      position: sticky;
+      top: 6.5rem;
+    }
+  }
+
+  .article-toc-title {
+    margin-bottom: 0.9rem;
+  }
+
+  .article-toc-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    list-style: none;
+    border-inline-start: 1px solid var(--line);
+  }
+
+  .article-toc-link {
+    display: block;
+    padding: 0.45rem 0 0.45rem 0.9rem;
+    margin-inline-start: -1px;
+    border-inline-start: 1px solid transparent;
+    font-size: 0.86rem;
+    line-height: 1.35;
+    color: var(--muted);
+    transition:
+      color 160ms ease,
+      border-color 160ms ease;
+  }
+
+  .article-toc-link:hover {
+    color: var(--ink);
+  }
+
+  .article-toc-link-active {
+    border-inline-start-color: var(--ember);
+    color: var(--ember);
+    font-weight: 600;
+  }
 }
 
 /* RTL: the glyph is mirrored, which also flips its local axis — so the same
