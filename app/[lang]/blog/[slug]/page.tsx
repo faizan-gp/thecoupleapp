@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { StoreBadges } from "@/components/apps/StoreBadges";
 import { Breadcrumbs, PageShell } from "@/components/layout/Page";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getReleasedApps, localized } from "@/lib/apps";
@@ -122,12 +123,14 @@ export default async function BlogPostPage({ params }: PageProps<"/[lang]/blog/[
                 <p className="t-card">{featuredApp.name}</p>
                 <p className="mt-1 text-muted">{localized(featuredApp.tagline, lang)}</p>
               </div>
-              <Link
-                href={`/${lang}/apps/${featuredApp.slug}`}
-                className="btn btn-primary mt-5 shrink-0 sm:mt-0"
-              >
-                {interpolate(dict.home.glimpseCta, { name: featuredApp.name })}
-              </Link>
+              <div className="mt-5 flex flex-wrap items-center gap-3 sm:mt-0 sm:shrink-0">
+                <Link href={`/${lang}/apps/${featuredApp.slug}`} className="btn btn-primary">
+                  {interpolate(dict.home.glimpseCta, { name: featuredApp.name })}
+                </Link>
+                {featuredApp.status === "released" && (
+                  <StoreBadges app={featuredApp} dict={dict} size="compact" />
+                )}
+              </div>
             </div>
           )}
         </article>
