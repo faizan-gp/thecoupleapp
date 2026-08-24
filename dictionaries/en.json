@@ -4,7 +4,7 @@
     "titleTemplate": "%s — TheCoupleApp",
     "home": {
       "title": "TheCoupleApp — A couple app for every part of your relationship",
-      "description": "TheCoupleApp is a library of couple apps: small, focused apps for couples that each solve one real problem, like communication, planning, memories, finances and more. Free on iOS and Android."
+      "description": "TheCoupleApp is a library of couple apps: small, focused apps for couples that each solve one real problem, like communication, planning, memories, finances and more. Free on iOS."
     },
     "apps": {
       "title": "All couple apps",
@@ -102,6 +102,152 @@
       "Free to download",
       "The library keeps growing"
     ],
+    "gettingStarted": {
+      "stepLabel": "Step {n}",
+      "eyebrow": "Getting started",
+      "title": "Set up in under a minute.",
+      "accent": "a minute.",
+      "subtitle": "No tutorials, no onboarding calls. Download, invite, go.",
+      "cta": "Get started for free",
+      "badges": [
+        "iOS",
+        "No credit card",
+        "Under a minute"
+      ],
+      "steps": [
+        {
+          "title": "Download the app",
+          "body": "Free on the App Store. Create your account and you're in."
+        },
+        {
+          "title": "Invite your partner",
+          "body": "Share your invite code. Once they enter it, your private shared space is ready."
+        },
+        {
+          "title": "Capture your hours together",
+          "body": "HourStory nudges you once an hour. Skip when you want, and watch each other's day unfold."
+        }
+      ]
+    },
+    "whoItsFor": {
+      "eyebrow": "Who it's for",
+      "title": "Closer, one hour at a time.",
+      "accent": "one hour at a time.",
+      "subtitle": "Different time zones, different shifts, weeks apart for work: HourStory is built for the days you don't actually share.",
+      "tags": [
+        "Long distance",
+        "Opposite shifts",
+        "Frequent travel"
+      ],
+      "cardCta": "Read the story",
+      "cta": "See every scenario"
+    },
+    "comparison": {
+      "eyebrow": "“Why not just text photos?”",
+      "title": "Built for two, not stitched together from texts.",
+      "accent": "not stitched together from texts.",
+      "subtitle": "Texting gets a photo to your partner. It doesn't hold on to a whole day, in order, for both of you to watch back.",
+      "appLabel": "HourStory",
+      "altLabel": "Texting photos",
+      "rows": [
+        {
+          "feature": "One nudge an hour, so nothing gets forgotten",
+          "altYes": false
+        },
+        {
+          "feature": "A shared timeline, replayed in order",
+          "altYes": false
+        },
+        {
+          "feature": "Paired with one partner, by invite code",
+          "altYes": false
+        },
+        {
+          "feature": "Both your days, side by side",
+          "altYes": false
+        },
+        {
+          "feature": "A private mode just for you",
+          "altYes": false
+        },
+        {
+          "feature": "Free to start",
+          "altYes": true
+        }
+      ],
+      "cta": "See how HourStory works"
+    },
+    "dayDial": {
+      "eyebrow": "A day, together",
+      "title": "Twenty-four hours. Drag through them.",
+      "accent": "Drag through them.",
+      "subtitle": "This is what an ordinary Tuesday looks like when you're apart. Move through the hours and watch both your days surface.",
+      "scrubLabel": "Hour of the day",
+      "quiet": "Nobody captured this hour. That's allowed.",
+      "captured": "{n} hours captured",
+      "moments": [
+        {
+          "hour": 6,
+          "who": "partner",
+          "emoji": "🌅",
+          "caption": "Up before the alarm again."
+        },
+        {
+          "hour": 8,
+          "who": "you",
+          "emoji": "☕",
+          "caption": "Coffee before the commute."
+        },
+        {
+          "hour": 10,
+          "who": "partner",
+          "emoji": "💻",
+          "caption": "Third meeting. Same mug."
+        },
+        {
+          "hour": 12,
+          "who": "you",
+          "emoji": "🥪",
+          "caption": "Lunch on a bench. Sun finally out."
+        },
+        {
+          "hour": 14,
+          "who": "you",
+          "emoji": "🌧️",
+          "caption": "Rain caught me without an umbrella."
+        },
+        {
+          "hour": 16,
+          "who": "partner",
+          "emoji": "🎧",
+          "caption": "This song, on repeat all afternoon."
+        },
+        {
+          "hour": 18,
+          "who": "partner",
+          "emoji": "🚇",
+          "caption": "Almost home, finally."
+        },
+        {
+          "hour": 20,
+          "who": "you",
+          "emoji": "🍜",
+          "caption": "Made too much. Wish you were here."
+        },
+        {
+          "hour": 21,
+          "who": "partner",
+          "emoji": "🛁",
+          "caption": "Long bath. Longer day."
+        },
+        {
+          "hour": 23,
+          "who": "you",
+          "emoji": "📖",
+          "caption": "Curled up, thinking of you."
+        }
+      ]
+    },
     "timeline": {
       "youLabel": "You",
       "partnerLabel": "Sam",

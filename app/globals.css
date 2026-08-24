@@ -525,11 +525,18 @@
    * touched rather than just watched.
    * ---------------------------------------------------------------------- */
   .timeline {
+    position: relative;
     width: 100%;
     max-width: 25rem;
-    border: 1px solid var(--line);
+    border: 1px solid var(--line-strong);
     border-radius: var(--radius-card);
     background-color: var(--surface);
+    /* A little of the couple's own light behind the card, so the hero's right
+       half isn't a flat rectangle beside a very loud headline. */
+    background-image:
+      radial-gradient(22rem 12rem at 100% 0%, color-mix(in oklab, var(--candy) 16%, transparent), transparent 70%),
+      radial-gradient(20rem 12rem at 0% 100%, color-mix(in oklab, var(--ember) 13%, transparent), transparent 70%);
+    box-shadow: var(--lift);
     padding: 1.3rem 1.3rem 0.6rem;
   }
 
@@ -575,12 +582,14 @@
     text-align: start;
     color: inherit;
     cursor: pointer;
-    opacity: 0.5;
+    /* Dim, but never so dim it reads as disabled — these are hours that have
+       already happened, not controls that are switched off. */
+    opacity: 0.72;
     transition: opacity 220ms ease;
   }
 
   .timeline-row:hover {
-    opacity: 0.8;
+    opacity: 0.92;
   }
 
   .timeline-row:focus-visible {
@@ -787,12 +796,30 @@
   }
 
   .shelf-area {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
     font-family: var(--font-body);
     font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 0.16em;
     text-transform: uppercase;
     color: var(--muted);
+  }
+
+  /* Dimmed on the open rows and full-strength on the row that shipped, so the
+     colour still tracks what is actually available. */
+  .shelf-emoji {
+    font-size: 1.15rem;
+    line-height: 1;
+    letter-spacing: normal;
+    opacity: 0.55;
+    transition: opacity 200ms ease;
+  }
+
+  .shelf-row-filled .shelf-emoji,
+  .shelf-row:hover .shelf-emoji {
+    opacity: 1;
   }
 
   .shelf-row-filled .shelf-area {
@@ -1381,6 +1408,418 @@
     color: var(--ember);
     font-weight: 600;
   }
+
+  /* -------------------------------------------------------------------------
+   * Getting-started reassurances (iOS, no card, a minute) — a checkmark
+   * reads as "already true," not "promised," which is the point of listing
+   * them beside the download button rather than folding them into it.
+   * ---------------------------------------------------------------------- */
+  .getting-started-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .getting-started-badge::before {
+    content: "✓";
+    color: var(--candy);
+    font-weight: 700;
+  }
+
+  /* -------------------------------------------------------------------------
+   * Step and scenario cards. Same skeleton as .card, but each one carries a
+   * mark in a tinted disc and a hairline of accent along its top edge — the
+   * accents alternate so a row of three reads as three things rather than one
+   * thing printed three times.
+   * ---------------------------------------------------------------------- */
+  .step-card,
+  .scenario-card {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .step-card::before,
+  .scenario-card::before {
+    content: "";
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline: 0;
+    height: 2px;
+    background-color: var(--card-accent, var(--candy));
+    opacity: 0.5;
+    transition: opacity 200ms ease;
+  }
+
+  .step-card:hover::before,
+  .scenario-card:hover::before {
+    opacity: 1;
+  }
+
+  .step-card:nth-child(odd),
+  .scenario-card:nth-child(odd) {
+    --card-accent: var(--candy);
+  }
+
+  .step-card:nth-child(even),
+  .scenario-card:nth-child(even) {
+    --card-accent: var(--ember);
+  }
+
+  .step-emoji,
+  .scenario-emoji {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    line-height: 1;
+    background-color: color-mix(in oklab, var(--card-accent) 16%, transparent);
+    border: 1px solid color-mix(in oklab, var(--card-accent) 32%, transparent);
+    transition: transform 220ms cubic-bezier(0.2, 0.7, 0.3, 1);
+  }
+
+  .step-card:hover .step-emoji,
+  .scenario-card:hover .scenario-emoji {
+    transform: scale(1.08) rotate(-4deg);
+  }
+
+  /* -------------------------------------------------------------------------
+   * Feature comparison table — HourStory against the default (texting
+   * photos back and forth), not a named competitor. Scrolls horizontally on
+   * narrow screens rather than trying to squeeze three columns into one.
+   * ---------------------------------------------------------------------- */
+  .comparison-table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-card);
+    background-color: var(--surface);
+  }
+
+  .comparison-table {
+    width: 100%;
+    min-width: 32rem;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 0.9rem 1.1rem;
+    text-align: start;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .comparison-table thead th {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .comparison-table tbody th {
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  .comparison-table tbody tr:last-child th,
+  .comparison-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .comparison-app-col {
+    text-align: center;
+    background-color: color-mix(in oklab, var(--ember) 7%, transparent);
+  }
+
+  .comparison-table td {
+    text-align: center;
+  }
+
+  .comparison-mark {
+    display: inline-flex;
+    font-weight: 700;
+  }
+
+  .comparison-mark-yes {
+    color: var(--ember);
+  }
+
+  .comparison-mark-no {
+    color: var(--muted);
+    opacity: 0.6;
+  }
+
+  /* -------------------------------------------------------------------------
+   * The day dial — the page's one loud moment. A whole day of light passes
+   * through this panel while you drag across it, and the two lanes underneath
+   * show the shape the two of you actually left on the day: some hours both,
+   * most hours one, plenty of hours neither.
+   *
+   * Everything here hangs off `--sky` (set per hour from the component) so the
+   * colour change is a single transitioning background-color rather than a
+   * gradient crossfade, which browsers won't interpolate.
+   * ---------------------------------------------------------------------- */
+  .dial {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    border: 1px solid var(--line-strong);
+    border-radius: calc(var(--radius-card) + 8px);
+    background-color: var(--surface);
+    padding: 1.75rem 1.25rem 1.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .dial {
+      padding: 2.5rem 2.25rem 2rem;
+    }
+  }
+
+  .dial-sky {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-color: var(--sky);
+    /* Strong enough that the hour is unmistakable, faded out toward the rail
+       so the lanes and ticks keep their own contrast at the bottom. */
+    opacity: 0.92;
+    mask-image: linear-gradient(180deg, #000 0%, #000 42%, rgb(0 0 0 / 0.25) 100%);
+    transition: background-color 900ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* The sun in the panel: a white hotspot that adds light without touching
+     the hue, so dawn and noon differ in brightness as well as colour. */
+  .dial-sky::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(34rem 18rem at 24% -10%, #fff, transparent 62%);
+    opacity: 0.16;
+  }
+
+  .dial-stage,
+  .dial-rail {
+    position: relative;
+    z-index: 1;
+  }
+
+  .dial-readout {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+  }
+
+  .dial-clock {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 1.6rem + 2.4vw, 3.2rem);
+    font-weight: 600;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+  }
+
+  .dial-count {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: color-mix(in oklab, var(--ink) 62%, transparent);
+  }
+
+  /* Fixed height so the panel never jolts between an hour with a moment and a
+     quiet one — the day should scrub past, not jump. */
+  .dial-moment {
+    display: flex;
+    align-items: center;
+    min-height: 7.5rem;
+    margin-top: 1.25rem;
+  }
+
+  .dial-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 1.1rem 1.25rem;
+    border: 1px solid color-mix(in oklab, var(--ink) 14%, transparent);
+    border-radius: var(--radius-card);
+    background-color: color-mix(in oklab, var(--paper) 62%, transparent);
+    backdrop-filter: blur(6px);
+    animation: dial-in 420ms cubic-bezier(0.2, 0.7, 0.3, 1) both;
+  }
+
+  .dial-card-you {
+    border-inline-start: 3px solid var(--candy);
+  }
+
+  .dial-card-partner {
+    border-inline-start: 3px solid var(--ember);
+  }
+
+  .dial-emoji {
+    flex-shrink: 0;
+    font-size: 2.4rem;
+    line-height: 1;
+  }
+
+  .dial-card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    min-width: 0;
+  }
+
+  .dial-who {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .dial-card-you .dial-who {
+    color: var(--candy);
+  }
+
+  .dial-card-partner .dial-who {
+    color: var(--ember);
+  }
+
+  .dial-caption {
+    font-family: var(--font-display);
+    font-size: clamp(1.05rem, 0.95rem + 0.5vw, 1.35rem);
+    line-height: 1.35;
+    color: var(--ink);
+  }
+
+  .dial-quiet {
+    width: 100%;
+    padding-block: 1.5rem;
+    text-align: center;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.05rem;
+    color: color-mix(in oklab, var(--ink) 55%, transparent);
+  }
+
+  .dial-rail {
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid color-mix(in oklab, var(--ink) 12%, transparent);
+  }
+
+  .dial-playhead {
+    position: absolute;
+    top: 1.25rem;
+    bottom: 0;
+    inset-inline-start: calc((var(--h) + 0.5) / 24 * 100%);
+    width: 2px;
+    margin-inline-start: -1px;
+    border-radius: 2px;
+    background-color: color-mix(in oklab, var(--ink) 55%, transparent);
+    transition: inset-inline-start 260ms cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+  }
+
+  .dial-lane + .dial-lane {
+    margin-top: 0.6rem;
+  }
+
+  .dial-lane-label {
+    display: block;
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: color-mix(in oklab, var(--ink) 55%, transparent);
+  }
+
+  .dial-lane-track {
+    display: grid;
+    /* minmax(0, 1fr), not 1fr: a bare 1fr floors at the emoji's intrinsic
+       width, so on a phone the ticks that hold one stop shrinking while the
+       empty ones keep going — the two lanes end up on different grids and
+       drift off the playhead, which is positioned on an even 24ths. */
+    grid-template-columns: repeat(24, minmax(0, 1fr));
+    align-items: center;
+    gap: 2px;
+    margin-top: 0.3rem;
+    height: 1.75rem;
+  }
+
+  .dial-tick {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    line-height: 1;
+    background-color: color-mix(in oklab, var(--ink) 8%, transparent);
+    transition:
+      background-color 200ms ease,
+      transform 200ms ease;
+  }
+
+  .dial-lane-you .dial-tick-on {
+    background-color: color-mix(in oklab, var(--candy) 35%, transparent);
+  }
+
+  .dial-lane-partner .dial-tick-on {
+    background-color: color-mix(in oklab, var(--ember) 35%, transparent);
+  }
+
+  .dial-tick-now {
+    transform: scaleY(1.25);
+    background-color: color-mix(in oklab, var(--ink) 22%, transparent);
+  }
+
+  .dial-lane-you .dial-tick-on.dial-tick-now {
+    background-color: var(--candy);
+  }
+
+  .dial-lane-partner .dial-tick-on.dial-tick-now {
+    background-color: var(--ember);
+  }
+
+  /* Transparent on purpose: it supplies dragging, keyboard steps and the
+     accessible name, while .dial-playhead draws the position exactly. */
+  .dial-scrub {
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5.25rem;
+    margin: 0;
+    opacity: 0;
+    cursor: ew-resize;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+  }
+
+  .dial-scrub:focus-visible {
+    opacity: 1;
+    outline: 2px solid var(--ink);
+    outline-offset: 4px;
+  }
+}
+
+@keyframes dial-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* RTL: the glyph is mirrored, which also flips its local axis — so the same
@@ -1463,7 +1902,23 @@
     animation: none;
   }
 
+  /* The dial still changes colour and still scrubs — it just stops sliding
+     and sweeping to get there. Autoplay is switched off in the component. */
+  .dial-card {
+    animation: none;
+  }
+
+  .dial-sky,
+  .dial-playhead {
+    transition: none;
+  }
+
   .card:hover {
+    transform: none;
+  }
+
+  .step-card:hover .step-emoji,
+  .scenario-card:hover .scenario-emoji {
     transform: none;
   }
 

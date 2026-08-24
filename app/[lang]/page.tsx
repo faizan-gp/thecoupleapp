@@ -3,9 +3,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { AppGlimpse } from "@/components/apps/AppGlimpse";
+import { ComparisonTable } from "@/components/home/ComparisonTable";
+import { DayDial } from "@/components/home/DayDial";
 import { DayTimeline } from "@/components/home/DayTimeline";
+import { GettingStarted } from "@/components/home/GettingStarted";
 import { LibraryBoard } from "@/components/home/LibraryBoard";
 import { Ticker } from "@/components/home/Ticker";
+import { WhoItsFor } from "@/components/home/WhoItsFor";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getReleasedApps, getUpcomingApps } from "@/lib/apps";
 import { getDictionary } from "@/lib/i18n/dictionaries";
@@ -114,7 +118,25 @@ export default async function LandingPage({ params }: PageProps<"/[lang]">) {
         </div>
       </section>
 
-      {/* 5. The multi-app thesis — set on the recessed band so the argument
+      {/* 5. The day dial — the section above describes HourStory; this one
+             lets you hold a whole day and drag through it. Placed here so the
+             demonstration lands immediately after the claim, and so the page
+             gets its one loud, coloured moment before it starts asking. */}
+      <DayDial lang={lang} dict={dict} />
+
+      {/* 6. Getting started — the real three steps to using the featured app,
+             so the pitch above ends in something the reader can actually do. */}
+      {released[0] && <GettingStarted app={released[0]} dict={dict} />}
+
+      {/* 7. Feature comparison — against the honest default (texting photos),
+             not a named competitor, on the recessed band for contrast. */}
+      {released[0] && <ComparisonTable app={released[0]} lang={lang} dict={dict} />}
+
+      {/* 8. Who it's for — real scenarios pulled from the blog, standing in
+             for testimonials we don't have yet rather than inventing any. */}
+      <WhoItsFor lang={lang} dict={dict} />
+
+      {/* 9. The multi-app thesis — set on the recessed band so the argument
              reads as a change of voice rather than another list of products. */}
       <section id="why" aria-labelledby="why-heading" className="border-y border-line bg-sunken">
         <div className="wrap py-14 sm:py-20">
@@ -132,7 +154,7 @@ export default async function LandingPage({ params }: PageProps<"/[lang]">) {
         </div>
       </section>
 
-      {/* 6. FAQ — mirrors the FAQPage JSON-LD above */}
+      {/* 10. FAQ — mirrors the FAQPage JSON-LD above */}
       <section aria-labelledby="faq-heading" className="wrap py-14 sm:py-20">
         <h2 id="faq-heading" className="t-section">
           {dict.home.faqTitle}

@@ -7,6 +7,22 @@ import type { Dictionary } from "@/lib/i18n/dictionaries";
 import { interpolate } from "@/lib/i18n/interpolate";
 import type { Locale } from "@/lib/i18n/locales";
 
+/**
+ * One emoji per area of a relationship. Structural, not copy — the same mark
+ * stands for "memories" in every language — so it lives here rather than in
+ * the dictionaries. It also gives the open rows something warm to hold: an
+ * area that hasn't shipped yet should still read as a part of a life, not as
+ * a blank line in a spreadsheet.
+ */
+const CATEGORY_EMOJI: Record<string, string> = {
+  communication: "💬",
+  planning: "🗓️",
+  memories: "📸",
+  finance: "💸",
+  wellness: "🌿",
+  fun: "🎲",
+};
+
 function ArrowGlyph() {
   return (
     <svg
@@ -72,7 +88,12 @@ export function LibraryBoard({ lang, dict }: { lang: Locale; dict: Dictionary })
                 className="shelf-row shelf-row-filled"
                 aria-label={`${app.name} — ${dict.categories[category]}`}
               >
-                <span className="shelf-area">{dict.categories[category]}</span>
+                <span className="shelf-area">
+                  <span className="shelf-emoji" aria-hidden="true">
+                    {CATEGORY_EMOJI[category]}
+                  </span>
+                  {dict.categories[category]}
+                </span>
 
                 <span className="shelf-body shelf-app">
                   <Image
@@ -97,7 +118,12 @@ export function LibraryBoard({ lang, dict }: { lang: Locale; dict: Dictionary })
               </Link>
             ) : (
               <div className="shelf-row">
-                <span className="shelf-area">{dict.categories[category]}</span>
+                <span className="shelf-area">
+                  <span className="shelf-emoji" aria-hidden="true">
+                    {CATEGORY_EMOJI[category]}
+                  </span>
+                  {dict.categories[category]}
+                </span>
                 <span className="shelf-status">
                   <DuoMark state="open" />
                   {dict.home.librarySlotOpen}

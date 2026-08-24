@@ -4,7 +4,7 @@
     "titleTemplate": "%s — TheCoupleApp",
     "home": {
       "title": "TheCoupleApp — Eine Paar-App für jeden Teil eurer Beziehung",
-      "description": "TheCoupleApp ist eine Bibliothek von Paar-Apps: kleine, fokussierte Apps für Paare, die jeweils ein echtes Problem lösen, etwa Kommunikation, Planung, Erinnerungen, Finanzen und mehr. Kostenlos für iOS und Android."
+      "description": "TheCoupleApp ist eine Bibliothek von Paar-Apps: kleine, fokussierte Apps für Paare, die jeweils ein echtes Problem lösen, etwa Kommunikation, Planung, Erinnerungen, Finanzen und mehr. Kostenlos für iOS."
     },
     "apps": {
       "title": "Alle Paar-Apps",
@@ -102,6 +102,152 @@
       "Kostenlos zum Download",
       "Die Bibliothek wächst weiter"
     ],
+    "gettingStarted": {
+      "stepLabel": "Schritt {n}",
+      "eyebrow": "Erste Schritte",
+      "title": "In unter einer Minute startklar.",
+      "accent": "einer Minute",
+      "subtitle": "Keine Tutorials, keine Onboarding-Calls. Herunterladen, einladen, loslegen.",
+      "cta": "Kostenlos starten",
+      "badges": [
+        "iOS",
+        "Keine Kreditkarte",
+        "Unter einer Minute"
+      ],
+      "steps": [
+        {
+          "title": "App herunterladen",
+          "body": "Kostenlos im App Store. Konto anlegen, fertig."
+        },
+        {
+          "title": "Partner einladen",
+          "body": "Teile deinen Einladungscode. Sobald er eingegeben wird, ist euer privater Bereich bereit."
+        },
+        {
+          "title": "Eure Stunden gemeinsam erleben",
+          "body": "HourStory erinnert dich einmal pro Stunde. Überspring es, wenn du willst, und sieh, wie sich der Tag deines Partners entfaltet."
+        }
+      ]
+    },
+    "whoItsFor": {
+      "eyebrow": "Für wen",
+      "title": "Näher, Stunde für Stunde.",
+      "accent": "Stunde für Stunde.",
+      "subtitle": "Unterschiedliche Zeitzonen, unterschiedliche Schichten, wochenlang getrennt wegen der Arbeit: HourStory ist für die Tage gebaut, die ihr nicht wirklich teilt.",
+      "tags": [
+        "Fernbeziehung",
+        "Gegensätzliche Schichten",
+        "Dienstreisen"
+      ],
+      "cardCta": "Geschichte lesen",
+      "cta": "Alle Fälle ansehen"
+    },
+    "comparison": {
+      "eyebrow": "„Warum nicht einfach Fotos schreiben?“",
+      "title": "Gebaut für zwei, nicht aus SMS zusammengesetzt.",
+      "accent": "nicht aus SMS zusammengesetzt.",
+      "subtitle": "Eine Nachricht bringt ein Foto zu deinem Partner. Sie hält keinen ganzen Tag fest, in der richtigen Reihenfolge, damit ihr beide ihn später anschauen könnt.",
+      "appLabel": "HourStory",
+      "altLabel": "Fotos per Nachricht",
+      "rows": [
+        {
+          "feature": "Eine Erinnerung pro Stunde, damit nichts vergessen wird",
+          "altYes": false
+        },
+        {
+          "feature": "Eine gemeinsame Zeitleiste, in der richtigen Reihenfolge",
+          "altYes": false
+        },
+        {
+          "feature": "Mit einer Person verbunden, per Einladungscode",
+          "altYes": false
+        },
+        {
+          "feature": "Eure beiden Tage, nebeneinander",
+          "altYes": false
+        },
+        {
+          "feature": "Ein privater Modus nur für dich",
+          "altYes": false
+        },
+        {
+          "feature": "Kostenloser Start",
+          "altYes": true
+        }
+      ],
+      "cta": "So funktioniert HourStory"
+    },
+    "dayDial": {
+      "eyebrow": "Ein Tag, gemeinsam",
+      "title": "Vierundzwanzig Stunden. Zieh dich durch.",
+      "accent": "Zieh dich durch.",
+      "subtitle": "So sieht ein ganz normaler Dienstag aus, wenn ihr getrennt seid. Geh durch die Stunden und sieh eure beiden Tage auftauchen.",
+      "scrubLabel": "Stunde des Tages",
+      "quiet": "Diese Stunde hat niemand festgehalten. Das ist in Ordnung.",
+      "captured": "{n} Stunden festgehalten",
+      "moments": [
+        {
+          "hour": 6,
+          "who": "partner",
+          "emoji": "🌅",
+          "caption": "Wieder vor dem Wecker wach."
+        },
+        {
+          "hour": 8,
+          "who": "you",
+          "emoji": "☕",
+          "caption": "Kaffee vor dem Weg zur Arbeit."
+        },
+        {
+          "hour": 10,
+          "who": "partner",
+          "emoji": "💻",
+          "caption": "Drittes Meeting. Gleiche Tasse."
+        },
+        {
+          "hour": 12,
+          "who": "you",
+          "emoji": "🥪",
+          "caption": "Mittagessen auf einer Bank. Endlich Sonne."
+        },
+        {
+          "hour": 14,
+          "who": "you",
+          "emoji": "🌧️",
+          "caption": "Der Regen hat mich ohne Schirm erwischt."
+        },
+        {
+          "hour": 16,
+          "who": "partner",
+          "emoji": "🎧",
+          "caption": "Dieses Lied, den ganzen Nachmittag."
+        },
+        {
+          "hour": 18,
+          "who": "partner",
+          "emoji": "🚇",
+          "caption": "Fast zu Hause, endlich."
+        },
+        {
+          "hour": 20,
+          "who": "you",
+          "emoji": "🍜",
+          "caption": "Zu viel gekocht. Wärst du hier."
+        },
+        {
+          "hour": 21,
+          "who": "partner",
+          "emoji": "🛁",
+          "caption": "Langes Bad. Längerer Tag."
+        },
+        {
+          "hour": 23,
+          "who": "you",
+          "emoji": "📖",
+          "caption": "Eingekuschelt, ich denke an dich."
+        }
+      ]
+    },
     "timeline": {
       "youLabel": "Du",
       "partnerLabel": "Sam",

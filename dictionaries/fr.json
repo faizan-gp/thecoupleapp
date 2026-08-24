@@ -4,7 +4,7 @@
     "titleTemplate": "%s — TheCoupleApp",
     "home": {
       "title": "TheCoupleApp — Une application pour couples pour chaque facette de votre relation",
-      "description": "TheCoupleApp est une bibliothèque d'applications pour couples : des applis petites et ciblées qui résolvent chacune un vrai problème, comme la communication, l'organisation, les souvenirs, les finances et plus. Gratuit sur iOS et Android."
+      "description": "TheCoupleApp est une bibliothèque d'applications pour couples : des applis petites et ciblées qui résolvent chacune un vrai problème, comme la communication, l'organisation, les souvenirs, les finances et plus. Gratuit sur iOS."
     },
     "apps": {
       "title": "Toutes les applications pour couples",
@@ -102,6 +102,152 @@
       "Téléchargement gratuit",
       "La bibliothèque ne cesse de grandir"
     ],
+    "gettingStarted": {
+      "stepLabel": "Étape {n}",
+      "eyebrow": "Pour commencer",
+      "title": "Prêt en moins d'une minute.",
+      "accent": "moins d'une minute.",
+      "subtitle": "Pas de tutoriel, pas d'appel d'intégration. Téléchargez, invitez, c'est parti.",
+      "cta": "Commencer gratuitement",
+      "badges": [
+        "iOS",
+        "Sans carte bancaire",
+        "Moins d'une minute"
+      ],
+      "steps": [
+        {
+          "title": "Téléchargez l'appli",
+          "body": "Gratuite sur l'App Store. Créez votre compte, et voilà."
+        },
+        {
+          "title": "Invitez votre partenaire",
+          "body": "Partagez votre code d'invitation. Dès qu'il l'utilise, votre espace privé est prêt."
+        },
+        {
+          "title": "Vivez vos heures ensemble",
+          "body": "HourStory vous sollicite une fois par heure. Passez votre tour si vous voulez, et regardez la journée de l'autre se dérouler."
+        }
+      ]
+    },
+    "whoItsFor": {
+      "eyebrow": "Pour qui",
+      "title": "Plus proches, heure par heure.",
+      "accent": "heure par heure.",
+      "subtitle": "Fuseaux horaires différents, horaires décalés, semaines séparés pour le travail : HourStory est pensée pour les journées que vous ne partagez pas vraiment.",
+      "tags": [
+        "Longue distance",
+        "Horaires décalés",
+        "Voyages professionnels"
+      ],
+      "cardCta": "Lire l'histoire",
+      "cta": "Voir tous les cas"
+    },
+    "comparison": {
+      "eyebrow": "« Pourquoi ne pas juste envoyer des photos par texto ? »",
+      "title": "Pensée pour deux, pas assemblée à coups de textos.",
+      "accent": "pas assemblée à coups de textos.",
+      "subtitle": "Un texto fait parvenir une photo à votre partenaire. Il ne garde pas toute une journée, dans l'ordre, pour que vous la revoyiez tous les deux.",
+      "appLabel": "HourStory",
+      "altLabel": "Photos par texto",
+      "rows": [
+        {
+          "feature": "Une sollicitation par heure, pour ne rien oublier",
+          "altYes": false
+        },
+        {
+          "feature": "Une chronologie partagée, dans l'ordre",
+          "altYes": false
+        },
+        {
+          "feature": "Associés à un seul partenaire, via un code d'invitation",
+          "altYes": false
+        },
+        {
+          "feature": "Vos deux journées, côte à côte",
+          "altYes": false
+        },
+        {
+          "feature": "Un mode privé rien que pour vous",
+          "altYes": false
+        },
+        {
+          "feature": "Gratuit pour commencer",
+          "altYes": true
+        }
+      ],
+      "cta": "Découvrir comment fonctionne HourStory"
+    },
+    "dayDial": {
+      "eyebrow": "Une journée, ensemble",
+      "title": "Vingt-quatre heures. Parcourez-les.",
+      "accent": "Parcourez-les.",
+      "subtitle": "Voilà à quoi ressemble un mardi ordinaire quand vous êtes loin. Parcourez les heures et regardez vos deux journées apparaître.",
+      "scrubLabel": "Heure de la journée",
+      "quiet": "Personne n'a capturé cette heure. C'est permis.",
+      "captured": "{n} heures capturées",
+      "moments": [
+        {
+          "hour": 6,
+          "who": "partner",
+          "emoji": "🌅",
+          "caption": "Debout avant le réveil, encore."
+        },
+        {
+          "hour": 8,
+          "who": "you",
+          "emoji": "☕",
+          "caption": "Café avant de partir."
+        },
+        {
+          "hour": 10,
+          "who": "partner",
+          "emoji": "💻",
+          "caption": "Troisième réunion. Même tasse."
+        },
+        {
+          "hour": 12,
+          "who": "you",
+          "emoji": "🥪",
+          "caption": "Déjeuner sur un banc. Enfin du soleil."
+        },
+        {
+          "hour": 14,
+          "who": "you",
+          "emoji": "🌧️",
+          "caption": "La pluie est arrivée, sans parapluie."
+        },
+        {
+          "hour": 16,
+          "who": "partner",
+          "emoji": "🎧",
+          "caption": "Cette chanson, en boucle tout l'après-midi."
+        },
+        {
+          "hour": 18,
+          "who": "partner",
+          "emoji": "🚇",
+          "caption": "Presque à la maison, enfin."
+        },
+        {
+          "hour": 20,
+          "who": "you",
+          "emoji": "🍜",
+          "caption": "J'en ai fait trop. Si tu étais là."
+        },
+        {
+          "hour": 21,
+          "who": "partner",
+          "emoji": "🛁",
+          "caption": "Bain interminable. Journée encore plus longue."
+        },
+        {
+          "hour": 23,
+          "who": "you",
+          "emoji": "📖",
+          "caption": "Sous la couette, je pense à toi."
+        }
+      ]
+    },
     "timeline": {
       "youLabel": "Vous",
       "partnerLabel": "Sam",
